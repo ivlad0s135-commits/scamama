@@ -1,1475 +1,1225 @@
-return (function (...)
-	local slot0_a1024 = {
-		"UkT5CL3Zlgp1mD2MtCX=",
-		"nCceUCpM",
-		"Ygm5ACcQ",
-		"Y3qB+dqStJhTKNRgCT==",
-		"UQ3kqT==",
-		"minmLxpvYO==",
-		"CJLCtx26pk3yq3ti",
-		"qxv2qT==",
-		"ZNV7qCB=",
-		"YDL4Kd2NmgL/1CveKe==",
-		"AvESlv3+",
-		"fsmkYdn3nO==",
-		"n4VinshSlDY=",
-		"lJd=",
-		"l4VRqspkYD3Gqe==",
-		"qgpNUu==",
-		"UxVGUxvk",
-		"mgvWAvvbCQviCd2RtZK=",
-		"lJy=",
-		"",
-		"ZNVQUe==",
-		"YDvGq4V2",
-		"YxLklCLkUZmRUDr3",
-		"+8u3qbXS+u==",
-		"lCvkAO==",
-		"AiED1ZqdYkp+YkRcqu==",
-		"YvmNfwycftVgLtq7a1y=",
-		"lCp2YiOkAxLza3n2nT==",
-		"L4v2Y4L5ydm3n4Lzn4LwyT==",
-		"qZh5lgy=",
-		"UxRRYu==",
-		"Y4pRl4e=",
-		"CCRya3vBltqz1CrJUke=",
-		"KzmdmdvbqLqsLs33Le==",
-		"ZNV2qZmRn4v8l4t=",
-		"l4LG",
-		"nk7efvm0YC3hLtUcme==",
-		"YDL2lgq3",
-		"mNhylwviYwL3tLhCtJhm",
-		"+u==",
-		"qxNRn4pX",
-		"qDrFlgy=",
-		"n4v8l4t=",
-		"KihJq1Ec",
-		"n4VGnCN8qZy=",
-		"ZNVSlDm3aO==",
-		"nQnIew/NJYxhvbdzeX/Oq5ihFLyuCK+ve0U24gi+GFs7GvZgjiU8VdHWUVxmX0J3u5HOGZwwKIgnPR8o5p644LZxpaQC9lwgTao/hDEqF+QDEEPtDudY0PCog6PkVaf+8gtocfA9d8HjDo5v21PFTwJ/"
-	}
-
-	local function slot1_a3260(arg0)
-		return slot0_a1024[arg0 + 25356]
-	end
-
-	local slot2_a1007 = ipairs
-	local slot3_a1008 = {
-		{
-			1,
-			47
-		},
-		{
-			1,
-			17
-		},
-		{
-			18,
-			47
-		}
-	}
-
-	for slot5_a1015, slot6_a1017 in slot2_a1007(slot3_a1008) do
-		while slot6_a1017[1] < slot6_a1017[2] do
-			local slot7_a1021 = slot6_a1017[1]
-			local slot8_a1022 = slot6_a1017[2]
-			local slot9_a1025 = slot0_a1024[slot6_a1017[2]]
-			local slot10_a1027 = slot0_a1024[slot6_a1017[1]]
-			local slot11_a1029 = slot6_a1017[1] + 1
-			slot6_a1017[2] = slot6_a1017[2] - 1
-			slot6_a1017[1] = slot11_a1029
-			slot0_a1024[slot8_a1022] = slot10_a1027
-			slot0_a1024[slot7_a1021] = slot9_a1025
-		end
-	end
-
-	local slot2_a1059 = string.len
-	local slot3_a1104 = string.char
-	local slot4_a1144 = table.concat
-	local slot5_a1090 = math.floor
-	local slot6_a1052 = slot0_a1024
-	local slot7_a1123 = string.sub
-	local slot8_a1100 = table.insert
-	local slot9_a1055 = type
-	local slot10_a1078 = {
-		p = 13,
-		C = 22,
-		["7"] = 44,
-		["2"] = 45,
-		Q = 39,
-		["3"] = 37,
-		o = 62,
-		S = 41,
-		P = 63,
-		A = 26,
-		F = 47,
-		i = 51,
-		a = 30,
-		["1"] = 19,
-		O = 0,
-		G = 46,
-		["0"] = 10,
-		z = 35,
-		W = 58,
-		m = 17,
-		["4"] = 6,
-		j = 59,
-		M = 43,
-		k = 52,
-		["+"] = 14,
-		Z = 23,
-		v = 5,
-		y = 8,
-		r = 49,
-		J = 3,
-		f = 18,
-		K = 12,
-		["/"] = 11,
-		H = 31,
-		h = 9,
-		Y = 28,
-		w = 36,
-		l = 27,
-		X = 40,
-		I = 15,
-		g = 55,
-		N = 53,
-		["6"] = 42,
-		["9"] = 60,
-		n = 29,
-		V = 61,
-		["8"] = 34,
-		t = 20,
-		e = 48,
-		u = 32,
-		b = 2,
-		d = 4,
-		U = 24,
-		s = 7,
-		x = 54,
-		T = 16,
-		E = 1,
-		c = 57,
-		D = 38,
-		R = 33,
-		["5"] = 50,
-		q = 25,
-		L = 21,
-		B = 56
-	}
-
-	for slot14_a1053 = 1, #slot6_a1052 do
-		local slot15_a1125 = slot6_a1052[slot14_a1053]
-
-		if slot9_a1055(slot15_a1125) == "string" then
-			local slot16_a1069 = slot2_a1059(slot15_a1125)
-			local slot17_a1102 = {}
-			local slot18_a1142 = 1
-			local slot19_a1139 = 0
-			local slot20_a1080 = 0
-
-			while slot18_a1142 <= slot16_a1069 do
-				local slot21_a1110 = slot7_a1123(slot15_a1125, slot18_a1142, slot18_a1142)
-				local slot22_a1084 = slot10_a1078[slot21_a1110]
-
-				if slot22_a1084 then
-					slot19_a1139 = slot19_a1139 + slot22_a1084 * 64^(3 - slot20_a1080)
-					slot20_a1080 = slot20_a1080 + 1
-
-					if slot20_a1080 == 4 then
-						slot20_a1080 = 0
-
-						slot8_a1100(slot17_a1102, slot3_a1104(slot5_a1090(slot19_a1139 / 65536), slot5_a1090(slot19_a1139 % 65536 / 256), slot19_a1139 % 256))
-
-						slot19_a1139 = 0
-					end
-				elseif slot21_a1110 == "=" then
-					slot8_a1100(slot17_a1102, slot3_a1104(slot5_a1090(slot19_a1139 / 65536)))
-
-					if slot16_a1069 <= slot18_a1142 or slot7_a1123(slot15_a1125, slot18_a1142 + 1, slot18_a1142 + 1) ~= "=" then
-						slot8_a1100(slot17_a1102, slot3_a1104(slot5_a1090(slot19_a1139 % 65536 / 256)))
-					end
-
-					break
-				end
-
-				slot18_a1142 = slot18_a1142 + 1
-			end
-
-			slot6_a1052[slot14_a1053] = slot4_a1144(slot17_a1102)
-		end
-	end
-
-	local function slot2_a3270(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20)
-		local function slot7_a3232(arg0, arg1, arg2, arg3)
-			local slot4_a1865 = nil
-			local slot5_a2594 = nil
-			local slot6_a1409 = nil
-			local slot7_a3026 = nil
-			local slot8_a3212 = nil
-			local slot9_a1965 = nil
-			local slot10_a2545 = nil
-			local slot11_a2992 = nil
-			local slot12_a2002 = nil
-			local slot13_a2953 = nil
-			local slot14_a1691 = nil
-			local slot15_a1418 = nil
-			local slot16_a1419 = nil
-			local slot17_a2654 = nil
-			local slot18_a3207 = nil
-			local slot19_a3014 = nil
-			local slot20_a1690 = nil
-			local slot21_a2313 = nil
-			local slot22_a1991 = nil
-			local slot23_a1640 = nil
-			local slot24_a3199 = nil
-			local slot25_a1557 = nil
-			local slot26_a1492 = nil
-			local slot27_a1430 = nil
-			local slot28_a1970 = nil
-			local slot29_a3011 = nil
-			local slot30_a1433 = nil
-			local slot31_a2271 = nil
-			local slot32_a2581 = nil
-			local slot33_a1955 = nil
-			local slot34_a1437 = nil
-			local slot35_a2807 = nil
-			local slot36_a1815 = nil
-			local slot37_a1666 = nil
-
-			while arg0 do
-				if arg0 < 9905063 then
-					if arg0 < 6389359 then
-						if arg0 < 4799168 then
-							if arg0 < 3735380 then
-								if arg0 < 2275845 then
-									if arg0 < 2199293 then
-										if arg0 < 1765056 then
-											slot14_a1691 = 1
-											slot31_a2271 = {}
-											slot35_a2807 = arg15[arg2[9]]
-											arg0 = 11937981
-											slot26_a1492 = 1
-
-											if slot26_a1492 >= 0 then
-												slot10_a2545 = false
-											else
-												slot10_a2545 = true
-											end
-
-											slot20_a1690 = slot14_a1691 - slot26_a1492
-										else
-											slot13_a2953 = {}
-											arg0 = arg0[slot1_a3260(-25352)]
-										end
-									else
-										slot13_a2953 = slot9_a1965
-										local slot0_a1485 = slot33_a1955
-
-										if slot9_a1965 then
-											arg0 = 10842583
-										else
-											arg0 = 10014750
-										end
-									end
-								elseif arg0 < 3641683 then
-									arg0 = 15099206
-									slot10_a2545 = arg15[slot26_a1492]
-									slot13_a2953 = slot10_a2545
-								else
-									local slot0_a1500 = arg0[slot1_a3260(-25309)]
-									slot31_a2271 = slot1_a3260(-25310)
-									local slot13_a1508 = slot0_a1500(slot31_a2271)
-									slot13_a2953 = {}
-									arg0 = arg0[slot1_a3260(-25329)]
-								end
-							elseif arg0 < 4384855 then
-								if arg0 < 4200296 then
-									arg0 = 13151360
-								else
-									slot20_a1690 = 1
-									slot14_a1691 = arg15[arg2[3]]
-
-									if slot14_a1691 == slot20_a1690 then
-										slot31_a2271 = false
-									else
-										slot31_a2271 = true
-									end
-
-									if slot31_a2271 then
-										arg0 = 5818554
-									else
-										arg0 = 8167133
-									end
-								end
-							elseif arg0 < 4776462 then
-								arg0 = 10987667
-								slot10_a2545 = nil
-								slot23_a1640 = nil
-								slot35_a2807 = nil
-							else
-								arg0 = 8175513
-								arg15[arg2[5]] = slot13_a2953
-								slot31_a2271 = nil
-							end
-						elseif arg0 < 5967838 then
-							if arg0 < 5471654 then
-								if arg0 < 5178333 then
-									if arg0 < 5028219 then
-										slot32_a2581 = arg20()
-										local slot7_a1554 = 100
-										local slot19_a1555 = 255
-										arg15[slot32_a2581] = slot25_a1557
-										slot5_a2594 = arg20()
-										arg15[slot5_a2594] = arg0[slot1_a3260(-25314)][slot1_a3260(-25317)](1, slot7_a1554)
-										local slot7_a1579 = 0
-										local slot22_a1583 = 1
-										local slot34_a1646 = 10000
-										local slot36_a1585 = 2
-										slot7_a3026 = arg20()
-										arg15[slot7_a3026] = arg15[slot23_a1640](slot7_a1579, slot19_a1555)
-										local slot0_a1596 = arg15[slot23_a1640]
-										local slot15_a1644 = 0
-										slot19_a3014 = arg20()
-										arg15[slot19_a3014] = slot0_a1596(1, arg15[slot5_a2594])
-
-										if arg15[slot23_a1640](slot22_a1583, slot36_a1585) ~= 1 then
-											local slot0_a1632 = false
-										else
-											slot0_a1632 = true
-										end
-
-										slot12_a2002 = arg20()
-										arg15[slot12_a2002] = slot0_a1632
-										local slot21_a1634 = arg0[slot1_a3260(-25326)]
-										local slot38_a1642 = {
-											arg15[slot23_a1640](slot15_a1644, slot34_a1646)
-										}
-										slot21_a2313 = slot1_a3260(-25346)
-										local slot29_a1665 = slot21_a1634(arg1(slot38_a1642)) .. slot21_a2313
-										local slot0_a1667 = slot37_a1666[slot1_a3260(-25323)]
-										slot22_a1991 = arg20()
-										local slot38_a1685 = arg13
-										local slot39_a1686 = 10489829
-										local slot40_a1687 = {
-											slot23_a1640,
-											slot32_a2581,
-											slot33_a1955,
-											slot20_a1690,
-											slot14_a1691,
-											slot17_a2654,
-											slot12_a2002,
-											slot22_a1991,
-											slot5_a2594,
-											slot19_a3014,
-											slot7_a3026,
-											slot9_a1965
-										}
-										slot29_a3011 = slot38_a1685(slot39_a1686, slot40_a1687)
-										arg15[slot22_a1991] = slot0_a1667(slot37_a1666, slot1_a3260(-25315), slot1_a3260(-25346) .. slot29_a1665)
-										slot13_a2953 = arg0[slot1_a3260(-25354)]
-										local slot38_a1702 = {
-											slot13_a2953(slot29_a3011)
-										}
-										local slot38_a1706 = {
-											arg1(slot38_a1702)
-										}
-										slot36_a1815 = slot38_a1706
-
-										if arg15[slot12_a2002] then
-											arg0 = 6522245
-										else
-											arg0 = 5182995
-										end
-									else
-										arg0 = 15675658
-									end
-								else
-									slot21_a2313 = arg15[slot14_a1691]
-									slot29_a3011 = slot21_a2313
-
-									if slot21_a2313 then
-										arg0 = 12647685
-									else
-										arg0 = 15684597
-									end
-								end
-							elseif arg0 < 5791568 then
-								slot18_a3207 = arg15[slot14_a1691]
-								slot25_a1557 = slot18_a3207
-
-								if slot18_a3207 then
-									arg0 = 15129582
-								else
-									arg0 = 14344270
-								end
-							else
-								local slot11_a1731 = 13
-								local slot31_a1736 = arg15[arg2[3]] % 32
-								local slot35_a1739 = arg15[arg2[4]]
-								local slot9_a1740 = 2
-								local slot23_a1743 = arg15[arg2[2]]
-								slot4_a1865 = arg15[arg2[3]] - slot31_a1736
-								slot37_a1666 = 32
-								slot28_a1970 = slot4_a1865 / slot37_a1666
-								local slot14_a1761 = slot35_a1739(slot23_a1743 / slot9_a1740^(slot11_a1731 - slot28_a1970)) % 4294967296.0 / 2^slot31_a1736
-								slot11_a2992 = 256
-								local slot9_a1774 = 256
-								local slot20_a1782 = arg15[arg2[4]](slot14_a1761 % 1 * 4294967296.0) + arg15[arg2[4]](slot14_a1761)
-								local slot23_a1783 = 65536
-								local slot35_a1785 = slot20_a1782 % 65536
-								arg0 = 14087390
-								local slot26_a1788 = (slot20_a1782 - slot35_a1785) / slot23_a1783
-								slot31_a2271 = nil
-								local slot10_a1791 = slot35_a1785 % 256
-								slot20_a1690 = nil
-								local slot23_a1794 = (slot35_a1785 - slot10_a1791) / slot9_a1774
-								slot14_a1691 = nil
-								local slot6_a1797 = slot26_a1788 % 256
-								slot35_a2807 = nil
-								local slot9_a1800 = (slot26_a1788 - slot6_a1797) / slot11_a2992
-								local slot38_a1801 = {
-									slot10_a1791,
-									slot23_a1794,
-									slot6_a1797,
-									slot9_a1800
-								}
-								slot33_a1955 = slot38_a1801
-								arg15[arg2[1]] = slot33_a1955
-								local slot6_a1805 = nil
-								slot9_a1965 = nil
-								slot26_a1492 = nil
-								slot10_a2545 = nil
-								slot23_a1640 = nil
-							end
-						elseif arg0 < 6241315 then
-							if arg0 < 6173258 then
-								if slot36_a1815[2] ~= arg15[slot22_a1991] then
-									local slot30_a1823 = false
-								else
-									slot30_a1823 = true
-								end
-
-								arg0 = 10334249
-								slot29_a3011 = slot30_a1823
-							else
-								slot9_a1965 = 255
-								slot23_a1640 = arg15[arg2[1]](0, slot9_a1965)
-								slot31_a2271[slot20_a1690] = slot23_a1640
-								slot14_a1691 = nil
-								arg0 = 11937981
-							end
-						elseif arg0 < 6304413 then
-							slot20_a1690 = 169
-							arg15[arg2[2]] = (arg15[arg2[2]] * slot20_a1690 + 30505366435707.0) % 35184372088832.0
-							slot31_a2271 = arg15[arg2[3]]
-							slot14_a1691 = 1
-
-							if slot31_a2271 == slot14_a1691 then
-								slot13_a2953 = false
-							else
-								slot13_a2953 = true
-							end
-
-							arg0 = 8167133
-						else
-							local slot37_a1863 = slot17_a2654
-							slot7_a3026 = slot37_a1863
-							slot4_a1865[slot37_a1863] = slot7_a3026
-							slot37_a1666 = nil
-							arg0 = 12971643
-						end
-					elseif arg0 < 8053016 then
-						if arg0 < 7362057 then
-							if arg0 < 7147061 then
-								if arg0 < 7134611 then
-									if arg0 < 6967949 then
-										slot29_a3011 = arg15[slot14_a1691]
-
-										if slot29_a3011 then
-											arg0 = 16118484
-										else
-											arg0 = 15771511
-										end
-
-										slot13_a2953 = slot29_a3011
-									else
-										slot14_a1691 = arg1[2]
-										local slot0_a1890 = arg15[arg2[1]]
-										slot31_a2271 = arg1[1]
-										slot20_a1690 = slot0_a1890
-
-										if slot20_a1690[slot14_a1691] then
-											arg0 = 8863094
-										else
-											arg0 = 7147606
-										end
-									end
-								elseif slot13_a2953 then
-									arg0 = 8166334
-								else
-									arg0 = 8175513
-								end
-							elseif arg0 < 7149609 then
-								arg15[arg2[2]] = {}
-								local slot23_a1905 = 255
-								slot35_a2807 = arg15[arg2[3]]
-								slot13_a2953 = slot14_a1691 % 35184372088832.0
-								local slot33_a1913 = 1
-								arg15[arg2[4]] = slot13_a2953
-								slot11_a2992 = slot33_a1913
-								slot26_a1492 = slot14_a1691 % slot23_a1905 + 2
-								arg0 = 7182093
-								arg15[arg2[5]] = slot26_a1492
-								local slot6_a1949 = 1
-								slot23_a1640 = arg0[slot1_a3260(-25336)][slot1_a3260(-25350)](slot31_a2271)
-
-								if slot11_a2992 >= 0 then
-									slot28_a1970 = false
-								else
-									slot28_a1970 = true
-								end
-
-								slot20_a1690[slot14_a1691] = slot1_a3260(-25319)
-								slot33_a1955 = slot6_a1949 - slot11_a2992
-								slot9_a1965 = slot23_a1640
-								slot10_a2545 = 91
-							else
-								slot33_a1955 = slot33_a1955 + slot11_a2992
-
-								if slot9_a1965 < slot33_a1955 then
-									local slot6_a1977 = false
-								else
-									slot6_a1977 = true
-								end
-
-								local slot4_a1963 = not slot28_a1970
-
-								if not slot4_a1963 then
-									slot6_a1977 = slot4_a1963
-								end
-
-								if slot9_a1965 > slot33_a1955 then
-									local slot4_a1973 = false
-								else
-									slot4_a1973 = true
-								end
-
-								if not slot28_a1970 then
-									slot4_a1973 = slot28_a1970
-								end
-
-								if slot4_a1973 then
-									slot6_a1977 = slot4_a1973
-								end
-
-								slot4_a1865 = 13456677
-
-								if not slot6_a1977 then
-									arg0 = slot6_a1977
-
-									if slot6_a1977 then
-										arg0 = slot4_a1865
-									end
-								end
-
-								local slot6_a1983 = 4759078
-
-								if not arg0 then
-									arg0 = slot6_a1983
-								end
-							end
-						elseif arg0 < 7591320 then
-							if arg0 < 7483557 then
-								slot22_a1991 = arg19(slot22_a1991)
-								slot36_a1815 = nil
-								slot7_a3026 = arg19(slot7_a3026)
-								slot12_a2002 = arg19(slot12_a2002)
-								arg0 = 16449444
-								slot19_a3014 = arg19(slot19_a3014)
-								slot32_a2581 = arg19(slot32_a2581)
-								slot5_a2594 = arg19(slot5_a2594)
-							else
-								local slot38_a2023 = arg11
-								local slot39_a2024 = 7666323
-								local slot40_a2025 = {
-									slot35_a2807
-								}
-								local slot38_a2029 = {
-									slot38_a2023(slot39_a2024, slot40_a2025)()
-								}
-								slot18_a3207 = slot38_a2029
-								local slot38_a2032 = {
-									arg1(slot18_a3207)
-								}
-								slot13_a2953 = slot38_a2032
-								arg0 = arg0[slot1_a3260(-25335)]
-							end
-						elseif arg0 < 7726928 then
-							arg0 = 14947238
-						else
-							slot13_a2953 = #arg15[arg2[1]]
-							slot31_a2271 = 0
-
-							if slot13_a2953 ~= slot31_a2271 then
-								local slot0_a2052 = false
-							else
-								slot0_a2052 = true
-							end
-
-							if slot0_a2052 then
-								arg0 = 6276858
-							else
-								arg0 = 14087390
-							end
-						end
-					elseif arg0 < 9238327 then
-						if arg0 < 8427741 then
-							if arg0 < 8172823 then
-								if arg0 < 8166942 then
-									local slot0_a2072 = arg0[slot1_a3260(-25341)]
-									slot9_a1965 = arg12(9535484, {})
-									local slot31_a2086 = arg15[arg2[4]]
-									local slot20_a2088 = arg0[slot1_a3260(-25326)]
-									local slot38_a2091 = {
-										arg0[slot1_a3260(-25354)](slot9_a1965)
-									}
-									slot23_a1640 = 2
-									local slot38_a2096 = {
-										arg1(slot38_a2091)
-									}
-									slot10_a2545 = slot38_a2096
-									slot26_a1492 = slot10_a2545[slot23_a1640]
-									slot35_a2807 = slot20_a2088(slot26_a1492)
-									slot20_a1690 = slot1_a3260(-25315)
-									local slot38_a2114 = {
-										slot31_a2086(slot35_a2807, slot20_a1690)()
-									}
-									slot31_a2271 = slot0_a2072(arg1(slot38_a2114))
-									slot14_a1691 = arg15[arg2[5]]
-
-									if slot14_a1691 then
-										arg0 = 9601505
-									else
-										arg0 = 4795333
-									end
-
-									slot13_a2953 = slot14_a1691
-								else
-									slot20_a1690 = 170
-									arg0 = 4244747
-									slot31_a2271 = arg15[arg2[3]] * slot20_a1690
-									slot14_a1691 = 257
-									slot13_a2953 = slot31_a2271 % slot14_a1691
-									arg15[arg2[3]] = slot13_a2953
-								end
-							elseif arg15[arg2[7]] then
-								arg0 = 14243980
-							else
-								arg0 = 1696584
-							end
-						elseif arg0 < 8952054 then
-							arg0 = 10987667
-						else
-							arg0 = 2200864
-							slot28_a1970 = arg0[slot1_a3260(-25343)]
-							slot4_a1865 = slot1_a3260(-25337)
-							slot11_a2992 = slot28_a1970[slot4_a1865]
-							slot9_a1965 = slot11_a2992
-						end
-					elseif arg0 < 9335212 then
-						if arg0 < 9300010 then
-							slot32_a2581 = slot1_a3260(-25325)
-							local slot0_a2176 = arg0[slot1_a3260(-25326)]
-							slot8_a3212 = arg0[slot32_a2581]
-							slot24_a3199 = slot0_a2176(slot8_a3212)
-							arg0[slot1_a3260(-25320)] = slot24_a3199
-							arg0 = 12464688
-						else
-							slot14_a1691 = arg20()
-							arg15[slot14_a1691] = true
-							slot31_a2271 = arg1
-							local slot13_a2205 = arg0[slot1_a3260(-25336)]
-							slot26_a1492 = arg20()
-							local slot38_a2213 = arg13
-							local slot39_a2214 = 10561329
-							local slot40_a2215 = {
-								slot26_a1492
-							}
-							slot20_a1690 = arg20()
-							arg15[slot20_a1690] = slot13_a2205[slot1_a3260(-25345)]
-							slot35_a2807 = arg20()
-							arg15[slot35_a2807] = arg16(3645300, {})
-							arg15[slot26_a1492] = false
-							slot10_a2545 = arg0[slot1_a3260(-25354)]
-							slot23_a1640 = slot10_a2545(slot38_a2213(slot39_a2214, slot40_a2215))
-							slot13_a2953 = slot23_a1640
-
-							if slot23_a1640 then
-								arg0 = 2391131
-							else
-								arg0 = 15099206
-							end
-						end
-					elseif arg0 < 9544565 then
-						slot14_a1691 = slot1_a3260(-25347)
-						slot20_a1690 = 8713017
-						slot31_a2271 = 870477 - slot14_a1691^slot20_a1690
-						local slot38_a2260 = {
-							slot1_a3260(-25342) / slot31_a2271
-						}
-						slot13_a2953 = slot38_a2260
-						arg0 = arg0[slot1_a3260(-25349)]
-					else
-						slot20_a1690 = arg15[arg2[6]]
-
-						if slot20_a1690 ~= slot31_a2271 then
-							slot14_a1691 = false
-						else
-							slot14_a1691 = true
-						end
-
-						arg0 = 4795333
-						slot13_a2953 = slot14_a1691
-					end
-				elseif arg0 < 13259539 then
-					if arg0 < 10933624 then
-						if arg0 < 10449991 then
-							if arg0 < 10304028 then
-								if arg0 < 10161874 then
-									if arg0 < 9983646 then
-										arg0 = 7144352
-										slot14_a1691 = arg15[arg2[2]]
-										slot20_a1690 = arg15[arg2[3]]
-
-										if slot14_a1691 ~= slot20_a1690 then
-											slot31_a2271 = false
-										else
-											slot31_a2271 = true
-										end
-
-										slot13_a2953 = slot31_a2271
-									else
-										arg0 = 10842583
-										slot33_a1955 = slot1_a3260(-25337)
-										slot9_a1965 = arg0[slot33_a1955]
-										slot13_a2953 = slot9_a1965
-									end
-								else
-									local slot0_a2309 = true
-									arg0 = 7529760
-								end
-							elseif arg0 < 10432278 then
-								local slot0_a2314 = slot21_a2313
-								slot13_a2953 = slot29_a3011
-								arg0 = 15771511
-							else
-								local slot0_a2327 = arg0[slot1_a3260(-25320)]
-								slot13_a2953 = arg0[slot1_a3260(-25325)]
-								arg0[slot1_a3260(-25325)] = slot0_a2327
-								arg0 = 14947238
-								arg0[slot1_a3260(-25320)] = slot13_a2953
-								slot31_a2271 = arg15[arg2[1]]
-								slot14_a1691 = slot31_a2271()
-							end
-						elseif arg0 < 10492383 then
-							if arg0 < 10482770 then
-								slot8_a3212 = 0
-								slot17_a2654 = #slot4_a1865
-
-								if slot17_a2654 ~= slot8_a3212 then
-									slot37_a1666 = false
-								else
-									slot37_a1666 = true
-								end
-
-								if slot37_a1666 then
-									arg0 = 16025169
-								else
-									arg0 = 14979669
-								end
-							else
-								slot35_a2807 = 1
-								slot26_a1492 = 2
-								slot20_a1690 = arg15[arg2[1]](slot35_a2807, slot26_a1492)
-								slot14_a1691 = 1
-
-								if slot20_a1690 ~= slot14_a1691 then
-									slot31_a2271 = false
-								else
-									slot31_a2271 = true
-								end
-
-								if slot31_a2271 then
-									arg0 = 7144352
-								else
-									arg0 = 9934138
-								end
-
-								slot13_a2953 = slot31_a2271
-							end
-						elseif arg0 < 10723709 then
-							slot13_a2953 = {}
-							arg15[arg2[1]] = true
-							arg0 = arg0[slot1_a3260(-25312)]
-						else
-							slot9_a1965 = arg20()
-							arg15[slot9_a1965] = slot13_a2953
-							local slot33_a2396 = 3
-							slot33_a1955 = arg20()
-							local slot0_a2409 = 0
-							arg15[slot33_a1955] = arg15[slot23_a1640](slot33_a2396, 65)
-							slot11_a2992 = slot0_a2409
-							slot28_a1970 = 0
-							local slot38_a2425 = {
-								arg0[slot1_a3260(-25354)](arg12(13251489, {}))
-							}
-							local slot38_a2433 = {
-								arg1(slot38_a2425)
-							}
-							slot4_a1865 = slot38_a2433
-							slot37_a1666 = slot4_a1865[2]
-							local slot0_a2446 = arg0[slot1_a3260(-25341)]
-							local slot38_a2465 = {
-								arg15[slot20_a1690](arg0[slot1_a3260(-25326)](slot37_a1666), slot1_a3260(-25315))()
-							}
-							slot17_a2654 = arg20()
-							arg15[slot17_a2654] = slot0_a2446(arg1(slot38_a2465))
-							slot13_a2953 = 1
-							arg0 = 16449444
-							slot18_a3207 = arg15[slot33_a1955]
-							slot24_a3199 = 1
-
-							if slot24_a3199 >= 0 then
-								slot8_a3212 = false
-							else
-								slot8_a3212 = true
-							end
-
-							slot25_a1557 = slot13_a2953 - slot24_a3199
-						end
-					elseif arg0 < 12662710 then
-						if arg0 < 11966494 then
-							if arg0 < 11412785 then
-								if arg0 < 11062282 then
-									local slot38_a2498 = {
-										slot14_a1691
-									}
-									slot13_a2953 = slot38_a2498
-									arg0 = arg0[slot1_a3260(-25332)]
-								else
-									slot31_a2271[arg15[arg2[10]]] = arg15[arg2[11]]
-									local slot38_a2517 = {
-										arg15[arg2[12]](slot31_a2271)
-									}
-									slot14_a1691 = slot38_a2517
-									arg0 = arg0[slot1_a3260(-25321)]
-									local slot38_a2526 = {
-										arg1(slot14_a1691)
-									}
-									slot13_a2953 = slot38_a2526
-								end
-							else
-								slot20_a1690 = slot20_a1690 + slot26_a1492
-
-								if slot35_a2807 < slot20_a1690 then
-									local slot14_a2552 = false
-								else
-									slot14_a2552 = true
-								end
-
-								local slot23_a2538 = not slot10_a2545
-
-								if not slot23_a2538 then
-									slot14_a2552 = slot23_a2538
-								end
-
-								if slot35_a2807 > slot20_a1690 then
-									local slot23_a2548 = false
-								else
-									slot23_a2548 = true
-								end
-
-								if not slot10_a2545 then
-									slot23_a2548 = slot10_a2545
-								end
-
-								if slot23_a2548 then
-									slot14_a2552 = slot23_a2548
-								end
-
-								slot23_a1640 = 6203094
-
-								if not slot14_a2552 then
-									arg0 = slot14_a2552
-
-									if slot14_a2552 then
-										arg0 = slot23_a1640
-									end
-								end
-
-								slot14_a1691 = 11155617
-
-								if not arg0 then
-									arg0 = slot14_a1691
-								end
-							end
-						elseif arg0 < 12608924 then
-							arg0 = 15675658
-						else
-							slot21_a2313 = slot36_a1815[1]
-							slot29_a3011 = slot21_a2313
-							arg0 = 15684597
-						end
-					elseif arg0 < 13006976 then
-						if arg0 < 12755785 then
-							slot17_a2654 = #slot4_a1865
-							slot8_a3212 = 0
-
-							if slot17_a2654 ~= slot8_a3212 then
-								slot37_a1666 = false
-							else
-								slot37_a1666 = true
-							end
-
-							arg0 = 14979669
-						else
-							local slot7_a2587 = not slot5_a2594
-							slot17_a2654 = slot17_a2654 + slot32_a2581
-
-							if slot8_a3212 < slot17_a2654 then
-								local slot37_a2601 = false
-							else
-								slot37_a2601 = true
-							end
-
-							if not slot7_a2587 then
-								slot37_a2601 = slot7_a2587
-							end
-
-							if slot8_a3212 > slot17_a2654 then
-								local slot7_a2597 = false
-							else
-								slot7_a2597 = true
-							end
-
-							if not slot5_a2594 then
-								slot7_a2597 = slot5_a2594
-							end
-
-							if slot7_a2597 then
-								slot37_a2601 = slot7_a2597
-							end
-
-							slot7_a3026 = 6309070
-
-							if not slot37_a2601 then
-								arg0 = slot37_a2601
-
-								if slot37_a2601 then
-									arg0 = slot7_a3026
-								end
-							end
-
-							slot37_a1666 = 12673200
-
-							if not arg0 then
-								arg0 = slot37_a1666
-							end
-						end
-					elseif arg0 < 13223599 then
-						local slot35_a2615 = arg19(slot35_a2807)
-						arg0 = 12971643
-						local slot4_a2617 = nil
-						local slot26_a2622 = arg19(slot26_a1492)
-						local slot37_a2623 = nil
-						local slot20_a2628 = arg19(slot20_a1690)
-						local slot14_a2633 = arg19(slot14_a1691)
-						slot20_a1690 = nil
-						slot14_a1691 = nil
-						local slot28_a2636 = nil
-						local slot10_a2637 = nil
-						local slot6_a2638 = nil
-						local slot33_a2643 = arg19(slot33_a1955)
-						local slot9_a2652 = arg19(slot9_a1965)
-						local slot17_a2657 = arg19(slot17_a2654)
-						slot4_a1865 = {}
-						slot33_a1955 = arg20()
-						local slot23_a2674 = arg19(slot23_a1640)
-						local slot11_a2677 = nil
-						slot28_a1970 = arg20()
-						slot26_a1492 = arg20()
-						arg15[slot26_a1492] = arg0[slot1_a3260(-25314)][slot1_a3260(-25344)]
-						slot35_a2807 = arg0[slot1_a3260(-25314)][slot1_a3260(-25317)]
-						slot10_a2545 = arg0[slot1_a3260(-25343)][slot1_a3260(-25348)]
-						slot37_a1666 = 1
-						local slot17_a2715 = 256
-						slot23_a1640 = arg0[slot1_a3260(-25336)][slot1_a3260(-25355)]
-						local slot11_a2717 = {}
-						slot9_a1965 = arg20()
-						arg15[slot9_a1965] = 0
-						arg15[slot33_a1955] = 2
-						local slot6_a2725 = {}
-						arg15[slot28_a1970] = slot11_a2717
-						slot11_a2992 = 0
-						slot8_a3212 = slot17_a2715
-						slot32_a2581 = 1
-
-						if slot32_a2581 >= 0 then
-							slot5_a2594 = false
-						else
-							slot5_a2594 = true
-						end
-
-						slot17_a2654 = slot37_a1666 - slot32_a2581
-					else
-						slot14_a1691 = slot1_a3260(-25333)
-						slot20_a1690 = 2132801
-						slot31_a2271 = 2566943 - slot14_a1691^slot20_a1690
-						local slot38_a2751 = {
-							slot1_a3260(-25328) / slot31_a2271
-						}
-						slot13_a2953 = slot38_a2751
-						arg0 = arg0[slot1_a3260(-25338)]
-					end
-				elseif arg0 < 14995531 then
-					if arg0 < 14478465 then
-						if arg0 < 14114360 then
-							if arg0 < 13988291 then
-								if arg0 < 13476271 then
-									arg0 = 7182093
-									slot4_a1865 = (arg0[slot1_a3260(-25336)][slot1_a3260(-25334)](slot31_a2271, slot33_a1955) + arg15[arg2[6]]() + slot10_a2545) % 256
-									slot17_a2654 = slot20_a1690[slot14_a1691]
-									slot24_a3199 = 1
-									local slot6_a2804 = nil
-									slot10_a2545 = slot4_a1865
-									slot18_a3207 = slot10_a2545 + slot24_a3199
-									slot25_a1557 = slot35_a2807[slot18_a3207]
-									slot37_a1666 = slot17_a2654 .. slot25_a1557
-									slot20_a1690[slot14_a1691] = slot37_a1666
-								else
-									slot8_a3212 = slot1_a3260(-25325)
-									arg0[slot8_a3212] = arg0[slot1_a3260(-25320)]
-									arg0 = 12464688
-								end
-							else
-								local slot14_a2829 = arg0[slot1_a3260(-25343)]
-								arg0 = arg0[slot1_a3260(-25313)]
-								slot31_a2271 = slot14_a2829[slot1_a3260(-25348)]
-								slot20_a1690 = arg15[arg2[1]]
-								local slot38_a2844 = {
-									slot31_a2271(slot20_a1690)
-								}
-								slot14_a1691 = slot38_a2844
-								local slot38_a2848 = {
-									arg1(slot14_a1691)
-								}
-								slot13_a2953 = slot38_a2848
-							end
-						elseif arg0 < 14245952 then
-							slot20_a1690 = 0
-							local slot0_a2860 = arg0[slot1_a3260(-25309)]
-							slot14_a1691 = arg15[arg2[8]]
-							slot31_a2271 = slot0_a2860(slot14_a1691, slot20_a1690)
-							arg0 = 1696584
-						else
-							arg15[slot14_a1691] = slot25_a1557
-
-							if arg15[slot14_a1691] then
-								arg0 = 3770148
-							else
-								arg0 = 10290346
-							end
-						end
-					elseif arg0 < 14806847 then
-						if arg0 < 14772564 then
-							local slot8_a2882 = 6
-							slot18_a3207 = arg15[slot23_a1640](1, slot8_a2882)
-							arg0[slot1_a3260(-25320)] = slot18_a3207
-							slot24_a3199 = arg0[slot1_a3260(-25320)]
-							slot8_a3212 = 2
-
-							if slot24_a3199 <= slot8_a3212 then
-								local slot0_a2906 = false
-							else
-								slot0_a2906 = true
-							end
-
-							if slot0_a2906 then
-								arg0 = 9284341
-							else
-								arg0 = 13583336
-							end
-						elseif true then
-							arg0 = 5123338
-						else
-							arg0 = 7529760
-						end
-					elseif arg0 < 14972524 then
-						if true then
-							arg0 = 10446159
-						else
-							arg0 = 2165646
-						end
-					else
-						local slot17_a2931 = slot10_a2545(slot4_a1865, slot35_a2807(1, #slot4_a1865))
-						slot7_a3026 = 1
-						slot8_a3212 = arg15[slot28_a1970]
-						slot5_a2594 = slot17_a2931 - slot7_a3026
-						slot32_a2581 = slot23_a1640(slot5_a2594)
-						slot37_a1666 = nil
-						arg0 = 10474615
-						slot8_a3212[slot17_a2931] = slot32_a2581
-						slot17_a2654 = nil
-					end
-				elseif arg0 < 15764010 then
-					if arg0 < 15650764 then
-						if arg0 < 15193458 then
-							if arg0 < 15100763 then
-								slot10_a2545 = slot13_a2953
-								slot23_a1640 = arg20()
-								arg15[slot23_a1640] = arg0[slot1_a3260(-25314)][slot1_a3260(-25317)]
-								slot28_a1970 = slot1_a3260(-25343)
-								slot13_a2953 = arg0[slot1_a3260(-25343)]
-								local slot0_a2984 = slot13_a2953[slot1_a3260(-25322)]
-								local slot6_a2985 = slot0_a2984
-								slot33_a1955 = slot0_a2984
-								slot11_a2992 = arg0[slot28_a1970]
-								slot9_a1965 = slot11_a2992
-
-								if slot11_a2992 then
-									arg0 = 8982749
-								else
-									arg0 = 2200864
-								end
-							else
-								if slot11_a2992 ~= slot28_a1970 then
-									slot18_a3207 = false
-								else
-									slot18_a3207 = true
-								end
-
-								slot25_a1557 = slot18_a3207
-								arg0 = 14344270
-							end
-						else
-							arg0 = arg0[slot1_a3260(-25311)]
-							slot13_a2953 = {}
-						end
-					elseif arg0 < 15684210 then
-						if true then
-							arg0 = 14745106
-						else
-							arg0 = 15374132
-						end
-					else
-						arg15[slot14_a1691] = slot29_a3011
-						slot11_a2992 = (slot11_a2992 + slot36_a1815[arg15[slot19_a3014] + 1]) % 256
-						slot21_a2313 = (slot28_a1970 + arg15[slot7_a3026]) % 256
-						arg0 = 7389450
-						slot28_a1970 = slot21_a2313
-					end
-				elseif arg0 < 16108098 then
-					if arg0 < 15818664 then
-						arg15[slot14_a1691] = slot13_a2953
-						arg0 = 7389450
-					else
-						local slot23_a3042 = nil
-						local slot37_a3043 = {}
-						slot7_a3026 = {}
-						local slot32_a3051 = arg20()
-						local slot17_a3054 = arg20()
-						local slot10_a3055 = nil
-						slot36_a1815 = slot1_a3260(-25351)
-						local slot38_a3064 = arg11
-						local slot39_a3065 = 7740239
-						local slot40_a3066 = {
-							slot17_a3054,
-							slot9_a1965,
-							slot33_a1955,
-							slot26_a1492
-						}
-						local slot30_a3072 = nil
-						slot13_a2953 = {}
-						arg15[slot17_a3054] = slot37_a3043
-						local slot6_a3075 = nil
-						local slot37_a3078 = arg20()
-						slot12_a2002 = slot1_a3260(-25340)
-						local slot11_a3083 = nil
-						arg15[slot37_a3078] = slot38_a3064(slot39_a3065, slot40_a3066)
-						local slot26_a3089 = arg19(slot26_a1492)
-						slot4_a1865 = nil
-						arg15[slot32_a3051] = {}
-						local slot35_a3096 = nil
-						local slot8_a3098 = arg0[slot1_a3260(-25316)]
-						slot22_a1991 = arg15[slot32_a3051]
-						local slot38_a3101 = {
-							[slot12_a2002] = slot22_a1991,
-							[slot36_a1815] = slot30_a3072
-						}
-						slot19_a3014 = slot38_a3101
-						slot5_a2594 = slot8_a3098(slot7_a3026, slot19_a3014)
-						local slot38_a3109 = arg9
-						local slot39_a3110 = 6998377
-						local slot40_a3111 = {
-							slot32_a3051,
-							slot17_a3054,
-							slot28_a1970,
-							slot9_a1965,
-							slot33_a1955,
-							slot37_a3078
-						}
-						slot8_a3212 = slot38_a3109(slot39_a3110, slot40_a3111)
-						slot11_a2992 = 408885985470.0
-						local slot35_a3117 = arg0[slot1_a3260(-25324)]
-						slot10_a2545 = arg0[slot1_a3260(-25331)]
-						slot17_a2654 = arg19(slot17_a3054)
-						local slot33_a3128 = arg19(slot33_a1955)
-						arg0 = arg0[slot1_a3260(-25353)]
-						slot32_a2581 = arg19(slot32_a3051)
-						slot33_a1955 = slot1_a3260(-25339)
-						local slot9_a3145 = arg19(slot9_a1965)
-						slot28_a1970 = arg19(slot28_a1970)
-						slot14_a1691 = nil
-						local slot6_a3157 = slot5_a2594[slot8_a3212(slot33_a1955, slot11_a2992)]
-						slot37_a1666 = arg19(slot37_a3078)
-						slot9_a1965 = slot10_a2545[slot1_a3260(-25327)]
-						local slot38_a3167 = {
-							slot9_a1965(slot10_a2545, slot6_a3157)
-						}
-						slot23_a1640 = slot38_a3167
-						slot20_a1690 = nil
-						slot26_a1492 = slot35_a3117(arg1(slot23_a1640))
-						slot35_a2807 = slot26_a1492()
-					end
-				elseif arg0 < 16207283 then
-					slot21_a2313 = arg0
-
-					if slot36_a1815[1] ~= false then
-						local slot30_a3194 = false
-					else
-						slot30_a3194 = true
-					end
-
-					if slot30_a3194 then
-						arg0 = 6083092
-					else
-						arg0 = 10334249
-					end
-
-					slot29_a3011 = slot30_a3194
-				else
-					local slot32_a3205 = not slot8_a3212
-					slot25_a1557 = slot25_a1557 + slot24_a3199
-
-					if slot18_a3207 < slot25_a1557 then
-						local slot13_a3219 = false
-					else
-						slot13_a3219 = true
-					end
-
-					if not slot32_a3205 then
-						slot13_a3219 = slot32_a3205
-					end
-
-					if slot18_a3207 > slot25_a1557 then
-						local slot32_a3215 = false
-					else
-						slot32_a3215 = true
-					end
-
-					if not slot8_a3212 then
-						slot32_a3215 = slot8_a3212
-					end
-
-					slot32_a2581 = 4804802
-					arg0 = slot13_a3219 and slot32_a2581
-					slot13_a2953 = 5758162
-					arg0 = arg0 or slot13_a2953
-				end
-			end
-
-			local slot0_a3228 = #arg3
-
-			return arg1(slot13_a2953)
-		end
-
-		local slot8_a3234 = 0
-		local slot15_a3235 = {}
-		local slot10_a3236 = {}
-
-		local function slot11_a3237(arg0, arg1)
-			local slot2_a1369 = arg17(arg1)
-
-			return (function ()
-				return arg7(arg0, {}, arg1, slot2_a1369)
-			end)
-		end
-
-		local function slot13_a3238(arg0, arg1)
-			local slot2_a1346 = arg17(arg1)
-
-			return (function (arg0, arg1, arg2, arg3, arg4)
-				local slot5_a1353 = arg7
-				local slot6_a1355 = arg0
-				local slot7_a1356 = {
-					arg0,
-					arg1,
-					arg2,
-					arg3,
-					arg4
-				}
-
-				return slot5_a1353(slot6_a1355, slot7_a1356, arg1, slot2_a1346)
-			end)
-		end
-
-		local function slot12_a3239(arg0, arg1)
-			local slot2_a1324 = arg17(arg1)
-
-			return (function (arg0, arg1, arg2, arg3)
-				local slot4_a1330 = arg7
-				local slot5_a1332 = arg0
-				local slot6_a1333 = {
-					arg0,
-					arg1,
-					arg2,
-					arg3
-				}
-
-				return slot4_a1330(slot5_a1332, slot6_a1333, arg1, slot2_a1324)
-			end)
-		end
-
-		local function slot19_a3240(arg0)
-			arg10[arg0] = arg10[arg0] - 1
-
-			if arg10[arg0] == 0 then
-				local slot1_a1312 = arg10
-				local slot3_a1315 = nil
-				arg15[arg0] = nil
-				slot1_a1312[arg0] = slot3_a1315
-			end
-		end
-
-		local function slot14_a3241(arg0)
-			local slot1_a1290 = 1
-			local slot2_a1299 = arg0[1]
-
-			while slot2_a1299 do
-				local slot3_a1285 = arg10
-				local slot4_a1289 = arg10[slot2_a1299] - 1
-				slot1_a1290 = slot1_a1290 + 1
-				slot3_a1285[slot2_a1299] = slot4_a1289
-
-				if arg10[slot2_a1299] == 0 then
-					local slot3_a1294 = arg10
-					local slot5_a1297 = nil
-					arg15[slot2_a1299] = nil
-					slot3_a1294[slot2_a1299] = slot5_a1297
-				end
-
-				slot2_a1299 = arg0[slot1_a1290]
-			end
-		end
-
-		local function slot9_a3242(arg0, arg1)
-			local slot2_a1265 = arg17(arg1)
-
-			return (function (arg0, arg1)
-				local slot2_a1269 = arg7
-				local slot3_a1271 = arg0
-				local slot4_a1272 = {
-					arg0,
-					arg1
-				}
-
-				return slot2_a1269(slot3_a1271, slot4_a1272, arg1, slot2_a1265)
-			end)
-		end
-
-		local function slot17_a3243(arg0)
-			for slot4_a1210 = 1, #arg0 do
-				arg10[arg0[slot4_a1210]] = arg10[arg0[slot4_a1210]] + 1
-			end
-
-			if arg2 then
-				local slot1_a1220 = arg2(true)
-				local slot2_a1224 = arg4(slot1_a1220)
-				local slot3_a1228 = slot1_a3260(-25340)
-				local slot4_a1231 = slot1_a3260(-25318)
-				local slot7_a1238 = arg14
-
-				slot2_a1224[slot1_a3260(-25330)] = (function ()
-					return -1778782
-				end)
-
-				slot2_a1224[slot4_a1231] = slot7_a1238
-				slot2_a1224[slot3_a1228] = arg0
-
-				return slot1_a1220
-			else
-				local slot1_a1242 = arg3
-				local slot2_a1243 = {}
-				local slot3_a1244 = {
-					[slot1_a3260(-25318)] = arg14,
-					[slot1_a3260(-25340)] = arg0,
-					[slot1_a3260(-25330)] = (function ()
-						return -1778782
-					end)
-				}
-
-				return slot1_a1242(slot2_a1243, slot3_a1244)
-			end
-		end
-
-		local function slot20_a3244()
-			arg8 = 1 + arg8
-			arg10[arg8] = 1
-
-			return arg8
-		end
-
-		local function slot16_a3245(arg0, arg1)
-			local slot2_a1177 = arg17(arg1)
-
-			return (function (arg0, arg1, arg2)
-				local slot3_a1182 = arg7
-				local slot4_a1184 = arg0
-				local slot5_a1185 = {
-					arg0,
-					arg1,
-					arg2
-				}
-
-				return slot3_a1182(slot4_a1184, slot5_a1185, arg1, slot2_a1177)
-			end)
-		end
-
-		return (function (arg0, arg1)
-			local slot2_a1390 = arg17(arg1)
-
-			return (function (...)
-				local slot0_a1392 = arg7
-				local slot1_a1394 = arg0
-				local slot2_a1395 = {
-					...
-				}
-
-				return slot0_a1392(slot1_a1394, slot2_a1395, arg1, slot2_a1390)
-			end)
-		end)(9316881, {})(arg1(arg6))
-	end
-
-	local slot3_a3271 = getfenv and getfenv() or _ENV
-	local slot4_a3273 = unpack or table[slot1_a3260(-25337)]
-	local slot5_a3265 = newproxy
-	local slot6_a3266 = setmetatable
-	local slot7_a3267 = getmetatable
-	local slot8_a3268 = select
-	local slot9_a3269 = {
-		...
-	}
-
-	return slot2_a3270(slot3_a3271, slot4_a3273, slot5_a3265, slot6_a3266, slot7_a3267, slot8_a3268, slot9_a3269)
-end)(...)
+--[[ v1.0.0 https://wearedevs.net/obfuscator ]]
+print(
+    local k = {
+        "\085\107\084\053\067\076\051\090\108\103\112\049\109\068\050\077\116\067\088\061",
+        "\110\067\099\101\085\067\112\077",
+        "\089\103\109\053\065\067\099\081",
+        "\089\051\113\066\043\100\113\083\116\074\104\084\075\078\082\103\067\084\061\061",
+        "\085\081\051\107\113\084\061\061",
+        "\109\105\110\109\076\120\112\118\089\079\061\061",
+        "\067\074\076\067\116\120\050\054\112\107\051\121\113\051\116\105",
+        "\113\120\118\050\113\084\061\061",
+        "\090\078\086\055\113\067\066\061",
+        "\089\068\076\052\075\100\050\078\109\103\076\047\049\067\118\101\075\101\061\061",
+        "\065\118\069\083\108\118\051\043",
+        "\102\115\109\107\089\100\110\051\110\079\061\061",
+        "\110\052\086\105\110\115\104\083\108\068\089\061",
+        "\108\074\100\061",
+        "\108\052\086\082\113\115\112\107\089\068\051\071\113\101\061\061",
+        "\113\103\112\078\085\117\061\061",
+        "\085\120\086\071\085\120\118\107",
+        "\109\103\118\087\065\118\118\098\067\081\118\105\067\100\050\082\116\090\075\061",
+        "\108\074\121\061",
+        "",
+        "\090\078\086\081\085\101\061\061",
+        "\089\068\118\071\113\052\086\050",
+        "\089\120\076\107\108\067\076\107\085\090\109\082\085\068\114\051",
+        "\043\056\117\051\113\098\088\083\043\117\061\061",
+        "\108\067\118\107\065\079\061\061",
+        "\065\105\069\068\049\090\113\100\089\107\112\043\089\107\082\099\113\117\061\061",
+        "\089\118\109\078\102\119\121\099\102\116\086\103\076\116\113\055\097\049\121\061",
+        "\108\067\112\050\089\105\079\107\065\120\076\122\097\051\110\050\110\084\061\061",
+        "\076\052\118\050\089\052\076\053\121\100\109\051\110\052\076\122\110\052\076\119\121\084\061\061",
+        "\113\090\104\053\108\103\121\061",
+        "\085\120\082\082\089\117\061\061",
+        "\089\052\112\082\108\052\101\061",
+        "\067\067\082\121\097\051\118\066\108\116\113\122\049\067\114\074\085\107\101\061",
+        "\075\122\109\100\109\100\118\098\113\076\113\115\076\115\051\051\076\101\061\061",
+        "\090\078\086\050\113\090\109\082\110\052\118\056\108\052\116\061",
+        "\108\052\076\071",
+        "\110\107\055\101\102\118\109\048\089\067\051\104\076\116\085\099\109\101\061\061",
+        "\089\068\076\050\108\103\113\051",
+        "\109\078\104\121\108\119\118\105\089\119\076\051\116\076\104\067\116\074\104\109",
+        "\043\117\061\061",
+        "\113\120\078\082\110\052\112\088",
+        "\113\068\114\070\108\103\121\061",
+        "\110\052\118\056\108\052\116\061",
+        "\075\105\104\074\113\049\069\099",
+        "\110\052\086\071\110\067\078\056\113\090\121\061",
+        "\090\078\086\083\108\068\109\051\097\079\061\061",
+        "\110\081\110\073\101\119\047\078\074\089\120\104\118\098\100\122\101\088\047\079\113\053\105\104\070\076\121\117\067\075\043\118\101\048\085\050\052\103\105\043\071\070\115\055\071\118\090\103\106\105\085\056\086\100\072\087\085\086\120\109\088\048\074\051\117\053\072\079\071\090\119\119\075\073\103\110\080\082\056\111\053\112\054\052\052\076\090\120\112\097\081\067\057\108\119\103\084\097\111\047\104\068\069\113\070\043\081\068\069\069\080\116\068\117\100\089\048\080\067\111\103\054\080\107\086\097\102\043\056\103\116\111\099\102\065\057\100\056\072\106\068\111\053\118\050\049\080\070\084\119\074\047"
+    }
+    local function l(l)
+        return k[l + (-958815 + 984171)]
+    end
+    for l, V in ipairs(
+        {
+            {-177049 + 177050, 160959 - 160912},
+            {-430223 - (-430224), -388221 - (-388238)},
+            {669095 + -669077, 454900 - 454853}
+        }
+    ) do
+        while V[258539 - 258538] < V[674195 - 674193] do
+            k[V[958714 - 958713]], k[V[-76252 - (-76254)]], V[456201 - 456200], V[253852 + -253850] =
+                k[V[-314502 + 314504]],
+                k[V[-390865 - (-390866)]],
+                V[742683 + -742682] + (979218 - 979217),
+                V[287292 + -287290] - (-139044 + 139045)
+        end
+    end
+    do
+        local l = string.len
+        local V = string.char
+        local h = table.concat
+        local b = math.floor
+        local f = k
+        local v = string.sub
+        local O = table.insert
+        local x = type
+        local w = {
+            g = 428005 - 427950,
+            Q = 665781 + -665742,
+            O = 331253 - 331253,
+            y = 451186 + -451178,
+            T = 929807 - 929791,
+            Z = 491284 - 491261,
+            z = -594346 - (-594381),
+            p = -243016 - (-243029),
+            ["\053"] = -868565 - (-868615),
+            K = -841912 + 841924,
+            h = -409327 - (-409336),
+            ["\051"] = 48881 + -48844,
+            U = -992721 + 992745,
+            J = 863938 + -863935,
+            R = -481783 + 481816,
+            n = 66782 - 66753,
+            d = -562867 - (-562871),
+            B = -421816 - (-421872),
+            ["\055"] = -117306 - (-117350),
+            ["\057"] = 113957 - 113897,
+            I = -683530 - (-683545),
+            N = -230599 + 230652,
+            C = 759202 + -759180,
+            S = -891685 + 891726,
+            c = 599032 + -598975,
+            ["\050"] = 711774 + -711729,
+            Y = -695310 - (-695338),
+            f = 550880 - 550862,
+            v = -344392 + 344397,
+            q = 867482 + -867457,
+            k = -1047258 + 1047310,
+            t = 281268 + -281248,
+            A = -144950 - (-144976),
+            X = 473714 + -473674,
+            E = -751502 + 751503,
+            ["\054"] = -4897 + 4939,
+            o = 27471 + -27409,
+            F = 743850 - 743803,
+            ["\049"] = -876754 - (-876773),
+            i = 234288 - 234237,
+            a = 882748 + -882718,
+            e = 409123 - 409075,
+            G = -185514 - (-185560),
+            x = -127815 - (-127869),
+            M = -328977 - (-329020),
+            W = -818934 + 818992,
+            m = -1027835 + 1027852,
+            ["\052"] = -332485 - (-332491),
+            l = 2744 - 2717,
+            ["\043"] = -11028 + 11042,
+            s = -573099 - (-573106),
+            r = -461111 - (-461160),
+            ["\056"] = 333033 + -332999,
+            ["\047"] = -543412 + 543423,
+            H = 796240 + -796209,
+            V = -609613 + 609674,
+            j = 591233 - 591174,
+            P = -550762 + 550825,
+            w = 321120 - 321084,
+            u = 141874 - 141842,
+            b = -729148 + 729150,
+            ["\048"] = -283911 - (-283921),
+            D = -893716 + 893754,
+            L = 552316 + -552295
+        }
+        for k = -208713 + 208714, #f, 411867 - 411866 do
+            local R = f[k]
+            if x(R) == "\115\116\114\105\110\103" then
+                local x = l(R)
+                local N = {}
+                local t = 484356 + -484355
+                local q = -733714 + 733714
+                local o = -295253 + 295253
+                while t <= x do
+                    local k = v(R, t, t)
+                    local l = w[k]
+                    if l then
+                        q = q + l * (95334 - 95270) ^ ((-381829 + 381832) - o)
+                        o = o + (-288385 - (-288386))
+                        if o == -878577 - (-878581) then
+                            o = 991932 + -991932
+                            local k = b(q / (-397122 - (-462658)))
+                            local l = b((q % (157975 - 92439)) / (409994 - 409738))
+                            local h = q % (-1008873 - (-1009129))
+                            O(N, V(k, l, h))
+                            q = 958708 + -958708
+                        end
+                    elseif k == "\061" then
+                        O(N, V(b(q / (409262 - 343726))))
+                        if t >= x or v(R, t + (355554 + -355553), t + (723268 - 723267)) ~= "\061" then
+                            O(N, V(b((q % (-905797 + 971333)) / (290469 - 290213))))
+                        end
+                        break
+                    end
+                    t = t + (-261962 + 261963)
+                end
+                f[k] = h(N)
+            end
+        end
+    end
+    return (function(k, h, b, f, v, O, x, V, t, e, R, B, j, X, o, w, p, q, I, D, N)
+        p, N, q, e, o, D, j, X, B, R, w, t, I, V =
+            function(k, l)
+                local h = q(l)
+                local b = function(b, f, v)
+                    return V(k, {b, f, v}, l, h)
+                end
+                return b
+            end,
+            function()
+                t = (-110921 + 110922) + t
+                R[t] = -3390 - (-3391)
+                return t
+            end,
+            function(k)
+                for l = 783130 + -783129, #k, 529707 - 529706 do
+                    R[k[l]] = R[k[l]] + (739837 - 739836)
+                end
+                if b then
+                    local V = b(true)
+                    local h = v(V)
+                    h[l(762189 - 787529)], h[l(776963 - 802281)], h[l(-209168 - (-183838))] = k, o, function()
+                            return -1710383 - 68399
+                        end
+                    return V
+                else
+                    return f(
+                        {},
+                        {[l(-314223 - (-288905))] = o, [l(17348 - 42688)] = k, [l(-688350 - (-663020))] = function()
+                                return -2339691 - (-560909)
+                            end}
+                    )
+                end
+            end,
+            function(k, l)
+                local h = q(l)
+                local b = function(b, f)
+                    return V(k, {b, f}, l, h)
+                end
+                return b
+            end,
+            function(k)
+                local l, V = -453717 - (-453718), k[-109549 + 109550]
+                while V do
+                    R[V], l = R[V] - (-614907 - (-614908)), l + (-990749 + 990750)
+                    if 808142 - 808142 == R[V] then
+                        R[V], w[V] = nil, nil
+                    end
+                    V = k[l]
+                end
+            end,
+            function(k)
+                R[k] = R[k] - (-488134 + 488135)
+                if R[k] == -351086 + 351086 then
+                    R[k], w[k] = nil, nil
+                end
+            end,
+            function(k, l)
+                local h = q(l)
+                local b = function(b, f, v, O)
+                    return V(k, {b, f, v, O}, l, h)
+                end
+                return b
+            end,
+            function(k, l)
+                local h = q(l)
+                local b = function(b, f, v, O, x)
+                    return V(k, {b, f, v, O, x}, l, h)
+                end
+                return b
+            end,
+            function(k, l)
+                local h = q(l)
+                local b = function()
+                    return V(k, {}, l, h)
+                end
+                return b
+            end,
+            {},
+            {},
+            -232520 + 232520,
+            function(k, l)
+                local h = q(l)
+                local b = function(...)
+                    return V(k, {...}, l, h)
+                end
+                return b
+            end,
+            function(V, b, f, v)
+                local C,
+                    r,
+                    F,
+                    S,
+                    K,
+                    A,
+                    G,
+                    L,
+                    U,
+                    x,
+                    t,
+                    u,
+                    W,
+                    i,
+                    s,
+                    J,
+                    q,
+                    Y,
+                    Q,
+                    n,
+                    Z,
+                    E,
+                    I,
+                    c,
+                    m,
+                    g,
+                    P,
+                    R,
+                    a,
+                    z,
+                    H,
+                    o,
+                    d,
+                    M
+                while V do
+                    if V < 10728503 - 823440 then
+                        if V < -885038 + 7274397 then
+                            if V < -957019 + 5756187 then
+                                if V < 853340 + 2882040 then
+                                    if V < 1922123 - (-353722) then
+                                        if V < 2131449 - (-67844) then
+                                            if V < 2087067 - 322011 then
+                                                t = -253775 - (-253776)
+                                                q = w[f[434402 + -434393]]
+                                                V = {}
+                                                R = V
+                                                o = q
+                                                V = 724146 + 11213835
+                                                q = -250425 + 250426
+                                                I = q
+                                                q = -203448 + 203448
+                                                G = I < q
+                                                q = t - I
+                                            else
+                                                x = {}
+                                                V = k[l(-375354 + 350002)]
+                                            end
+                                        else
+                                            x = A
+                                            V = z
+                                            V = A and 11754118 - 911535 or 10881734 - 866984
+                                        end
+                                    else
+                                        if V < 3242768 - (-398915) then
+                                            V = 812489 + 14286717
+                                            G = w[I]
+                                            x = G
+                                        else
+                                            x = l(-610459 + 585150)
+                                            V = k[x]
+                                            R = l(-898595 - (-873285))
+                                            x = V(R)
+                                            x = {}
+                                            V = k[l(42497 - 67826)]
+                                        end
+                                    end
+                                else
+                                    if V < 3817163 - (-567692) then
+                                        if V < -49504 + 4249800 then
+                                            V = 13273893 - 122533
+                                        else
+                                            q = 974771 + -974770
+                                            t = w[f[-259574 - (-259577)]]
+                                            R = t ~= q
+                                            V = R and 5639994 - (-178560) or -873306 + 9040439
+                                        end
+                                    else
+                                        if V < 4756192 - (-20270) then
+                                            V = 10730821 - (-256846)
+                                            G = nil
+                                            n = nil
+                                            o = nil
+                                        else
+                                            V = 7620315 - (-555198)
+                                            w[f[453307 + -453302]] = x
+                                            R = nil
+                                        end
+                                    end
+                                end
+                            else
+                                if V < 25449 + 5942389 then
+                                    if V < 6218393 - 746739 then
+                                        if V < 6186243 - 1007910 then
+                                            if V < 4438688 - (-589531) then
+                                                a = N()
+                                                S = -144245 + 144345
+                                                J = -713189 + 713444
+                                                w[a] = E
+                                                r = l(876177 - 901491)
+                                                x = k[r]
+                                                r = l(-98180 - (-72863))
+                                                V = x[r]
+                                                r = 724813 - 724812
+                                                x = V(r, S)
+                                                r = N()
+                                                w[r] = x
+                                                S = 15099 - 15099
+                                                V = w[n]
+                                                Q = 286305 + -286304
+                                                H = 50603 - 40603
+                                                d = 136480 + -136478
+                                                x = V(S, J)
+                                                S = N()
+                                                w[S] = x
+                                                V = w[n]
+                                                U = w[r]
+                                                u = 904870 + -904870
+                                                J = -288453 - (-288454)
+                                                x = V(J, U)
+                                                J = N()
+                                                w[J] = x
+                                                x = w[n]
+                                                U = x(Q, d)
+                                                x = -830080 - (-830081)
+                                                V = U == x
+                                                d = l(-751967 + 726621)
+                                                P = l(-521390 - (-496064))
+                                                U = N()
+                                                w[U] = V
+                                                Y = k[P]
+                                                x = l(-692056 + 666741)
+                                                W = w[n]
+                                                c = {W(u, H)}
+                                                P = Y(h(c))
+                                                V = l(855276 - 880599)
+                                                Y = l(277561 - 302907)
+                                                g = P .. Y
+                                                V = M[V]
+                                                Q = d .. g
+                                                V = V(M, x, Q)
+                                                d = l(66812 + -92166)
+                                                Q = N()
+                                                g = X(11174764 - 684935, {n, a, z, q, t, i, U, Q, r, J, S, A})
+                                                w[Q] = V
+                                                x = k[d]
+                                                d = {x(g)}
+                                                V = {h(d)}
+                                                d = V
+                                                V = w[U]
+                                                V = V and 6129620 - (-392625) or 4579142 - (-603853)
+                                            else
+                                                V = -242967 + 15918625
+                                            end
+                                        else
+                                            Y = w[t]
+                                            g = Y
+                                            V = Y and 846716 + 11800969 or -809126 + 16493723
+                                        end
+                                    else
+                                        if V < 10046 + 5781522 then
+                                            s = w[t]
+                                            E = s
+                                            V = s and 11475 + 15118107 or -460039 + 14804309
+                                        else
+                                            q = -145024 + 145056
+                                            L = -1003786 + 1003799
+                                            t = w[f[-201004 - (-201007)]]
+                                            R = t % q
+                                            o = w[f[687361 - 687357]]
+                                            A = -720405 - (-720407)
+                                            n = w[f[318641 - 318639]]
+                                            M = w[f[-324461 - (-324464)]]
+                                            C = M - R
+                                            M = 934581 + -934549
+                                            m = C / M
+                                            z = L - m
+                                            F = A ^ z
+                                            G = n / F
+                                            I = o(G)
+                                            o = -690971 + 4295658267
+                                            q = I % o
+                                            I = 63266 + -63264
+                                            o = I ^ R
+                                            t = q / o
+                                            o = w[f[-782499 + 782503]]
+                                            L = -301679 - (-301935)
+                                            F = -459600 - (-459601)
+                                            n = t % F
+                                            F = -58130 + 4295025426
+                                            G = n * F
+                                            I = o(G)
+                                            A = 108657 - 108401
+                                            o = w[f[-767543 + 767547]]
+                                            G = o(t)
+                                            q = I + G
+                                            n = 285947 - 220411
+                                            I = -462099 - (-527635)
+                                            o = q % I
+                                            G = q - o
+                                            V = 13454223 - (-633167)
+                                            I = G / n
+                                            R = nil
+                                            n = -982149 - (-982405)
+                                            G = o % n
+                                            F = o - G
+                                            q = nil
+                                            n = F / A
+                                            A = -995557 + 995813
+                                            t = nil
+                                            F = I % A
+                                            o = nil
+                                            z = I - F
+                                            A = z / L
+                                            z = {G, n, F, A}
+                                            w[f[931022 + -931021]] = z
+                                            F = nil
+                                            A = nil
+                                            I = nil
+                                            G = nil
+                                            n = nil
+                                        end
+                                    end
+                                else
+                                    if V < 5753607 - (-487708) then
+                                        if V < 298801 + 5874457 then
+                                            c = 968127 + -968125
+                                            W = d[c]
+                                            c = w[Q]
+                                            P = W == c
+                                            V = -423971 + 10758220
+                                            g = P
+                                        else
+                                            A = 834758 + -834503
+                                            V = w[f[1031865 + -1031864]]
+                                            t = q
+                                            F = 207766 + -207766
+                                            n = V(F, A)
+                                            R[t] = n
+                                            t = nil
+                                            V = -736640 + 12674621
+                                        end
+                                    else
+                                        if V < 7042406 - 737993 then
+                                            q = -560346 - (-560515)
+                                            t = w[f[-763238 - (-763240)]]
+                                            R = t * q
+                                            t = 30505367215088 - 779381
+                                            x = R + t
+                                            R = 35184371607382 - (-481450)
+                                            V = x % R
+                                            w[f[188559 + -188557]] = V
+                                            R = w[f[485126 - 485123]]
+                                            t = -697055 + 697056
+                                            x = R ~= t
+                                            V = -452481 + 8619614
+                                        else
+                                            M = i
+                                            S = M
+                                            C[M] = S
+                                            M = nil
+                                            V = 116792 + 12854851
+                                        end
+                                    end
+                                end
+                            end
+                        else
+                            if V < -339242 + 8392258 then
+                                if V < 555027 + 6807030 then
+                                    if V < -1032708 + 8179769 then
+                                        if V < 688186 + 6446425 then
+                                            if V < -928637 + 7896586 then
+                                                g = w[t]
+                                                V = g and -885747 + 17004231 or 506568 + 15264943
+                                                x = g
+                                            else
+                                                t = b[614213 + -614211]
+                                                V = w[f[978934 + -978933]]
+                                                R = b[-168732 + 168733]
+                                                q = V
+                                                V = q[t]
+                                                V = V and 420181 + 8442913 or 113323 + 7034283
+                                            end
+                                        else
+                                            V = x and 8015125 - (-151209) or 7225924 - (-949589)
+                                        end
+                                    else
+                                        if V < 477216 + 6672393 then
+                                            V = {}
+                                            w[f[-226983 + 226985]] = V
+                                            n = -377743 - (-377998)
+                                            I = 35184371059686 - (-1029146)
+                                            x = w[f[-474371 - (-474374)]]
+                                            o = x
+                                            x = t % I
+                                            z = -216505 - (-216506)
+                                            w[f[-499339 - (-499343)]] = x
+                                            G = t % n
+                                            L = z
+                                            n = -638232 - (-638234)
+                                            I = G + n
+                                            V = -283180 + 7465273
+                                            w[f[751987 - 751982]] = I
+                                            F = l(-158989 - (-133653))
+                                            z = 673631 - 673631
+                                            n = k[F]
+                                            F = l(-961743 - (-936393))
+                                            G = n[F]
+                                            F = 606444 - 606443
+                                            n = G(R)
+                                            m = L < z
+                                            G = l(-509325 + 484006)
+                                            q[t] = G
+                                            z = F - L
+                                            A = n
+                                            G = 869998 + -869907
+                                        else
+                                            z = z + L
+                                            F = z <= A
+                                            C = not m
+                                            F = C and F
+                                            C = z >= A
+                                            C = m and C
+                                            F = C or F
+                                            C = -595513 + 14052190
+                                            V = F and C
+                                            F = -509103 + 5268181
+                                            V = V or F
+                                        end
+                                    end
+                                else
+                                    if V < 722806 + 6868514 then
+                                        if V < 291795 + 7191762 then
+                                            Q = D(Q)
+                                            d = nil
+                                            S = D(S)
+                                            U = D(U)
+                                            V = -354017 + 16803461
+                                            J = D(J)
+                                            a = D(a)
+                                            r = D(r)
+                                        else
+                                            V = B(361907 + 7304416, {o})
+                                            s = {V()}
+                                            x = {h(s)}
+                                            V = k[l(-429243 + 403908)]
+                                        end
+                                    else
+                                        if V < 688548 + 7038380 then
+                                            V = 318134 + 14629104
+                                        else
+                                            R = w[f[662249 + -662248]]
+                                            x = #R
+                                            R = -173974 + 173974
+                                            V = x == R
+                                            V = V and 699238 + 5577620 or 209751 + 13877639
+                                        end
+                                    end
+                                end
+                            else
+                                if V < 8793690 - (-444637) then
+                                    if V < 300804 + 8126937 then
+                                        if V < 403702 + 7769121 then
+                                            if V < -767704 + 8934646 then
+                                                x = l(390048 - 415389)
+                                                F = l(-734355 + 709001)
+                                                V = k[x]
+                                                A = j(-940679 + 10476163, {})
+                                                o = l(-577830 - (-552504))
+                                                R = w[f[-817632 - (-817636)]]
+                                                q = k[o]
+                                                n = k[F]
+                                                F = {n(A)}
+                                                n = 90621 - 90619
+                                                G = {h(F)}
+                                                I = G[n]
+                                                o = q(I)
+                                                q = l(-760934 - (-735619))
+                                                t = R(o, q)
+                                                R = {t()}
+                                                x = V(h(R))
+                                                R = x
+                                                t = w[f[640592 + -640587]]
+                                                V = t and -63062 + 9664567 or -714066 + 5509399
+                                                x = t
+                                            else
+                                                q = -349278 - (-349448)
+                                                V = 5092696 - 847949
+                                                t = w[f[287098 + -287095]]
+                                                R = t * q
+                                                t = -95138 + 95395
+                                                x = R % t
+                                                w[f[242601 + -242598]] = x
+                                            end
+                                        else
+                                            V = w[f[-673856 - (-673863)]]
+                                            V = V and 695571 + 13548409 or 215925 + 1480659
+                                        end
+                                    else
+                                        if V < 9775758 - 823704 then
+                                            V = 570552 + 10417115
+                                        else
+                                            V = 1383112 - (-817752)
+                                            C = l(-327323 + 301980)
+                                            m = k[C]
+                                            C = l(-445396 - (-420059))
+                                            L = m[C]
+                                            A = L
+                                        end
+                                    end
+                                else
+                                    if V < -29178 + 9364390 then
+                                        if V < -123732 + 9423742 then
+                                            a = l(-376761 - (-351436))
+                                            Z = l(652350 - 677676)
+                                            V = k[Z]
+                                            K = k[a]
+                                            Z = V(K)
+                                            V = l(351668 + -376988)
+                                            k[V] = Z
+                                            V = -168674 + 12633362
+                                        else
+                                            t = N()
+                                            V = true
+                                            q = l(-248449 - (-223113))
+                                            n = l(-413482 - (-388128))
+                                            w[t] = V
+                                            R = b
+                                            x = k[q]
+                                            q = l(-1023534 + 998189)
+                                            I = N()
+                                            F = X(10789383 - 228054, {I})
+                                            V = x[q]
+                                            q = N()
+                                            w[q] = V
+                                            o = N()
+                                            V = p(3810590 - 165290, {})
+                                            w[o] = V
+                                            V = false
+                                            w[I] = V
+                                            G = k[n]
+                                            n = G(F)
+                                            x = n
+                                            V = n and 1518280 - (-872851) or 117041 + 14982165
+                                        end
+                                    else
+                                        if V < 315224 + 9229341 then
+                                            t = l(-222315 - (-196968))
+                                            q = 205543 + 8507474
+                                            x = -428555 + 1299032
+                                            R = t ^ q
+                                            V = x - R
+                                            R = V
+                                            x = l(913658 - 939000)
+                                            V = x / R
+                                            x = {V}
+                                            V = k[l(862398 - 887747)]
+                                        else
+                                            q = w[f[182461 - 182455]]
+                                            t = q == R
+                                            V = 5714569 - 919236
+                                            x = t
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    else
+                        if V < 13656326 - 396787 then
+                            if V < -468092 + 11401716 then
+                                if V < -1046196 + 11496187 then
+                                    if V < 10132236 - (-171792) then
+                                        if V < -214847 + 10376721 then
+                                            if V < 10533128 - 549482 then
+                                                V = 6421968 - (-722384)
+                                                t = w[f[-651584 - (-651586)]]
+                                                q = w[f[-985257 - (-985260)]]
+                                                R = t == q
+                                                x = R
+                                            else
+                                                V = 11006100 - 163517
+                                                z = l(-449768 - (-424431))
+                                                A = k[z]
+                                                x = A
+                                            end
+                                        else
+                                            V = true
+                                            V = 7522660 - (-7100)
+                                        end
+                                    else
+                                        if V < 10620578 - 188300 then
+                                            V = Y
+                                            x = g
+                                            V = 15513215 - (-258296)
+                                        else
+                                            R = l(-390257 - (-364932))
+                                            x = l(942583 - 967903)
+                                            V = k[x]
+                                            x = k[R]
+                                            R = l(-1023786 + 998461)
+                                            k[R] = V
+                                            V = 38868 + 14908370
+                                            R = l(-504276 - (-478956))
+                                            k[R] = x
+                                            R = w[f[799730 - 799729]]
+                                            t = R()
+                                        end
+                                    end
+                                else
+                                    if V < 1033453 + 9458930 then
+                                        if V < -229554 + 10712324 then
+                                            K = 958275 - 958275
+                                            i = #C
+                                            M = i == K
+                                            V = M and 16945475 - 920306 or 14641597 - (-338072)
+                                        else
+                                            o = -846072 + 846073
+                                            I = -48785 + 48787
+                                            t = w[f[-370812 - (-370813)]]
+                                            q = t(o, I)
+                                            t = 611265 - 611264
+                                            R = q == t
+                                            V = R and 6254203 - (-890149) or 10225398 - 291260
+                                            x = R
+                                        end
+                                    else
+                                        if V < 69067 + 10654642 then
+                                            V = true
+                                            x = {}
+                                            w[f[-98531 - (-98532)]] = V
+                                            V = k[l(-866610 + 841298)]
+                                        else
+                                            A = N()
+                                            w[A] = x
+                                            z = -445839 - (-445842)
+                                            V = w[n]
+                                            L = -521730 - (-521795)
+                                            x = V(z, L)
+                                            z = N()
+                                            V = 685 - 685
+                                            C = l(5350 - 30704)
+                                            w[z] = x
+                                            L = V
+                                            V = -801714 + 801714
+                                            m = V
+                                            M = j(13416903 - 165414, {})
+                                            x = k[C]
+                                            C = {x(M)}
+                                            Z = l(993227 + -1018553)
+                                            V = {h(C)}
+                                            x = 642854 + -642852
+                                            C = V
+                                            V = C[x]
+                                            x = l(793057 - 818398)
+                                            M = V
+                                            V = k[x]
+                                            i = w[q]
+                                            s = k[Z]
+                                            Z = s(M)
+                                            s = l(-1019724 + 994409)
+                                            E = i(Z, s)
+                                            i = {E()}
+                                            x = V(h(i))
+                                            i = N()
+                                            w[i] = x
+                                            x = -315257 - (-315258)
+                                            E = w[z]
+                                            V = 15515195 - (-934249)
+                                            s = E
+                                            E = 1043747 - 1043746
+                                            Z = E
+                                            E = 404549 - 404549
+                                            K = Z < E
+                                            E = x - Z
+                                        end
+                                    end
+                                end
+                            else
+                                if V < 13075914 - 413204 then
+                                    if V < 636757 + 11329737 then
+                                        if V < 11619692 - 206907 then
+                                            if V < -320496 + 11382778 then
+                                                x = {t}
+                                                V = k[l(706561 + -731893)]
+                                            else
+                                                V = w[f[411495 + -411485]]
+                                                t = w[f[-404377 + 404388]]
+                                                R[V] = t
+                                                V = w[f[-856812 + 856824]]
+                                                t = {V(R)}
+                                                V = k[l(-346765 - (-321444))]
+                                                x = {h(t)}
+                                            end
+                                        else
+                                            q = q + I
+                                            t = q <= o
+                                            n = not G
+                                            t = n and t
+                                            n = q >= o
+                                            n = G and n
+                                            t = n or t
+                                            n = 6308850 - 105756
+                                            V = t and n
+                                            t = 11534164 - 378547
+                                            V = V or t
+                                        end
+                                    else
+                                        if V < 760341 + 11848583 then
+                                            V = -471722 + 16147380
+                                        else
+                                            P = -449576 - (-449577)
+                                            Y = d[P]
+                                            g = Y
+                                            V = 942729 + 14741868
+                                        end
+                                    end
+                                else
+                                    if V < 12332927 - (-674049) then
+                                        if V < 13472782 - 716997 then
+                                            i = #C
+                                            K = -684409 + 684409
+                                            M = i == K
+                                            V = -391361 + 15371030
+                                        else
+                                            S = not r
+                                            i = i + a
+                                            M = i <= K
+                                            M = S and M
+                                            S = i >= K
+                                            S = r and S
+                                            M = S or M
+                                            S = 5660842 - (-648228)
+                                            V = M and S
+                                            M = 12716864 - 43664
+                                            V = V or M
+                                        end
+                                    else
+                                        if V < 194701 + 13028898 then
+                                            o = D(o)
+                                            V = 12488369 - (-483274)
+                                            C = nil
+                                            I = D(I)
+                                            M = nil
+                                            q = D(q)
+                                            t = D(t)
+                                            q = nil
+                                            t = nil
+                                            m = nil
+                                            G = nil
+                                            F = nil
+                                            z = D(z)
+                                            G = l(607958 + -633272)
+                                            A = D(A)
+                                            i = D(i)
+                                            C = {}
+                                            z = N()
+                                            A = l(858876 - 884212)
+                                            F = l(-227990 - (-202647))
+                                            n = D(n)
+                                            I = k[G]
+                                            L = nil
+                                            n = l(626424 + -651738)
+                                            G = l(992879 + -1018223)
+                                            o = I[G]
+                                            m = N()
+                                            I = N()
+                                            w[I] = o
+                                            G = k[n]
+                                            n = l(954062 + -979379)
+                                            o = G[n]
+                                            n = k[F]
+                                            F = l(985779 + -1011127)
+                                            G = n[F]
+                                            F = k[A]
+                                            M = 801898 - 801897
+                                            A = l(-695481 + 670126)
+                                            i = -343278 + 343534
+                                            n = F[A]
+                                            L = {}
+                                            F = -834690 - (-834690)
+                                            A = N()
+                                            w[A] = F
+                                            F = -56079 + 56081
+                                            w[z] = F
+                                            F = {}
+                                            w[m] = L
+                                            L = -234420 + 234420
+                                            K = i
+                                            i = 46869 - 46868
+                                            a = i
+                                            i = -547691 + 547691
+                                            r = a < i
+                                            i = M - a
+                                        else
+                                            t = l(831109 - 856442)
+                                            x = 2995658 - 428715
+                                            q = -339661 + 2472462
+                                            R = t ^ q
+                                            V = x - R
+                                            R = V
+                                            x = l(783273 + -808601)
+                                            V = x / R
+                                            x = {V}
+                                            V = k[l(569336 - 594674)]
+                                        end
+                                    end
+                                end
+                            end
+                        else
+                            if V < 15972959 - 977428 then
+                                if V < 14714826 - 236361 then
+                                    if V < 14342648 - 228288 then
+                                        if V < 13351853 - (-636438) then
+                                            if V < -329194 + 13805465 then
+                                                F = z
+                                                Z = l(-180797 + 155461)
+                                                s = k[Z]
+                                                Z = l(-22823 + -2511)
+                                                E = s[Z]
+                                                s = E(R, F)
+                                                E = w[f[306070 + -306064]]
+                                                Z = E()
+                                                V = -404976 + 7587069
+                                                i = s + Z
+                                                M = i + G
+                                                i = 351782 - 351526
+                                                C = M % i
+                                                i = q[t]
+                                                Z = 314509 - 314508
+                                                F = nil
+                                                G = C
+                                                s = G + Z
+                                                E = o[s]
+                                                M = i .. E
+                                                q[t] = M
+                                            else
+                                                K = l(-136737 - (-111417))
+                                                V = k[K]
+                                                K = l(-582594 + 557269)
+                                                k[K] = V
+                                                V = 13413971 - 949283
+                                            end
+                                        else
+                                            q = l(508774 - 534117)
+                                            t = k[q]
+                                            q = l(-89000 - (-63652))
+                                            V = k[l(-157992 + 132679)]
+                                            R = t[q]
+                                            q = w[f[582978 + -582977]]
+                                            t = {R(q)}
+                                            x = {h(t)}
+                                        end
+                                    else
+                                        if V < 358224 + 13887728 then
+                                            R = l(-476099 + 450790)
+                                            q = -94343 + 94343
+                                            V = k[R]
+                                            t = w[f[-900652 - (-900660)]]
+                                            R = V(t, q)
+                                            V = 750308 + 946276
+                                        else
+                                            w[t] = E
+                                            V = w[t]
+                                            V = V and -123057 + 3893205 or 944891 + 9345455
+                                        end
+                                    end
+                                else
+                                    if V < -844038 + 15650885 then
+                                        if V < 14703447 - (-69117) then
+                                            K = 615128 - 615122
+                                            V = w[n]
+                                            Z = -925098 + 925099
+                                            s = V(Z, K)
+                                            V = l(663778 + -689098)
+                                            k[V] = s
+                                            K = l(536194 + -561514)
+                                            Z = k[K]
+                                            K = 179590 + -179588
+                                            V = Z > K
+                                            V = V and 9382714 - 98373 or 12801641 - (-781695)
+                                        else
+                                            V = true
+                                            V = V and -62851 + 5186189 or 6786053 - (-743707)
+                                        end
+                                    else
+                                        if V < -960382 + 15932906 then
+                                            V = true
+                                            V = V and 617640 + 9828519 or -928282 + 3093928
+                                        else
+                                            i = 235585 + -235584
+                                            K = #C
+                                            M = o(i, K)
+                                            i = G(C, M)
+                                            S = -706244 + 706245
+                                            K = w[m]
+                                            r = i - S
+                                            a = n(r)
+                                            M = nil
+                                            V = 10764066 - 289451
+                                            K[i] = a
+                                            i = nil
+                                        end
+                                    end
+                                end
+                            else
+                                if V < -16928 + 15780938 then
+                                    if V < 819325 + 14831439 then
+                                        if V < 480505 + 14712953 then
+                                            if V < 951522 + 14149241 then
+                                                G = x
+                                                n = l(-479490 - (-454176))
+                                                F = l(112259 - 137602)
+                                                x = k[n]
+                                                n = l(-497688 - (-472371))
+                                                V = x[n]
+                                                n = N()
+                                                w[n] = V
+                                                m = l(-330221 - (-304878))
+                                                x = k[F]
+                                                F = l(-505989 - (-480667))
+                                                V = x[F]
+                                                F = V
+                                                z = V
+                                                L = k[m]
+                                                A = L
+                                                V = L and 8919828 - (-62921) or 1430043 - (-770821)
+                                            else
+                                                s = L == m
+                                                E = s
+                                                V = 447457 + 13896813
+                                            end
+                                        else
+                                            V = k[l(13665 - 38976)]
+                                            x = {}
+                                        end
+                                    else
+                                        if V < 15413074 - (-271136) then
+                                            V = true
+                                            V = V and 289614 + 14455492 or -200582 + 15574714
+                                        else
+                                            w[t] = g
+                                            c = w[J]
+                                            u = -447467 - (-447468)
+                                            W = c + u
+                                            P = d[W]
+                                            Y = L + P
+                                            P = -75235 + 75491
+                                            V = Y % P
+                                            L = V
+                                            W = w[S]
+                                            P = m + W
+                                            W = 443084 - 442828
+                                            Y = P % W
+                                            V = 8402182 - 1012732
+                                            m = Y
+                                        end
+                                    end
+                                else
+                                    if V < -176575 + 16284673 then
+                                        if V < -72086 + 15890750 then
+                                            w[t] = x
+                                            V = 7705379 - 315929
+                                        else
+                                            n = nil
+                                            M = {}
+                                            S = {}
+                                            n = l(146441 + -171772)
+                                            a = N()
+                                            i = N()
+                                            G = nil
+                                            r = l(207412 - 232728)
+                                            d = l(222829 + -248180)
+                                            K = B(573965 + 7166274, {i, A, z, I})
+                                            P = nil
+                                            x = {}
+                                            w[i] = M
+                                            F = nil
+                                            M = N()
+                                            U = l(547954 - 573294)
+                                            L = nil
+                                            w[M] = K
+                                            K = {}
+                                            I = D(I)
+                                            C = nil
+                                            I = l(-378795 + 353471)
+                                            w[a] = K
+                                            o = nil
+                                            K = k[r]
+                                            Q = w[a]
+                                            J = {[U] = Q, [d] = P}
+                                            r = K(S, J)
+                                            K = e(7414059 - 415682, {a, i, m, A, z, M})
+                                            L = 1017638 + 408884967832
+                                            o = k[I]
+                                            G = k[n]
+                                            t = K
+                                            i = D(i)
+                                            z = D(z)
+                                            V = k[l(-620460 - (-595107))]
+                                            a = D(a)
+                                            z = l(96933 - 122272)
+                                            A = D(A)
+                                            m = D(m)
+                                            A = t(z, L)
+                                            q = r
+                                            t = nil
+                                            F = q[A]
+                                            M = D(M)
+                                            A = l(655508 - 680835)
+                                            A = G[A]
+                                            n = {A(G, F)}
+                                            q = nil
+                                            I = o(h(n))
+                                            o = I()
+                                        end
+                                    else
+                                        if V < -279920 + 16487203 then
+                                            Y = V
+                                            c = 968485 - 968484
+                                            W = d[c]
+                                            c = false
+                                            P = W == c
+                                            V = P and 6788333 - 705241 or 9678280 - (-655969)
+                                            g = P
+                                        else
+                                            a = not K
+                                            E = E + Z
+                                            x = E <= s
+                                            x = a and x
+                                            a = E >= s
+                                            a = K and a
+                                            x = a or x
+                                            a = -474096 + 5278898
+                                            V = x and a
+                                            x = 4828444 - (-929718)
+                                            V = V or x
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+                V = #v
+                return h(x)
+            end
+        return (I(-386789 + 9703670, {}))(h(x))
+    end))
