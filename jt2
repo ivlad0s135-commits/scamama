@@ -1,221 +1,1475 @@
--- PHASE_BOUNDARY:INIT return (function ( . ) --Decompiled array: key
--- PHASE_BOUNDARY:INIT local key = {"\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\06b"..\11a\06h\09j\10b\08f\06h\11c\07h", "\08j\10d\10j\05d\06f\06h\09j\08b"..\08j\05b\11d\06g\04d\10a\11d\08d\11g\07e\10e\08e\07f\07i\08c\10d\06h\08e\06b\06b", "\08f\08b\05b\10h\11d\08e\06b\06b"..\10j\10f\11a\10j\07g\12a\11c\11i\08j\07j\06b\06b"..\06h\07e\07g\06h\11g\12a\05a\05e\11c\10h\05b\12b\11d\05b\11g\10f", "\11d\12a\11i\05a\11d\08e\06b\06b"..\09a\07i\08g\05f\11d\06h\06g\06b", "\08j\06i\07g\05c\07f\10a\05a\07i\10j\10d\07g\04h\04j\06h\11i\10b\07f\10b\06b\06b"..\06f\11i\06j\08d\10i\11i\05b\04d"..\10c\11f\10j\10h\08j\10a\11a\05b\11a\07j\06b\06b"..\11a\05c\08g\10f\11a\11f\10e\08d\10i\06i\08j\06b", "\10i\07e\10a\06b"..\10i\05c\08g\08c\11d\11f\11c\10h\08j\06i\05b\07b\11d\10b\06b\06b"..\11d\10d\11c\07i\08f\11h\06b\06b"..\08f\12a\08g\07b\08f\12a\11i\10h"..\10j\10d\11i\08h\06f\11i\11i\09i\06h\08b\11i\10f\06h\10a\05a\08c\11g\09a\07f\06b", "\10i\07e\12b\06b".."..\09a\07i\08g\08b\08f\10b\06b\06b", "\08j\06i\11i\07b\11d\05c\08g\05a"..\08j\12a\07g\10h\10i\06h\07g\10h\08f\09a\10j\08c\08f\06i\11e\05b", "\04d\05g\11h\05b\11d\09i\08i\08d\04d\11h\06b\06b"..\10i\06h\11i\10h\06f\07j\06b\06b", "\06f\10f\06j\06i\04j\09a\11d\10a\08j\10h\11c\04d\08j\10h\08c\09j\11d\11h\06b\06b", "\08j\11i\10j\07i\10c\11j\12b\09j\10c\11g\08g\10d\07g\11g\11d\05f\09h\04j\12b\06b", "\10i\06h\11c\05a\08j\10f\07j\10h\06f\12a\07g\12c\09h\05b\11a\05a\11a\08e\06b\06b", "\07g\05c\11i\05a\08j\05c\07g\05d\12b\10a\10j\05b\11a\05c\07g\12c\11a\05c\07g\11j\12b\08e\06b\06b"..\11d\09a\10e\05d\10i\10d\12b\06b", "\08f\12a\08c\08c\08j\11h\06b\06b"..\08j\05c\11c\08c\10i\05c\10b\06b", "\06h\06h\08c\12b\09h\05b\11i\06g\10i\11g\11d\12c\04j\06h\11e\07e\08f\10h\10b\06b", "\07f\12c\10j\10a\10j\10a\11i\09i\11d\07g\11d\11f\07g\11f\05b\05b\07g\10b\06b\06b"..\09a\07i\08g\05a\11d\09a\10j\08c\11a\05c\11i\05g\10i\05c\11g\06b", "\10i\05c\07g\07b"..\11a\10h\05f\10b\10c\11i\10j\04i\08j\06h\05b\10e\07g\11g\08f\09j\10j\10b\06b\06b", "\08j\06i\07g\05a\10i\10d\11d\05b"..\10j\07i\10e\12b\10i\11j\11i\10f\08j\11j\07g\05b\11g\07g\10e\06h\11g\07e\10e\10j"..\04d\11h\06b\06b"..\11d\12a\07i\08c\11a\05c\11c\08i"..\11d\06i\11e\07a\10i\10d\12b\06b", "\11a\05c\11i\05g\10i\05c\11g\06b", "\07f\10f\10e\07e\11d\04j\06j\09j"..\11a\05c\08g\07b\11a\06h\07i\05g\11d\09a\12b\06b"..\09a\07i\08g\08d\10i\06i\10j\05b\09h\07j\06b\06b", "\11a\08b\11a\07d\10b\11j\04h\07i\07e\08j\12a\10e\11i\09i\10a\12c\10b\08i\04h\07j\11d\05d\10f\10e\07a\07g\12b\11h\06h\07f\04d\11i\10b\04i\08f\05a\05c\10d\10f\04d\07b\07a\11f\05f\07b\11i\09a\10d\10g\10f\08f\05g\08g\10a\07c\08h\08f\08g\12a\10j\08i\04i\07e\05b\11h\05d\07c\07j\07b\09a\11j\11j\07f\07d\10d\11a\08a\08c\05g\11b\05d\11c\05e\05c\05c\07g\09a\12a\11c\09h\08b\06h\05h\10i\11j\10d\08e\09h\11b\04h\10e\06i\06j\11d\07a\04d\08b\06i\06j\06j\08a\11g\06i\11h\10a\08j\04i\08a\06h\11b\10d\05e\08a\10h\08g\09h\10c\04d\05g\10d\11g\11b\09j\10c\06f\05h\10a\05g\07c\10g\06i\11b\05d\11i\05a\04j\08a\07a\08e\11j\07e\04h"} local function list (list )
--- PHASE_BOUNDARY:INIT return "\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\06b"..\11a\06h\09j\10b\08f\06h\11c\07h"end for list, table in ipairs ( { {, 4h}, {1  ;  25g} ; {1i;4h} } )do while table [1] <table [2]do key [table [1]], key [table [6 ] ], table [1], table [2]= key [table [-2], ], } key [table [ ] ], table [1]+ 1, table [2]- (  )end end do local list = string .len
--- PHASE_BOUNDARY:INIT local  table = string .char local handle = table .concat
--- PHASE_BOUNDARY:INIT local  buffer = math .floor local function = key
--- PHASE_BOUNDARY:INIT local  versan = string.sub local math = table .insert
--- PHASE_BOUNDARY:INIT local  x = type --Decompiled array: number
--- PHASE_BOUNDARY:INIT local number = {global =     2, 3} zone =  ;string.sub = , ["\05d"]=  1 bit32.bxor(, handle = , ["\05b"]=3h, string =, table =  count =  , byte = 6 ) ["\05f"]=  , ["\05h"]=6a, [0] =  , number = char =  char = 5h; ["\05a"]=4f; 25g
--- PHASE_BOUNDARY:VM_2A_BOUNDARY  .concat =  , 4i, table .insert =  x =1  ;math .max = , window =, memory = ; ["\05c"]=  , list = 2h, ["\04d"]= , string =  result = , ["\05g"]=3e, ["\04h"]= 1, table =  goto = 5j, number =, number =  3c, buffer =25g, ["\04i"]=   buffer =  ["for"] = 2b } for key =, #function, 1 do local string = function .kif x (string )= = "\11f\11g\11e\10f\11a\10d" then
--- PHASE_BOUNDARY:VM_2A_BOUNDARY     local  x = list (string
--- [1]     local number = {} local  accumulator = 
--- [1]     local
--- [1]     while accumulator <=x do local key = versan (strin, g, } accumulator, accumulator )
--- [1]         local  list = number .kif list then 0 .write = 0 .write + list * 6e ^ (  -object )
--- [1]         object = object + (   )if object == -175715ithen object = 0
--- [1]         local key = buffer (0 .write / (  25g ) )
--- [1]         local list = buffer ((0 .write  %   ) / 25g
--- [1]         local  handle = 0 .write  %  (   )math (number, table (key, list, handle ))0 .write = 0end
--- [1] elseif key == "\06b"
--- [1] then
--- [1] math (number, table (buffer (0 .write /  ) ))if accumulator >=x or versan (string, accumulator + 1, accumulator + 1 )~ ="\06b"
--- [1] then math (number, table (buffer ((0 .write  %  ) / 25g )) )end break end accumulator = accumulator + (  )end function .key = handle (number
--- [1] end end end
--- [1] return (
--- [1]     local  buffer = function (buffer )
--- [1]     function, versan )
--- [1]         positan = 8
--- [1]         type =  2d, zone =  ;string.sub = , ["\05d"]=  1 bit32.bxor(, handle = , ["\05b"]=3h, string =, table =  count =  , byte = 6 ) ["\05f"]=  , ["\05h"]=6a, [0] =  , number = char =  char = 5h; ["\05a"]=4f; 25g
--- PHASE_BOUNDARY:VM_2A_BOUNDARY          .concat =  , 4i, table .insert =  x =1  ;math .max = , window =, memory = ; ["\05c"]=  , list = 2h, ["\04d"]= , string =  result = , ["\05g"]=3e, ["\04h"]= 1, table =  goto = 5j, number =, number =  3c, buffer =25g, ["\04i"]=   buffer =  ["for"] = 2b } for key =, #function, 1 do local string = function .kif x (string )= = "\11f\11g\11e\10f\11a\10d" then
--- PHASE_BOUNDARY:VM_2A_BOUNDARY             local  x = list (string
--- [1]             local number = {} local  accumulator = 
--- [1]             local
--- [1]             while accumulator <=x do local key = versan (strin, g, } accumulator, accumulator )
--- [1]                 local  list = number .kif list then 0 .write = 0 .write + list * 6e ^ (  -object )
--- [1]                 object = object + (   )if object == -175715ithen object = 0
--- [1]                 local key = buffer (0 .write / (  25g ) )
--- [1]                 local list = buffer ((0 .write  %   ) / 25g
--- [1]                 local  handle = 0 .write  %  (   )math (number, table (key, list, handle ))0 .write = 0end
--- [1]         elseif key == "\06b"
--- [1]         then
--- [1]         math (number, table (buffer (0 .write /  ) ))if accumulator >=x or versan (string, accumulator + 1, accumulator + 1 )~ ="\06b"
--- [1]         then math (number, table (buffer ((0 .write  %  ) / 25g )) )end break end accumulator = accumulator + (  )end function .key = handle (number
--- [1] end end end
--- [1] return (
--- [1]     local  buffer = function (buffer )
--- [1]     function, versan )
--- [1]         return buffer (buffer )
--- [1]         function, versan )
--- [1]     end
--- [1]     return buffer end
--- [1]     function ( . )accumulator =1 + accumulator string . accumulator end
--- [1]         function (key
--- [1]             for list = 1, #key, 1 do string [key .list]=string [key .list]+ (1
--- [1]         end if buffer
--- [1]         then local table = buffer (true )
--- [1]         local  handle = versan (table ), handle [list ], handle [list 25g], handle [list ( 25g )]=key, object
--- [1]         function ( . )return   end
--- [1]             return table else return function ( {}, {[list (1  )] =object, [list ] =key, [list (  )]=function ( . )return -177878cend} )end end, function (key, list
--- [1]             local handle = 0 .write (list )
--- [1]             local  buffer = function (buffer )
--- [1]             function )
--- [1]                 return buffer (buffer )
--- [1]                 function )
--- [1]             end
--- [1]             return buffer end
--- [1]             function (key )
--- [1]                 local list =  25g, table = key []while table do string .table, nil = list = string .table - (   ), nil = list + (  )if 0 == string .V
--- [1]                 then
--- [1]                 string .table nil end table = key .lend end
--- [1]                 function (key ) string .key == 6  then string .key nil end end
--- [1]                     function (key, list
--- [1]                         local handle = 0 .write (list )
--- [1]                         local  buffer = function (buffer )
--- [1]                         function, versan, math )
--- [1]                             return buffer (buffer )
--- [1]                             function, versan, math )
--- [1]                         end
--- [1]                         return buffer end
--- [1]                         function (key, list
--- [1]                             local handle = 0 .write (list )
--- [1]                             local  buffer = function (buffer )
--- [1]                             function, versan, math, x )
--- [1]                                 return buffer (buffer )
--- [1]                                 function, versan, math, x )
--- [1]                             end
--- [1]                             return buffer end
--- [1]                             function (key, list
--- [1]                                 local handle = 0 .write (list )
--- [1]                                 local  buffer = function ( . )return table (key, {}, list, handle
--- [1]                         end
--- [1]                         return buffer end, {}, {}, 
--- [1]                         function (key, list
--- [1]                             local handle = 0 .write (list )
--- [1]                             local  buffer = function ( . )
--- [1]                             return buffer ( . )
--- [1]                     end
--- [1]                     return buffer end
--- [1]                     
--- [1]                             if table then if table then if table then if table then if table then if table <  number [function [9]]table = {} string = table object = 0 .write = 0 .write G = 0 <0 .write 0 .write = accumulator -0 else x =, {} }table ="\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\\06h\09j\10b\08f\06h\11c\07h"end
--- [1]                         else x = array table = zone table =(array and   or  ) end
--- [1]                 elseif table then table =  number .Ix = table .insert else  .xR = list (1  )x = table (string )
--- [1]                 x = {} table = "\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\06b"..\11a\06h\09j\10b\08f\06h\11c\07h"end end
--- [1]         else
--- [1]         if table then if table then table = 1315136aelse 0 .write =  number [function [ ] ]string = accumulator ~=0 .write table =(string and   or  ) end
--- [1]     elseif table then table =  nil count = nil object = nil else table = 817551dw [function [5]] =x string = nil end end end
--- [1] elseif table then if table then if table then if table then array = number () =-142663dw .array = error  .rr = list ( 1 )table = x .rr = 1x, =, } table (result, state )
--- [1] result = number ()number .result = x state =  number .nQ =    table (state, table )
--- [1] state = number ()number .state = x table = number .nU = number .ru == table (table, string )
--- [1] table = number ()number .table = x x = number .nU = x (flag, pointer )= string == x  (  )string = number ()number .string = table  key . .n
--- [1] local char = {window (user, table )} number = 0 .read (handle (char )) - number .0 .read table = math .max .VQ = pointer .global table = table (math .ma, x, } x, flag )
--- [1]  ()global = char (, {count array;zone;0 .write;accumulator;string .concat, string;flag;result, table, state, array} )number .flag = table x = key .d
--- [1] local pointer = {x (global )} local table = {handle (pointer, )} }pointer = table table = number .UV =(table and   or  ) - (  )else
--- [1] table =-1616159cend
--- [1] else  number .tg = 0 .read table =(0 .read and   or  ) end
--- [1] elseif table 585F5a
--- [1] then
--- [1] string = number .tE = string table =(string and   or  ) else = number [function [ ] ]string = accumulator  %  0 .write object = number [function [4]] = number [function [2]]math .max = number [function [ ] ]char = math .max -string math .max =  char / math .max  string .format = array ^ zone table .insert = count / string .format 0 = object (table .insert = 0  %  object 0 =  0 ^ string accumulator = 0 .write / object object = number [function [] ]= - accumulator  %  string .format G = count * string .format 0 = object (table .insert
--- [1] array =  number [function [] ]table .insert = object (accumulator
--- [1] 0 .write = 0 + table .insert count ==0 .write  %  0 table .insert = 0 .write -object table =  table .insert / count string = nil = object  %  count string .e .insert  count = string .format / array = nil string .format = 0  %  array object = nil  .format array = zone / for local zone = {table .insert, count;string .format, array} number [function [1]] = zone  array = nil 0 = nil  count = nil end end
--- [1] elseif table 5F3C2d
--- [1] then
--- [1] )
--- [1] if table then
--- [1]     char =  pointer .cc = number .QP = window == char = number else array =  number [function [1]]accumulator = 0 .write string .format, =, }  table (string .format, array )
--- [1]     string .accumulator = count accumulator = nil nd
--- [3050536643570hx] elseif table then t = number [function [25g ] ]string = accumulator * 0 .write accumulator =  = string + accumulator string =  x  %  string number [function [2]] =table string = number [function [3]] =string ~=accumulator lse math .max = string .concat state = math .max char .math .max = state  table = 1297164dend end end end
--- [3050536643570hx] elseif table then if table then if table then if table then if table then global = number .tV =(global and   or  ) x = global else accumulator = buffer[2] -- BUFFER ACCESStable = number [function [1]]string = buffer[] -- BUFFER ACCESSa .write = table table = 0 .write .tV =(table and   or  ) end
--- [3050536643570hx] else table =(x and 13e  or  ) - (  )end
--- [3050536643570hx] elseif table then table = {} number [function [] ]= table =  number [function [ ] ]object = x x = accumulator  %  0 [function [ 1] ]=x table .insert = accumulator  %  count ["for"] = zone = table .insert + count [function [5]] =0 string .format = list (  )zone =  key .FF = list (1  )table .insert = count .FF =  table .insert (string
--- [3050536643570hx]  <zone table . .accumulator = table .insert zone = string .format -for array = count table .insert = 9belse zone = zone + for string .format = zone < = array char = not memory string .format = char and string .format char = zone > = array char = memory and char string .format = char or string .format = string .format and char V = table or string .format end end
--- [3050536643570hx] elseif table then if table then flag = buffer (flag
--- [3050536643570hx] pointer = nil state = buffer (state
--- [3050536643570hx] string = buffer (string = buffer (table
--- [3050536643570hx] array = buffer (array )
--- [3050536643570hx] result = buffer (result )
--- [3050536643570hx] els, e, } table = byte (12d, {object} )
--- [3050536643570hx] local payload_chunks = {} local  x = {handle (string, )} }table ="\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\\06h\09j\10b\08f\06h\11c\07h"end
--- [3050536643570hx] elseif table 75E75a
--- [3050536643570hx] then
--- [3050536643570hx] table = 1494723ielse
--- [3050536643570hx] string = number [function [1]]x =#string = x == string table =(table and   or 19a ) end end end
--- [3050536643570hx] elseif table then if table then if table then if table then  - key .xA = goto (( , {} ) )object = list (  )string = number [function [6 ] ]0 .write = key .on = key .F
--- [3050536643570hx] local string .format = {count (array )} count = 2
--- [3050536643570hx] local table .insert = {handle (string .format, )} }0 = table .insert .no = 0 .write (0 )
--- [3050536643570hx] 0 .write = list (  )accumulator = string (object, 0 .write )
--- [3050536643570hx] local payload_chunks = {} x = table (handle (string ))string = x accumulator = number [function [5]]table =(accumulator and   or 13d ) x = accumulator else V =  number [function [3]]string = accumulator * 0 .write = string  %  accumulator number [function [3]] =x end
--- [3050536643570hx] else table = number [function [ 1] ]table =(table and   or  ) end
--- [3050536643570hx] elseif table < 
--- [3050536643570hx] then
--- [3050536643570hx] table = 1098766helse  .CC = list (  )["for"] = memory .CA = for end end
--- [3050536643570hx] elseif table then if table then array = list (  ) .ZK = key .aZ = table (bit3c )
--- [3050536643570hx]  .table = temp lse accumulator = number ()table = true 0 .write = list (  )count = list (  )number .accumulator = table string = buffer x = key . ()string .format, =, } char (12j, {0} )table = x .qq = number ()number .0 .write = table object = number ()table = string.sub (10a, {} )number .object = table table = false number .0 = table table .insert = key .nn = table .insert (string .format )
--- [3050536643570hx] x = count table =(count and   or  ) end
--- [3050536643570hx] elseif table then accumulator = list (1  )0 .write ==accumulator ^ 0 .write  string = table x = list - x / string local x = {table} table = "\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\\06h\09j\10b\08f\06h\11c\07h"else 0 .write = number [function [6]]accumulator = 0 .write ==string table =  accumulator end end end end end
--- [3050536643570hx] elseif table CA531d
--- [3050536643570hx] then
--- [3050536643570hx] if table then
--- [3050536643570hx]     if table then if table then if table then if table then table =  number [function [ ] ]0 .write = number [function [ ] ]string = accumulator == 0 .write x = string else table =  list (  )array = key .zx = array end
--- [3050536643570hx] else table = true table = 752976aend
--- [3050536643570hx] elseif table then table = 0 .read x = global table = 1577151belse string = list ( 6 ) .xx = key . .string = table table =  list (  )key .string = x string = number [function [1]]accumulator = string ()end end
--- [3050536643570hx] elseif table then if table then bit32.bxor(#char math .max = string .concat ==bit3c table =(math .max and   or  ) - ( 6 )else =- number [function [6 ] ]0 .write = accumulator (objec, t, } 0 )
--- PHASE_BOUNDARY:VM_1R_BOUNDARY accumulator =  = 0 .write ==accumulator table =(string and 15c  or  ) x = string end
--- PHASE_BOUNDARY:VM_1R_BOUNDARY elseif table then table = true x = {} number [function [ 6] ]= table table ="\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\\06h\09j\10b\08f\06h\11c\07h"else array = number ()number .array = x = x, =, } table (zone) for )
--- PHASE_BOUNDARY:VM_1R_BOUNDARY zone = number () .zone = x ["for"] = table = table math .max = goto (, {} )x = key .C
--- PHASE_BOUNDARY:VM_1R_BOUNDARY local char = {x (math .max )}   {handle (char, )} }x =  table table = char .e table = key .xi = number .qs = key .ZZ = string (math .max )
--- PHASE_BOUNDARY:VM_1R_BOUNDARY  .concat (temp, string )
--- PHASE_BOUNDARY:VM_1R_BOUNDARY local string .concat = {error ()} x = table (handle (string .concat ))string .concat = number ()number .string .concat = x = number .zV =  error error =  error error =  temp <error  end end end
--- PHASE_BOUNDARY:VM_1R_BOUNDARY elseif table < 
--- PHASE_BOUNDARY:VM_1R_BOUNDARY then
--- PHASE_BOUNDARY:VM_1R_BOUNDARY if table then if table then if table then local x = {accumulato, r} }table ="\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\\06h\09j\10b\08f\06h\11c\07h"else table = number [function [1a]]accumulator = number [function [] ]string .table = accumulator table = number [function [] ]
--- PHASE_BOUNDARY:VM_1R_BOUNDARY     local accumulator = {table (string )} table = key [list (  )]
--- PHASE_BOUNDARY:VM_1R_BOUNDARY     local  x = {handle (accumulator, )} }end
--- PHASE_BOUNDARY:VM_1R_BOUNDARY else
--- [1115561hV] 0 .write = 0 .write + 0 accumulator = 0 .write <=object count = not table .insert accumulator = count and accumulator count = 0 .write >=object count = table .insert and count accumulator = count or accumulator count =  accumulator and count accumulator =  = table or accumulator end
--- [1115561hV] elseif table C065jC
--- [1115561hV] then
--- [1115561hV] lse = pointer .Pg = 0 .read table = 1568459hend end
--- [1115561hV] elseif table then if table then string .concat =#char = string .concat ==bit3c lse state = not result string .concat = string .concat + array math .max = string .concat <=bit3c math .max = state and math .max state = string .concat >=bit3c state = result and state math .max = state or math .max state =  math .max and state math .max =  table or math .max end
--- [1115561hV] elseif table then object = buffer (object
--- [1115561hV] table =  nil 0 = buffer (0
--- [1115561hV] 0 .write = buffer (0 .write
--- [1115561hV] accumulator = buffer (accumulator
--- [1115561hV] accumulator = nil memory = nil   zone = buffer (zone
--- [1115561hV] table . (array )
--- [1115561hV] string .concat = buffer (string .concat )
--- [1115561hV] char = {} zone = number () (  )count = buffer (count )
--- [1115561hV] 0 =  - 0 .Gm = number ()0 = number ()number .0 = object table .insert = key .e .insert .nn = key . .FF = key .AM =  list -= string .format .AL =, {} }A = number ()number .array = string .format w .zone = string .format string .format = {} number . = string .concat string .concat =  string .concat r = array <string .concat string .concat = math .max -array else accumulator = list -=accumulator ^ 0 .write  string = table x = list - x / string local x = {tabl, e} }table ="\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\\06h\09j\10b\08f\06h\11c\07h"end end end end
--- [1115561hV] elseif table E4D0eB
--- [1115561hV] then
--- [1115561hV] if table then
--- [1115561hV]     if table then if table then if table then string .format = zone  . .Zs = error (string, string .format )
--- [1115561hV]         error = number [function [6]]temp = error () =string + temp math .max = string .concat + table .insert string .concat =  math .max  %  string .concat string .concat = 0 .write .tZ =  nil table .insert = char string = table .insert + temp error = object .sM = string .concat .error 0 .write .accumulator = math .max else bit32.bxor(list (  )table = key . .bit3c = table table = 1246468iend
--- [1115561hV]     else 0 . .qq = list ( 6 )table ="\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\\06h\09j\10b\08f\06h\11c\07h"string = accumulator .qq = number [function [1]]
--- [1115561hV]     local accumulator = {string (0 .write )} local  x = {handle (accumulator, )} }end
--- [1115561hV] elseif table D9604a
--- [1115561hV] then
--- [1115561hV] string = list -= key .Rt = number [function [6 ] ]string = table (accumulator, 0 .write )
--- [1115561hV] table = 169658eelse number .accumulator = error table = number .tV =(table and   or 14g ) end end
--- [1115561hV] elseif table then if table then bit3c =  s = table (temp, bit3c )
--- [1115561hV]  .table = string  .KK =  temp >bit3c table =(table and 14b  or  ) - ( 1 )else table = true table =(table and 13i  or  ) - (  )end
--- [1115561hV] elseif table then table = true table =(table and 1j  or  ) else string .concat = #char math .max = object (string .concat, bit3c
--- [1115561hV] string .concat = table .insert (char, math .max )= number .mr = string .concat -state array = count (result )
--- [1115561hV] table = 1047461fK .string .concat = array  end end end
--- [1115561hV] elseif table then if table then if table then if table then table .insert = x count = list (  )string . .nn = list (  )table = x .nn = number ()number .count = table memory = list ( 25g )x = key .FF = list (  )table = x .FF = table zone = table ["for"] = key .mA = for table =(for and   or  ) - (  )else string = ["for"] == memory error = string table = 1434427aend
--- [1115561hV] else table ="\08f\10h\08e\05d\06h\07g\05b\09a\10i\10d\11c\04j\10j\06i\05a\07h\11g\06h\08i\\06h\09j\10b\08f\06h\11c\07h"x = {} end
--- [1115561hV] elseif table then table = true table =(table and   or  ) else number .accumulator = global char = W =char + user number = pointer .WY = for + number = 0 .read  %  number ["for"] = table window = number .SP = memory + window window =  number  %  window table =  0 .read end end
--- [1115561hV] elseif table then if table then number .accumulator = x table = 738945aelse count = nil math .max =, {} }state = {}  ()string .concat = number ()  - byte ( } {string .concat, array, zone)0} )number = nil x = {} number .string .concat = math .max  math .max = number () number .math .max = bit3c bit32.bxor(, {} }0 = buffer (0 )
--- [1115561hV] char = nil  .array = bit3c object = nil bit3c = key .rQ = number .a
--- [1115561hV] local table = {[string]= flag) [pointer]=numbe, r} }result = bit3c (state, table )
--- [1115561hV] bit32.bxor(element (17h, {array, string .concat)memory;array, zone, math .max} )["for"] =  key .IG = key .nt = bit3c string .concat = buffer (string .concat )
--- [1115561hV] zone = buffer (zone )
--- [1115561hV] table = key [list (  )]array = buffer (array
--- [1115561hV]  (array
--- [1115561hV] memory = buffer (memory
--- [1115561hV] array = accumulator (zone; for )
--- [1115561hV] 0 .write = result accumulator = nil string .format = 0 .write .AM = buffer (math .max )
--- [1115561hV] e .insert .A
--- [1115561hV] local count = {array (table .insert, string .format )} 0 = object (handle (count ))object = 0 ()end
--- [1115561hV] elseif table then  table char =  pointer .cc = false number = window == char table =(number and   or  ) - (  )global = number else array = not bit3c error = error + temp x = error < = string x = array and x array = error > = string array = bit3c and array x = array or x = x and array x =  table or x end end end end end end end table =#versan return handle (x
--- [1115561hV] end )
--- [1115561hV] return 0 ((  } {} ) )(handle (x ))end )(getfenv and getfenv ()or _ENV, table .unpack, newproxy, setmetatable, getmetatable, select, {. } )end )( . )
+return (function (...)
+	local slot0_a1024 = {
+		"UkT5CL3Zlgp1mD2MtCX=",
+		"nCceUCpM",
+		"Ygm5ACcQ",
+		"Y3qB+dqStJhTKNRgCT==",
+		"UQ3kqT==",
+		"minmLxpvYO==",
+		"CJLCtx26pk3yq3ti",
+		"qxv2qT==",
+		"ZNV7qCB=",
+		"YDL4Kd2NmgL/1CveKe==",
+		"AvESlv3+",
+		"fsmkYdn3nO==",
+		"n4VinshSlDY=",
+		"lJd=",
+		"l4VRqspkYD3Gqe==",
+		"qgpNUu==",
+		"UxVGUxvk",
+		"mgvWAvvbCQviCd2RtZK=",
+		"lJy=",
+		"",
+		"ZNVQUe==",
+		"YDvGq4V2",
+		"YxLklCLkUZmRUDr3",
+		"+8u3qbXS+u==",
+		"lCvkAO==",
+		"AiED1ZqdYkp+YkRcqu==",
+		"YvmNfwycftVgLtq7a1y=",
+		"lCp2YiOkAxLza3n2nT==",
+		"L4v2Y4L5ydm3n4Lzn4LwyT==",
+		"qZh5lgy=",
+		"UxRRYu==",
+		"Y4pRl4e=",
+		"CCRya3vBltqz1CrJUke=",
+		"KzmdmdvbqLqsLs33Le==",
+		"ZNV2qZmRn4v8l4t=",
+		"l4LG",
+		"nk7efvm0YC3hLtUcme==",
+		"YDL2lgq3",
+		"mNhylwviYwL3tLhCtJhm",
+		"+u==",
+		"qxNRn4pX",
+		"qDrFlgy=",
+		"n4v8l4t=",
+		"KihJq1Ec",
+		"n4VGnCN8qZy=",
+		"ZNVSlDm3aO==",
+		"nQnIew/NJYxhvbdzeX/Oq5ihFLyuCK+ve0U24gi+GFs7GvZgjiU8VdHWUVxmX0J3u5HOGZwwKIgnPR8o5p644LZxpaQC9lwgTao/hDEqF+QDEEPtDudY0PCog6PkVaf+8gtocfA9d8HjDo5v21PFTwJ/"
+	}
+
+	local function slot1_a3260(arg0)
+		return slot0_a1024[arg0 + 25356]
+	end
+
+	local slot2_a1007 = ipairs
+	local slot3_a1008 = {
+		{
+			1,
+			47
+		},
+		{
+			1,
+			17
+		},
+		{
+			18,
+			47
+		}
+	}
+
+	for slot5_a1015, slot6_a1017 in slot2_a1007(slot3_a1008) do
+		while slot6_a1017[1] < slot6_a1017[2] do
+			local slot7_a1021 = slot6_a1017[1]
+			local slot8_a1022 = slot6_a1017[2]
+			local slot9_a1025 = slot0_a1024[slot6_a1017[2]]
+			local slot10_a1027 = slot0_a1024[slot6_a1017[1]]
+			local slot11_a1029 = slot6_a1017[1] + 1
+			slot6_a1017[2] = slot6_a1017[2] - 1
+			slot6_a1017[1] = slot11_a1029
+			slot0_a1024[slot8_a1022] = slot10_a1027
+			slot0_a1024[slot7_a1021] = slot9_a1025
+		end
+	end
+
+	local slot2_a1059 = string.len
+	local slot3_a1104 = string.char
+	local slot4_a1144 = table.concat
+	local slot5_a1090 = math.floor
+	local slot6_a1052 = slot0_a1024
+	local slot7_a1123 = string.sub
+	local slot8_a1100 = table.insert
+	local slot9_a1055 = type
+	local slot10_a1078 = {
+		p = 13,
+		C = 22,
+		["7"] = 44,
+		["2"] = 45,
+		Q = 39,
+		["3"] = 37,
+		o = 62,
+		S = 41,
+		P = 63,
+		A = 26,
+		F = 47,
+		i = 51,
+		a = 30,
+		["1"] = 19,
+		O = 0,
+		G = 46,
+		["0"] = 10,
+		z = 35,
+		W = 58,
+		m = 17,
+		["4"] = 6,
+		j = 59,
+		M = 43,
+		k = 52,
+		["+"] = 14,
+		Z = 23,
+		v = 5,
+		y = 8,
+		r = 49,
+		J = 3,
+		f = 18,
+		K = 12,
+		["/"] = 11,
+		H = 31,
+		h = 9,
+		Y = 28,
+		w = 36,
+		l = 27,
+		X = 40,
+		I = 15,
+		g = 55,
+		N = 53,
+		["6"] = 42,
+		["9"] = 60,
+		n = 29,
+		V = 61,
+		["8"] = 34,
+		t = 20,
+		e = 48,
+		u = 32,
+		b = 2,
+		d = 4,
+		U = 24,
+		s = 7,
+		x = 54,
+		T = 16,
+		E = 1,
+		c = 57,
+		D = 38,
+		R = 33,
+		["5"] = 50,
+		q = 25,
+		L = 21,
+		B = 56
+	}
+
+	for slot14_a1053 = 1, #slot6_a1052 do
+		local slot15_a1125 = slot6_a1052[slot14_a1053]
+
+		if slot9_a1055(slot15_a1125) == "string" then
+			local slot16_a1069 = slot2_a1059(slot15_a1125)
+			local slot17_a1102 = {}
+			local slot18_a1142 = 1
+			local slot19_a1139 = 0
+			local slot20_a1080 = 0
+
+			while slot18_a1142 <= slot16_a1069 do
+				local slot21_a1110 = slot7_a1123(slot15_a1125, slot18_a1142, slot18_a1142)
+				local slot22_a1084 = slot10_a1078[slot21_a1110]
+
+				if slot22_a1084 then
+					slot19_a1139 = slot19_a1139 + slot22_a1084 * 64^(3 - slot20_a1080)
+					slot20_a1080 = slot20_a1080 + 1
+
+					if slot20_a1080 == 4 then
+						slot20_a1080 = 0
+
+						slot8_a1100(slot17_a1102, slot3_a1104(slot5_a1090(slot19_a1139 / 65536), slot5_a1090(slot19_a1139 % 65536 / 256), slot19_a1139 % 256))
+
+						slot19_a1139 = 0
+					end
+				elseif slot21_a1110 == "=" then
+					slot8_a1100(slot17_a1102, slot3_a1104(slot5_a1090(slot19_a1139 / 65536)))
+
+					if slot16_a1069 <= slot18_a1142 or slot7_a1123(slot15_a1125, slot18_a1142 + 1, slot18_a1142 + 1) ~= "=" then
+						slot8_a1100(slot17_a1102, slot3_a1104(slot5_a1090(slot19_a1139 % 65536 / 256)))
+					end
+
+					break
+				end
+
+				slot18_a1142 = slot18_a1142 + 1
+			end
+
+			slot6_a1052[slot14_a1053] = slot4_a1144(slot17_a1102)
+		end
+	end
+
+	local function slot2_a3270(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20)
+		local function slot7_a3232(arg0, arg1, arg2, arg3)
+			local slot4_a1865 = nil
+			local slot5_a2594 = nil
+			local slot6_a1409 = nil
+			local slot7_a3026 = nil
+			local slot8_a3212 = nil
+			local slot9_a1965 = nil
+			local slot10_a2545 = nil
+			local slot11_a2992 = nil
+			local slot12_a2002 = nil
+			local slot13_a2953 = nil
+			local slot14_a1691 = nil
+			local slot15_a1418 = nil
+			local slot16_a1419 = nil
+			local slot17_a2654 = nil
+			local slot18_a3207 = nil
+			local slot19_a3014 = nil
+			local slot20_a1690 = nil
+			local slot21_a2313 = nil
+			local slot22_a1991 = nil
+			local slot23_a1640 = nil
+			local slot24_a3199 = nil
+			local slot25_a1557 = nil
+			local slot26_a1492 = nil
+			local slot27_a1430 = nil
+			local slot28_a1970 = nil
+			local slot29_a3011 = nil
+			local slot30_a1433 = nil
+			local slot31_a2271 = nil
+			local slot32_a2581 = nil
+			local slot33_a1955 = nil
+			local slot34_a1437 = nil
+			local slot35_a2807 = nil
+			local slot36_a1815 = nil
+			local slot37_a1666 = nil
+
+			while arg0 do
+				if arg0 < 9905063 then
+					if arg0 < 6389359 then
+						if arg0 < 4799168 then
+							if arg0 < 3735380 then
+								if arg0 < 2275845 then
+									if arg0 < 2199293 then
+										if arg0 < 1765056 then
+											slot14_a1691 = 1
+											slot31_a2271 = {}
+											slot35_a2807 = arg15[arg2[9]]
+											arg0 = 11937981
+											slot26_a1492 = 1
+
+											if slot26_a1492 >= 0 then
+												slot10_a2545 = false
+											else
+												slot10_a2545 = true
+											end
+
+											slot20_a1690 = slot14_a1691 - slot26_a1492
+										else
+											slot13_a2953 = {}
+											arg0 = arg0[slot1_a3260(-25352)]
+										end
+									else
+										slot13_a2953 = slot9_a1965
+										local slot0_a1485 = slot33_a1955
+
+										if slot9_a1965 then
+											arg0 = 10842583
+										else
+											arg0 = 10014750
+										end
+									end
+								elseif arg0 < 3641683 then
+									arg0 = 15099206
+									slot10_a2545 = arg15[slot26_a1492]
+									slot13_a2953 = slot10_a2545
+								else
+									local slot0_a1500 = arg0[slot1_a3260(-25309)]
+									slot31_a2271 = slot1_a3260(-25310)
+									local slot13_a1508 = slot0_a1500(slot31_a2271)
+									slot13_a2953 = {}
+									arg0 = arg0[slot1_a3260(-25329)]
+								end
+							elseif arg0 < 4384855 then
+								if arg0 < 4200296 then
+									arg0 = 13151360
+								else
+									slot20_a1690 = 1
+									slot14_a1691 = arg15[arg2[3]]
+
+									if slot14_a1691 == slot20_a1690 then
+										slot31_a2271 = false
+									else
+										slot31_a2271 = true
+									end
+
+									if slot31_a2271 then
+										arg0 = 5818554
+									else
+										arg0 = 8167133
+									end
+								end
+							elseif arg0 < 4776462 then
+								arg0 = 10987667
+								slot10_a2545 = nil
+								slot23_a1640 = nil
+								slot35_a2807 = nil
+							else
+								arg0 = 8175513
+								arg15[arg2[5]] = slot13_a2953
+								slot31_a2271 = nil
+							end
+						elseif arg0 < 5967838 then
+							if arg0 < 5471654 then
+								if arg0 < 5178333 then
+									if arg0 < 5028219 then
+										slot32_a2581 = arg20()
+										local slot7_a1554 = 100
+										local slot19_a1555 = 255
+										arg15[slot32_a2581] = slot25_a1557
+										slot5_a2594 = arg20()
+										arg15[slot5_a2594] = arg0[slot1_a3260(-25314)][slot1_a3260(-25317)](1, slot7_a1554)
+										local slot7_a1579 = 0
+										local slot22_a1583 = 1
+										local slot34_a1646 = 10000
+										local slot36_a1585 = 2
+										slot7_a3026 = arg20()
+										arg15[slot7_a3026] = arg15[slot23_a1640](slot7_a1579, slot19_a1555)
+										local slot0_a1596 = arg15[slot23_a1640]
+										local slot15_a1644 = 0
+										slot19_a3014 = arg20()
+										arg15[slot19_a3014] = slot0_a1596(1, arg15[slot5_a2594])
+
+										if arg15[slot23_a1640](slot22_a1583, slot36_a1585) ~= 1 then
+											local slot0_a1632 = false
+										else
+											slot0_a1632 = true
+										end
+
+										slot12_a2002 = arg20()
+										arg15[slot12_a2002] = slot0_a1632
+										local slot21_a1634 = arg0[slot1_a3260(-25326)]
+										local slot38_a1642 = {
+											arg15[slot23_a1640](slot15_a1644, slot34_a1646)
+										}
+										slot21_a2313 = slot1_a3260(-25346)
+										local slot29_a1665 = slot21_a1634(arg1(slot38_a1642)) .. slot21_a2313
+										local slot0_a1667 = slot37_a1666[slot1_a3260(-25323)]
+										slot22_a1991 = arg20()
+										local slot38_a1685 = arg13
+										local slot39_a1686 = 10489829
+										local slot40_a1687 = {
+											slot23_a1640,
+											slot32_a2581,
+											slot33_a1955,
+											slot20_a1690,
+											slot14_a1691,
+											slot17_a2654,
+											slot12_a2002,
+											slot22_a1991,
+											slot5_a2594,
+											slot19_a3014,
+											slot7_a3026,
+											slot9_a1965
+										}
+										slot29_a3011 = slot38_a1685(slot39_a1686, slot40_a1687)
+										arg15[slot22_a1991] = slot0_a1667(slot37_a1666, slot1_a3260(-25315), slot1_a3260(-25346) .. slot29_a1665)
+										slot13_a2953 = arg0[slot1_a3260(-25354)]
+										local slot38_a1702 = {
+											slot13_a2953(slot29_a3011)
+										}
+										local slot38_a1706 = {
+											arg1(slot38_a1702)
+										}
+										slot36_a1815 = slot38_a1706
+
+										if arg15[slot12_a2002] then
+											arg0 = 6522245
+										else
+											arg0 = 5182995
+										end
+									else
+										arg0 = 15675658
+									end
+								else
+									slot21_a2313 = arg15[slot14_a1691]
+									slot29_a3011 = slot21_a2313
+
+									if slot21_a2313 then
+										arg0 = 12647685
+									else
+										arg0 = 15684597
+									end
+								end
+							elseif arg0 < 5791568 then
+								slot18_a3207 = arg15[slot14_a1691]
+								slot25_a1557 = slot18_a3207
+
+								if slot18_a3207 then
+									arg0 = 15129582
+								else
+									arg0 = 14344270
+								end
+							else
+								local slot11_a1731 = 13
+								local slot31_a1736 = arg15[arg2[3]] % 32
+								local slot35_a1739 = arg15[arg2[4]]
+								local slot9_a1740 = 2
+								local slot23_a1743 = arg15[arg2[2]]
+								slot4_a1865 = arg15[arg2[3]] - slot31_a1736
+								slot37_a1666 = 32
+								slot28_a1970 = slot4_a1865 / slot37_a1666
+								local slot14_a1761 = slot35_a1739(slot23_a1743 / slot9_a1740^(slot11_a1731 - slot28_a1970)) % 4294967296.0 / 2^slot31_a1736
+								slot11_a2992 = 256
+								local slot9_a1774 = 256
+								local slot20_a1782 = arg15[arg2[4]](slot14_a1761 % 1 * 4294967296.0) + arg15[arg2[4]](slot14_a1761)
+								local slot23_a1783 = 65536
+								local slot35_a1785 = slot20_a1782 % 65536
+								arg0 = 14087390
+								local slot26_a1788 = (slot20_a1782 - slot35_a1785) / slot23_a1783
+								slot31_a2271 = nil
+								local slot10_a1791 = slot35_a1785 % 256
+								slot20_a1690 = nil
+								local slot23_a1794 = (slot35_a1785 - slot10_a1791) / slot9_a1774
+								slot14_a1691 = nil
+								local slot6_a1797 = slot26_a1788 % 256
+								slot35_a2807 = nil
+								local slot9_a1800 = (slot26_a1788 - slot6_a1797) / slot11_a2992
+								local slot38_a1801 = {
+									slot10_a1791,
+									slot23_a1794,
+									slot6_a1797,
+									slot9_a1800
+								}
+								slot33_a1955 = slot38_a1801
+								arg15[arg2[1]] = slot33_a1955
+								local slot6_a1805 = nil
+								slot9_a1965 = nil
+								slot26_a1492 = nil
+								slot10_a2545 = nil
+								slot23_a1640 = nil
+							end
+						elseif arg0 < 6241315 then
+							if arg0 < 6173258 then
+								if slot36_a1815[2] ~= arg15[slot22_a1991] then
+									local slot30_a1823 = false
+								else
+									slot30_a1823 = true
+								end
+
+								arg0 = 10334249
+								slot29_a3011 = slot30_a1823
+							else
+								slot9_a1965 = 255
+								slot23_a1640 = arg15[arg2[1]](0, slot9_a1965)
+								slot31_a2271[slot20_a1690] = slot23_a1640
+								slot14_a1691 = nil
+								arg0 = 11937981
+							end
+						elseif arg0 < 6304413 then
+							slot20_a1690 = 169
+							arg15[arg2[2]] = (arg15[arg2[2]] * slot20_a1690 + 30505366435707.0) % 35184372088832.0
+							slot31_a2271 = arg15[arg2[3]]
+							slot14_a1691 = 1
+
+							if slot31_a2271 == slot14_a1691 then
+								slot13_a2953 = false
+							else
+								slot13_a2953 = true
+							end
+
+							arg0 = 8167133
+						else
+							local slot37_a1863 = slot17_a2654
+							slot7_a3026 = slot37_a1863
+							slot4_a1865[slot37_a1863] = slot7_a3026
+							slot37_a1666 = nil
+							arg0 = 12971643
+						end
+					elseif arg0 < 8053016 then
+						if arg0 < 7362057 then
+							if arg0 < 7147061 then
+								if arg0 < 7134611 then
+									if arg0 < 6967949 then
+										slot29_a3011 = arg15[slot14_a1691]
+
+										if slot29_a3011 then
+											arg0 = 16118484
+										else
+											arg0 = 15771511
+										end
+
+										slot13_a2953 = slot29_a3011
+									else
+										slot14_a1691 = arg1[2]
+										local slot0_a1890 = arg15[arg2[1]]
+										slot31_a2271 = arg1[1]
+										slot20_a1690 = slot0_a1890
+
+										if slot20_a1690[slot14_a1691] then
+											arg0 = 8863094
+										else
+											arg0 = 7147606
+										end
+									end
+								elseif slot13_a2953 then
+									arg0 = 8166334
+								else
+									arg0 = 8175513
+								end
+							elseif arg0 < 7149609 then
+								arg15[arg2[2]] = {}
+								local slot23_a1905 = 255
+								slot35_a2807 = arg15[arg2[3]]
+								slot13_a2953 = slot14_a1691 % 35184372088832.0
+								local slot33_a1913 = 1
+								arg15[arg2[4]] = slot13_a2953
+								slot11_a2992 = slot33_a1913
+								slot26_a1492 = slot14_a1691 % slot23_a1905 + 2
+								arg0 = 7182093
+								arg15[arg2[5]] = slot26_a1492
+								local slot6_a1949 = 1
+								slot23_a1640 = arg0[slot1_a3260(-25336)][slot1_a3260(-25350)](slot31_a2271)
+
+								if slot11_a2992 >= 0 then
+									slot28_a1970 = false
+								else
+									slot28_a1970 = true
+								end
+
+								slot20_a1690[slot14_a1691] = slot1_a3260(-25319)
+								slot33_a1955 = slot6_a1949 - slot11_a2992
+								slot9_a1965 = slot23_a1640
+								slot10_a2545 = 91
+							else
+								slot33_a1955 = slot33_a1955 + slot11_a2992
+
+								if slot9_a1965 < slot33_a1955 then
+									local slot6_a1977 = false
+								else
+									slot6_a1977 = true
+								end
+
+								local slot4_a1963 = not slot28_a1970
+
+								if not slot4_a1963 then
+									slot6_a1977 = slot4_a1963
+								end
+
+								if slot9_a1965 > slot33_a1955 then
+									local slot4_a1973 = false
+								else
+									slot4_a1973 = true
+								end
+
+								if not slot28_a1970 then
+									slot4_a1973 = slot28_a1970
+								end
+
+								if slot4_a1973 then
+									slot6_a1977 = slot4_a1973
+								end
+
+								slot4_a1865 = 13456677
+
+								if not slot6_a1977 then
+									arg0 = slot6_a1977
+
+									if slot6_a1977 then
+										arg0 = slot4_a1865
+									end
+								end
+
+								local slot6_a1983 = 4759078
+
+								if not arg0 then
+									arg0 = slot6_a1983
+								end
+							end
+						elseif arg0 < 7591320 then
+							if arg0 < 7483557 then
+								slot22_a1991 = arg19(slot22_a1991)
+								slot36_a1815 = nil
+								slot7_a3026 = arg19(slot7_a3026)
+								slot12_a2002 = arg19(slot12_a2002)
+								arg0 = 16449444
+								slot19_a3014 = arg19(slot19_a3014)
+								slot32_a2581 = arg19(slot32_a2581)
+								slot5_a2594 = arg19(slot5_a2594)
+							else
+								local slot38_a2023 = arg11
+								local slot39_a2024 = 7666323
+								local slot40_a2025 = {
+									slot35_a2807
+								}
+								local slot38_a2029 = {
+									slot38_a2023(slot39_a2024, slot40_a2025)()
+								}
+								slot18_a3207 = slot38_a2029
+								local slot38_a2032 = {
+									arg1(slot18_a3207)
+								}
+								slot13_a2953 = slot38_a2032
+								arg0 = arg0[slot1_a3260(-25335)]
+							end
+						elseif arg0 < 7726928 then
+							arg0 = 14947238
+						else
+							slot13_a2953 = #arg15[arg2[1]]
+							slot31_a2271 = 0
+
+							if slot13_a2953 ~= slot31_a2271 then
+								local slot0_a2052 = false
+							else
+								slot0_a2052 = true
+							end
+
+							if slot0_a2052 then
+								arg0 = 6276858
+							else
+								arg0 = 14087390
+							end
+						end
+					elseif arg0 < 9238327 then
+						if arg0 < 8427741 then
+							if arg0 < 8172823 then
+								if arg0 < 8166942 then
+									local slot0_a2072 = arg0[slot1_a3260(-25341)]
+									slot9_a1965 = arg12(9535484, {})
+									local slot31_a2086 = arg15[arg2[4]]
+									local slot20_a2088 = arg0[slot1_a3260(-25326)]
+									local slot38_a2091 = {
+										arg0[slot1_a3260(-25354)](slot9_a1965)
+									}
+									slot23_a1640 = 2
+									local slot38_a2096 = {
+										arg1(slot38_a2091)
+									}
+									slot10_a2545 = slot38_a2096
+									slot26_a1492 = slot10_a2545[slot23_a1640]
+									slot35_a2807 = slot20_a2088(slot26_a1492)
+									slot20_a1690 = slot1_a3260(-25315)
+									local slot38_a2114 = {
+										slot31_a2086(slot35_a2807, slot20_a1690)()
+									}
+									slot31_a2271 = slot0_a2072(arg1(slot38_a2114))
+									slot14_a1691 = arg15[arg2[5]]
+
+									if slot14_a1691 then
+										arg0 = 9601505
+									else
+										arg0 = 4795333
+									end
+
+									slot13_a2953 = slot14_a1691
+								else
+									slot20_a1690 = 170
+									arg0 = 4244747
+									slot31_a2271 = arg15[arg2[3]] * slot20_a1690
+									slot14_a1691 = 257
+									slot13_a2953 = slot31_a2271 % slot14_a1691
+									arg15[arg2[3]] = slot13_a2953
+								end
+							elseif arg15[arg2[7]] then
+								arg0 = 14243980
+							else
+								arg0 = 1696584
+							end
+						elseif arg0 < 8952054 then
+							arg0 = 10987667
+						else
+							arg0 = 2200864
+							slot28_a1970 = arg0[slot1_a3260(-25343)]
+							slot4_a1865 = slot1_a3260(-25337)
+							slot11_a2992 = slot28_a1970[slot4_a1865]
+							slot9_a1965 = slot11_a2992
+						end
+					elseif arg0 < 9335212 then
+						if arg0 < 9300010 then
+							slot32_a2581 = slot1_a3260(-25325)
+							local slot0_a2176 = arg0[slot1_a3260(-25326)]
+							slot8_a3212 = arg0[slot32_a2581]
+							slot24_a3199 = slot0_a2176(slot8_a3212)
+							arg0[slot1_a3260(-25320)] = slot24_a3199
+							arg0 = 12464688
+						else
+							slot14_a1691 = arg20()
+							arg15[slot14_a1691] = true
+							slot31_a2271 = arg1
+							local slot13_a2205 = arg0[slot1_a3260(-25336)]
+							slot26_a1492 = arg20()
+							local slot38_a2213 = arg13
+							local slot39_a2214 = 10561329
+							local slot40_a2215 = {
+								slot26_a1492
+							}
+							slot20_a1690 = arg20()
+							arg15[slot20_a1690] = slot13_a2205[slot1_a3260(-25345)]
+							slot35_a2807 = arg20()
+							arg15[slot35_a2807] = arg16(3645300, {})
+							arg15[slot26_a1492] = false
+							slot10_a2545 = arg0[slot1_a3260(-25354)]
+							slot23_a1640 = slot10_a2545(slot38_a2213(slot39_a2214, slot40_a2215))
+							slot13_a2953 = slot23_a1640
+
+							if slot23_a1640 then
+								arg0 = 2391131
+							else
+								arg0 = 15099206
+							end
+						end
+					elseif arg0 < 9544565 then
+						slot14_a1691 = slot1_a3260(-25347)
+						slot20_a1690 = 8713017
+						slot31_a2271 = 870477 - slot14_a1691^slot20_a1690
+						local slot38_a2260 = {
+							slot1_a3260(-25342) / slot31_a2271
+						}
+						slot13_a2953 = slot38_a2260
+						arg0 = arg0[slot1_a3260(-25349)]
+					else
+						slot20_a1690 = arg15[arg2[6]]
+
+						if slot20_a1690 ~= slot31_a2271 then
+							slot14_a1691 = false
+						else
+							slot14_a1691 = true
+						end
+
+						arg0 = 4795333
+						slot13_a2953 = slot14_a1691
+					end
+				elseif arg0 < 13259539 then
+					if arg0 < 10933624 then
+						if arg0 < 10449991 then
+							if arg0 < 10304028 then
+								if arg0 < 10161874 then
+									if arg0 < 9983646 then
+										arg0 = 7144352
+										slot14_a1691 = arg15[arg2[2]]
+										slot20_a1690 = arg15[arg2[3]]
+
+										if slot14_a1691 ~= slot20_a1690 then
+											slot31_a2271 = false
+										else
+											slot31_a2271 = true
+										end
+
+										slot13_a2953 = slot31_a2271
+									else
+										arg0 = 10842583
+										slot33_a1955 = slot1_a3260(-25337)
+										slot9_a1965 = arg0[slot33_a1955]
+										slot13_a2953 = slot9_a1965
+									end
+								else
+									local slot0_a2309 = true
+									arg0 = 7529760
+								end
+							elseif arg0 < 10432278 then
+								local slot0_a2314 = slot21_a2313
+								slot13_a2953 = slot29_a3011
+								arg0 = 15771511
+							else
+								local slot0_a2327 = arg0[slot1_a3260(-25320)]
+								slot13_a2953 = arg0[slot1_a3260(-25325)]
+								arg0[slot1_a3260(-25325)] = slot0_a2327
+								arg0 = 14947238
+								arg0[slot1_a3260(-25320)] = slot13_a2953
+								slot31_a2271 = arg15[arg2[1]]
+								slot14_a1691 = slot31_a2271()
+							end
+						elseif arg0 < 10492383 then
+							if arg0 < 10482770 then
+								slot8_a3212 = 0
+								slot17_a2654 = #slot4_a1865
+
+								if slot17_a2654 ~= slot8_a3212 then
+									slot37_a1666 = false
+								else
+									slot37_a1666 = true
+								end
+
+								if slot37_a1666 then
+									arg0 = 16025169
+								else
+									arg0 = 14979669
+								end
+							else
+								slot35_a2807 = 1
+								slot26_a1492 = 2
+								slot20_a1690 = arg15[arg2[1]](slot35_a2807, slot26_a1492)
+								slot14_a1691 = 1
+
+								if slot20_a1690 ~= slot14_a1691 then
+									slot31_a2271 = false
+								else
+									slot31_a2271 = true
+								end
+
+								if slot31_a2271 then
+									arg0 = 7144352
+								else
+									arg0 = 9934138
+								end
+
+								slot13_a2953 = slot31_a2271
+							end
+						elseif arg0 < 10723709 then
+							slot13_a2953 = {}
+							arg15[arg2[1]] = true
+							arg0 = arg0[slot1_a3260(-25312)]
+						else
+							slot9_a1965 = arg20()
+							arg15[slot9_a1965] = slot13_a2953
+							local slot33_a2396 = 3
+							slot33_a1955 = arg20()
+							local slot0_a2409 = 0
+							arg15[slot33_a1955] = arg15[slot23_a1640](slot33_a2396, 65)
+							slot11_a2992 = slot0_a2409
+							slot28_a1970 = 0
+							local slot38_a2425 = {
+								arg0[slot1_a3260(-25354)](arg12(13251489, {}))
+							}
+							local slot38_a2433 = {
+								arg1(slot38_a2425)
+							}
+							slot4_a1865 = slot38_a2433
+							slot37_a1666 = slot4_a1865[2]
+							local slot0_a2446 = arg0[slot1_a3260(-25341)]
+							local slot38_a2465 = {
+								arg15[slot20_a1690](arg0[slot1_a3260(-25326)](slot37_a1666), slot1_a3260(-25315))()
+							}
+							slot17_a2654 = arg20()
+							arg15[slot17_a2654] = slot0_a2446(arg1(slot38_a2465))
+							slot13_a2953 = 1
+							arg0 = 16449444
+							slot18_a3207 = arg15[slot33_a1955]
+							slot24_a3199 = 1
+
+							if slot24_a3199 >= 0 then
+								slot8_a3212 = false
+							else
+								slot8_a3212 = true
+							end
+
+							slot25_a1557 = slot13_a2953 - slot24_a3199
+						end
+					elseif arg0 < 12662710 then
+						if arg0 < 11966494 then
+							if arg0 < 11412785 then
+								if arg0 < 11062282 then
+									local slot38_a2498 = {
+										slot14_a1691
+									}
+									slot13_a2953 = slot38_a2498
+									arg0 = arg0[slot1_a3260(-25332)]
+								else
+									slot31_a2271[arg15[arg2[10]]] = arg15[arg2[11]]
+									local slot38_a2517 = {
+										arg15[arg2[12]](slot31_a2271)
+									}
+									slot14_a1691 = slot38_a2517
+									arg0 = arg0[slot1_a3260(-25321)]
+									local slot38_a2526 = {
+										arg1(slot14_a1691)
+									}
+									slot13_a2953 = slot38_a2526
+								end
+							else
+								slot20_a1690 = slot20_a1690 + slot26_a1492
+
+								if slot35_a2807 < slot20_a1690 then
+									local slot14_a2552 = false
+								else
+									slot14_a2552 = true
+								end
+
+								local slot23_a2538 = not slot10_a2545
+
+								if not slot23_a2538 then
+									slot14_a2552 = slot23_a2538
+								end
+
+								if slot35_a2807 > slot20_a1690 then
+									local slot23_a2548 = false
+								else
+									slot23_a2548 = true
+								end
+
+								if not slot10_a2545 then
+									slot23_a2548 = slot10_a2545
+								end
+
+								if slot23_a2548 then
+									slot14_a2552 = slot23_a2548
+								end
+
+								slot23_a1640 = 6203094
+
+								if not slot14_a2552 then
+									arg0 = slot14_a2552
+
+									if slot14_a2552 then
+										arg0 = slot23_a1640
+									end
+								end
+
+								slot14_a1691 = 11155617
+
+								if not arg0 then
+									arg0 = slot14_a1691
+								end
+							end
+						elseif arg0 < 12608924 then
+							arg0 = 15675658
+						else
+							slot21_a2313 = slot36_a1815[1]
+							slot29_a3011 = slot21_a2313
+							arg0 = 15684597
+						end
+					elseif arg0 < 13006976 then
+						if arg0 < 12755785 then
+							slot17_a2654 = #slot4_a1865
+							slot8_a3212 = 0
+
+							if slot17_a2654 ~= slot8_a3212 then
+								slot37_a1666 = false
+							else
+								slot37_a1666 = true
+							end
+
+							arg0 = 14979669
+						else
+							local slot7_a2587 = not slot5_a2594
+							slot17_a2654 = slot17_a2654 + slot32_a2581
+
+							if slot8_a3212 < slot17_a2654 then
+								local slot37_a2601 = false
+							else
+								slot37_a2601 = true
+							end
+
+							if not slot7_a2587 then
+								slot37_a2601 = slot7_a2587
+							end
+
+							if slot8_a3212 > slot17_a2654 then
+								local slot7_a2597 = false
+							else
+								slot7_a2597 = true
+							end
+
+							if not slot5_a2594 then
+								slot7_a2597 = slot5_a2594
+							end
+
+							if slot7_a2597 then
+								slot37_a2601 = slot7_a2597
+							end
+
+							slot7_a3026 = 6309070
+
+							if not slot37_a2601 then
+								arg0 = slot37_a2601
+
+								if slot37_a2601 then
+									arg0 = slot7_a3026
+								end
+							end
+
+							slot37_a1666 = 12673200
+
+							if not arg0 then
+								arg0 = slot37_a1666
+							end
+						end
+					elseif arg0 < 13223599 then
+						local slot35_a2615 = arg19(slot35_a2807)
+						arg0 = 12971643
+						local slot4_a2617 = nil
+						local slot26_a2622 = arg19(slot26_a1492)
+						local slot37_a2623 = nil
+						local slot20_a2628 = arg19(slot20_a1690)
+						local slot14_a2633 = arg19(slot14_a1691)
+						slot20_a1690 = nil
+						slot14_a1691 = nil
+						local slot28_a2636 = nil
+						local slot10_a2637 = nil
+						local slot6_a2638 = nil
+						local slot33_a2643 = arg19(slot33_a1955)
+						local slot9_a2652 = arg19(slot9_a1965)
+						local slot17_a2657 = arg19(slot17_a2654)
+						slot4_a1865 = {}
+						slot33_a1955 = arg20()
+						local slot23_a2674 = arg19(slot23_a1640)
+						local slot11_a2677 = nil
+						slot28_a1970 = arg20()
+						slot26_a1492 = arg20()
+						arg15[slot26_a1492] = arg0[slot1_a3260(-25314)][slot1_a3260(-25344)]
+						slot35_a2807 = arg0[slot1_a3260(-25314)][slot1_a3260(-25317)]
+						slot10_a2545 = arg0[slot1_a3260(-25343)][slot1_a3260(-25348)]
+						slot37_a1666 = 1
+						local slot17_a2715 = 256
+						slot23_a1640 = arg0[slot1_a3260(-25336)][slot1_a3260(-25355)]
+						local slot11_a2717 = {}
+						slot9_a1965 = arg20()
+						arg15[slot9_a1965] = 0
+						arg15[slot33_a1955] = 2
+						local slot6_a2725 = {}
+						arg15[slot28_a1970] = slot11_a2717
+						slot11_a2992 = 0
+						slot8_a3212 = slot17_a2715
+						slot32_a2581 = 1
+
+						if slot32_a2581 >= 0 then
+							slot5_a2594 = false
+						else
+							slot5_a2594 = true
+						end
+
+						slot17_a2654 = slot37_a1666 - slot32_a2581
+					else
+						slot14_a1691 = slot1_a3260(-25333)
+						slot20_a1690 = 2132801
+						slot31_a2271 = 2566943 - slot14_a1691^slot20_a1690
+						local slot38_a2751 = {
+							slot1_a3260(-25328) / slot31_a2271
+						}
+						slot13_a2953 = slot38_a2751
+						arg0 = arg0[slot1_a3260(-25338)]
+					end
+				elseif arg0 < 14995531 then
+					if arg0 < 14478465 then
+						if arg0 < 14114360 then
+							if arg0 < 13988291 then
+								if arg0 < 13476271 then
+									arg0 = 7182093
+									slot4_a1865 = (arg0[slot1_a3260(-25336)][slot1_a3260(-25334)](slot31_a2271, slot33_a1955) + arg15[arg2[6]]() + slot10_a2545) % 256
+									slot17_a2654 = slot20_a1690[slot14_a1691]
+									slot24_a3199 = 1
+									local slot6_a2804 = nil
+									slot10_a2545 = slot4_a1865
+									slot18_a3207 = slot10_a2545 + slot24_a3199
+									slot25_a1557 = slot35_a2807[slot18_a3207]
+									slot37_a1666 = slot17_a2654 .. slot25_a1557
+									slot20_a1690[slot14_a1691] = slot37_a1666
+								else
+									slot8_a3212 = slot1_a3260(-25325)
+									arg0[slot8_a3212] = arg0[slot1_a3260(-25320)]
+									arg0 = 12464688
+								end
+							else
+								local slot14_a2829 = arg0[slot1_a3260(-25343)]
+								arg0 = arg0[slot1_a3260(-25313)]
+								slot31_a2271 = slot14_a2829[slot1_a3260(-25348)]
+								slot20_a1690 = arg15[arg2[1]]
+								local slot38_a2844 = {
+									slot31_a2271(slot20_a1690)
+								}
+								slot14_a1691 = slot38_a2844
+								local slot38_a2848 = {
+									arg1(slot14_a1691)
+								}
+								slot13_a2953 = slot38_a2848
+							end
+						elseif arg0 < 14245952 then
+							slot20_a1690 = 0
+							local slot0_a2860 = arg0[slot1_a3260(-25309)]
+							slot14_a1691 = arg15[arg2[8]]
+							slot31_a2271 = slot0_a2860(slot14_a1691, slot20_a1690)
+							arg0 = 1696584
+						else
+							arg15[slot14_a1691] = slot25_a1557
+
+							if arg15[slot14_a1691] then
+								arg0 = 3770148
+							else
+								arg0 = 10290346
+							end
+						end
+					elseif arg0 < 14806847 then
+						if arg0 < 14772564 then
+							local slot8_a2882 = 6
+							slot18_a3207 = arg15[slot23_a1640](1, slot8_a2882)
+							arg0[slot1_a3260(-25320)] = slot18_a3207
+							slot24_a3199 = arg0[slot1_a3260(-25320)]
+							slot8_a3212 = 2
+
+							if slot24_a3199 <= slot8_a3212 then
+								local slot0_a2906 = false
+							else
+								slot0_a2906 = true
+							end
+
+							if slot0_a2906 then
+								arg0 = 9284341
+							else
+								arg0 = 13583336
+							end
+						elseif true then
+							arg0 = 5123338
+						else
+							arg0 = 7529760
+						end
+					elseif arg0 < 14972524 then
+						if true then
+							arg0 = 10446159
+						else
+							arg0 = 2165646
+						end
+					else
+						local slot17_a2931 = slot10_a2545(slot4_a1865, slot35_a2807(1, #slot4_a1865))
+						slot7_a3026 = 1
+						slot8_a3212 = arg15[slot28_a1970]
+						slot5_a2594 = slot17_a2931 - slot7_a3026
+						slot32_a2581 = slot23_a1640(slot5_a2594)
+						slot37_a1666 = nil
+						arg0 = 10474615
+						slot8_a3212[slot17_a2931] = slot32_a2581
+						slot17_a2654 = nil
+					end
+				elseif arg0 < 15764010 then
+					if arg0 < 15650764 then
+						if arg0 < 15193458 then
+							if arg0 < 15100763 then
+								slot10_a2545 = slot13_a2953
+								slot23_a1640 = arg20()
+								arg15[slot23_a1640] = arg0[slot1_a3260(-25314)][slot1_a3260(-25317)]
+								slot28_a1970 = slot1_a3260(-25343)
+								slot13_a2953 = arg0[slot1_a3260(-25343)]
+								local slot0_a2984 = slot13_a2953[slot1_a3260(-25322)]
+								local slot6_a2985 = slot0_a2984
+								slot33_a1955 = slot0_a2984
+								slot11_a2992 = arg0[slot28_a1970]
+								slot9_a1965 = slot11_a2992
+
+								if slot11_a2992 then
+									arg0 = 8982749
+								else
+									arg0 = 2200864
+								end
+							else
+								if slot11_a2992 ~= slot28_a1970 then
+									slot18_a3207 = false
+								else
+									slot18_a3207 = true
+								end
+
+								slot25_a1557 = slot18_a3207
+								arg0 = 14344270
+							end
+						else
+							arg0 = arg0[slot1_a3260(-25311)]
+							slot13_a2953 = {}
+						end
+					elseif arg0 < 15684210 then
+						if true then
+							arg0 = 14745106
+						else
+							arg0 = 15374132
+						end
+					else
+						arg15[slot14_a1691] = slot29_a3011
+						slot11_a2992 = (slot11_a2992 + slot36_a1815[arg15[slot19_a3014] + 1]) % 256
+						slot21_a2313 = (slot28_a1970 + arg15[slot7_a3026]) % 256
+						arg0 = 7389450
+						slot28_a1970 = slot21_a2313
+					end
+				elseif arg0 < 16108098 then
+					if arg0 < 15818664 then
+						arg15[slot14_a1691] = slot13_a2953
+						arg0 = 7389450
+					else
+						local slot23_a3042 = nil
+						local slot37_a3043 = {}
+						slot7_a3026 = {}
+						local slot32_a3051 = arg20()
+						local slot17_a3054 = arg20()
+						local slot10_a3055 = nil
+						slot36_a1815 = slot1_a3260(-25351)
+						local slot38_a3064 = arg11
+						local slot39_a3065 = 7740239
+						local slot40_a3066 = {
+							slot17_a3054,
+							slot9_a1965,
+							slot33_a1955,
+							slot26_a1492
+						}
+						local slot30_a3072 = nil
+						slot13_a2953 = {}
+						arg15[slot17_a3054] = slot37_a3043
+						local slot6_a3075 = nil
+						local slot37_a3078 = arg20()
+						slot12_a2002 = slot1_a3260(-25340)
+						local slot11_a3083 = nil
+						arg15[slot37_a3078] = slot38_a3064(slot39_a3065, slot40_a3066)
+						local slot26_a3089 = arg19(slot26_a1492)
+						slot4_a1865 = nil
+						arg15[slot32_a3051] = {}
+						local slot35_a3096 = nil
+						local slot8_a3098 = arg0[slot1_a3260(-25316)]
+						slot22_a1991 = arg15[slot32_a3051]
+						local slot38_a3101 = {
+							[slot12_a2002] = slot22_a1991,
+							[slot36_a1815] = slot30_a3072
+						}
+						slot19_a3014 = slot38_a3101
+						slot5_a2594 = slot8_a3098(slot7_a3026, slot19_a3014)
+						local slot38_a3109 = arg9
+						local slot39_a3110 = 6998377
+						local slot40_a3111 = {
+							slot32_a3051,
+							slot17_a3054,
+							slot28_a1970,
+							slot9_a1965,
+							slot33_a1955,
+							slot37_a3078
+						}
+						slot8_a3212 = slot38_a3109(slot39_a3110, slot40_a3111)
+						slot11_a2992 = 408885985470.0
+						local slot35_a3117 = arg0[slot1_a3260(-25324)]
+						slot10_a2545 = arg0[slot1_a3260(-25331)]
+						slot17_a2654 = arg19(slot17_a3054)
+						local slot33_a3128 = arg19(slot33_a1955)
+						arg0 = arg0[slot1_a3260(-25353)]
+						slot32_a2581 = arg19(slot32_a3051)
+						slot33_a1955 = slot1_a3260(-25339)
+						local slot9_a3145 = arg19(slot9_a1965)
+						slot28_a1970 = arg19(slot28_a1970)
+						slot14_a1691 = nil
+						local slot6_a3157 = slot5_a2594[slot8_a3212(slot33_a1955, slot11_a2992)]
+						slot37_a1666 = arg19(slot37_a3078)
+						slot9_a1965 = slot10_a2545[slot1_a3260(-25327)]
+						local slot38_a3167 = {
+							slot9_a1965(slot10_a2545, slot6_a3157)
+						}
+						slot23_a1640 = slot38_a3167
+						slot20_a1690 = nil
+						slot26_a1492 = slot35_a3117(arg1(slot23_a1640))
+						slot35_a2807 = slot26_a1492()
+					end
+				elseif arg0 < 16207283 then
+					slot21_a2313 = arg0
+
+					if slot36_a1815[1] ~= false then
+						local slot30_a3194 = false
+					else
+						slot30_a3194 = true
+					end
+
+					if slot30_a3194 then
+						arg0 = 6083092
+					else
+						arg0 = 10334249
+					end
+
+					slot29_a3011 = slot30_a3194
+				else
+					local slot32_a3205 = not slot8_a3212
+					slot25_a1557 = slot25_a1557 + slot24_a3199
+
+					if slot18_a3207 < slot25_a1557 then
+						local slot13_a3219 = false
+					else
+						slot13_a3219 = true
+					end
+
+					if not slot32_a3205 then
+						slot13_a3219 = slot32_a3205
+					end
+
+					if slot18_a3207 > slot25_a1557 then
+						local slot32_a3215 = false
+					else
+						slot32_a3215 = true
+					end
+
+					if not slot8_a3212 then
+						slot32_a3215 = slot8_a3212
+					end
+
+					slot32_a2581 = 4804802
+					arg0 = slot13_a3219 and slot32_a2581
+					slot13_a2953 = 5758162
+					arg0 = arg0 or slot13_a2953
+				end
+			end
+
+			local slot0_a3228 = #arg3
+
+			return arg1(slot13_a2953)
+		end
+
+		local slot8_a3234 = 0
+		local slot15_a3235 = {}
+		local slot10_a3236 = {}
+
+		local function slot11_a3237(arg0, arg1)
+			local slot2_a1369 = arg17(arg1)
+
+			return (function ()
+				return arg7(arg0, {}, arg1, slot2_a1369)
+			end)
+		end
+
+		local function slot13_a3238(arg0, arg1)
+			local slot2_a1346 = arg17(arg1)
+
+			return (function (arg0, arg1, arg2, arg3, arg4)
+				local slot5_a1353 = arg7
+				local slot6_a1355 = arg0
+				local slot7_a1356 = {
+					arg0,
+					arg1,
+					arg2,
+					arg3,
+					arg4
+				}
+
+				return slot5_a1353(slot6_a1355, slot7_a1356, arg1, slot2_a1346)
+			end)
+		end
+
+		local function slot12_a3239(arg0, arg1)
+			local slot2_a1324 = arg17(arg1)
+
+			return (function (arg0, arg1, arg2, arg3)
+				local slot4_a1330 = arg7
+				local slot5_a1332 = arg0
+				local slot6_a1333 = {
+					arg0,
+					arg1,
+					arg2,
+					arg3
+				}
+
+				return slot4_a1330(slot5_a1332, slot6_a1333, arg1, slot2_a1324)
+			end)
+		end
+
+		local function slot19_a3240(arg0)
+			arg10[arg0] = arg10[arg0] - 1
+
+			if arg10[arg0] == 0 then
+				local slot1_a1312 = arg10
+				local slot3_a1315 = nil
+				arg15[arg0] = nil
+				slot1_a1312[arg0] = slot3_a1315
+			end
+		end
+
+		local function slot14_a3241(arg0)
+			local slot1_a1290 = 1
+			local slot2_a1299 = arg0[1]
+
+			while slot2_a1299 do
+				local slot3_a1285 = arg10
+				local slot4_a1289 = arg10[slot2_a1299] - 1
+				slot1_a1290 = slot1_a1290 + 1
+				slot3_a1285[slot2_a1299] = slot4_a1289
+
+				if arg10[slot2_a1299] == 0 then
+					local slot3_a1294 = arg10
+					local slot5_a1297 = nil
+					arg15[slot2_a1299] = nil
+					slot3_a1294[slot2_a1299] = slot5_a1297
+				end
+
+				slot2_a1299 = arg0[slot1_a1290]
+			end
+		end
+
+		local function slot9_a3242(arg0, arg1)
+			local slot2_a1265 = arg17(arg1)
+
+			return (function (arg0, arg1)
+				local slot2_a1269 = arg7
+				local slot3_a1271 = arg0
+				local slot4_a1272 = {
+					arg0,
+					arg1
+				}
+
+				return slot2_a1269(slot3_a1271, slot4_a1272, arg1, slot2_a1265)
+			end)
+		end
+
+		local function slot17_a3243(arg0)
+			for slot4_a1210 = 1, #arg0 do
+				arg10[arg0[slot4_a1210]] = arg10[arg0[slot4_a1210]] + 1
+			end
+
+			if arg2 then
+				local slot1_a1220 = arg2(true)
+				local slot2_a1224 = arg4(slot1_a1220)
+				local slot3_a1228 = slot1_a3260(-25340)
+				local slot4_a1231 = slot1_a3260(-25318)
+				local slot7_a1238 = arg14
+
+				slot2_a1224[slot1_a3260(-25330)] = (function ()
+					return -1778782
+				end)
+
+				slot2_a1224[slot4_a1231] = slot7_a1238
+				slot2_a1224[slot3_a1228] = arg0
+
+				return slot1_a1220
+			else
+				local slot1_a1242 = arg3
+				local slot2_a1243 = {}
+				local slot3_a1244 = {
+					[slot1_a3260(-25318)] = arg14,
+					[slot1_a3260(-25340)] = arg0,
+					[slot1_a3260(-25330)] = (function ()
+						return -1778782
+					end)
+				}
+
+				return slot1_a1242(slot2_a1243, slot3_a1244)
+			end
+		end
+
+		local function slot20_a3244()
+			arg8 = 1 + arg8
+			arg10[arg8] = 1
+
+			return arg8
+		end
+
+		local function slot16_a3245(arg0, arg1)
+			local slot2_a1177 = arg17(arg1)
+
+			return (function (arg0, arg1, arg2)
+				local slot3_a1182 = arg7
+				local slot4_a1184 = arg0
+				local slot5_a1185 = {
+					arg0,
+					arg1,
+					arg2
+				}
+
+				return slot3_a1182(slot4_a1184, slot5_a1185, arg1, slot2_a1177)
+			end)
+		end
+
+		return (function (arg0, arg1)
+			local slot2_a1390 = arg17(arg1)
+
+			return (function (...)
+				local slot0_a1392 = arg7
+				local slot1_a1394 = arg0
+				local slot2_a1395 = {
+					...
+				}
+
+				return slot0_a1392(slot1_a1394, slot2_a1395, arg1, slot2_a1390)
+			end)
+		end)(9316881, {})(arg1(arg6))
+	end
+
+	local slot3_a3271 = getfenv and getfenv() or _ENV
+	local slot4_a3273 = unpack or table[slot1_a3260(-25337)]
+	local slot5_a3265 = newproxy
+	local slot6_a3266 = setmetatable
+	local slot7_a3267 = getmetatable
+	local slot8_a3268 = select
+	local slot9_a3269 = {
+		...
+	}
+
+	return slot2_a3270(slot3_a3271, slot4_a3273, slot5_a3265, slot6_a3266, slot7_a3267, slot8_a3268, slot9_a3269)
+end)(...)
