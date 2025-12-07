@@ -3,17 +3,13 @@ local TradeHistoryApp = require(game:GetService("ReplicatedStorage").ClientModul
 local PlayerProfileApp = require(game.ReplicatedStorage.ClientModules.Core.UIManager.Apps.PlayerProfileApp.PlayerProfileApp)
 local profile_func = PlayerProfileApp.open_player_profile_for_user_id
 local create_trade_frame = TradeHistoryApp._create_trade_frame
-
 local v_u_1 = require(game.ReplicatedStorage:WaitForChild("Fsys")).load
 local v_u_3 = v_u_1("RouterClient")
-
 local local_offer = nil
-
 local saved_ids = {}
 local custom_name = "NO_CUSTOM_NAME"
 local parter_offer
 local func
-
 local old1
 local old2
 local old3
@@ -23,11 +19,7 @@ local old6
 local old7
 local old8
 local old9
-
-local wtf = "                                                                                    "
-
 getgenv().customnames = false
-
 -- Таблица с питомцами
 local petstbl = {
 "Bat Dragon",
@@ -141,750 +133,653 @@ local petstbl = {
 "Chicken",
 "Meerkat"
 }
-
--- Переменные для фейк-трейда
-local fakeTradePartner = nil
-local fakeTradeActive = false
-local fakePartnerOffer = {}
-local fakePartnerConfirmed = false
-local fakePartnerLocked = false
-
+-- Хуки
 for _,v in pairs(getgc(true)) do
-    if typeof(v) == "table" and rawget(v,"trade") then
-        for kk,vv in pairs(v['trade']) do
-            if typeof(tonumber(kk)) == "number" then
-                func = vv
-            end
-        end
-    end 
+if typeof(v) == "table" and rawget(v,"trade") then
+for kk,vv in pairs(v['trade']) do
+if typeof(tonumber(kk)) == "number" then
+func = vv
+end
+end
+end
 end
 for _,v in pairs(getgc(true)) do
-    if typeof(v) == "table" and rawget(v,"_get_partner_offer") then
-        parter_offer = v._get_partner_offer
-    end
+if typeof(v) == "table" and rawget(v,"_get_partner_offer") then
+parter_offer = v._get_partner_offer
 end
-
+end
 old1 = hookfunction(TradeApp._change_local_trade_state,function(a,b)
-    for k,v in pairs(b) do
-        if k == "sender_offer" or k == "recipient_offer" then
-            for kk,vv in pairs(v) do
-                if kk == "items" then
-                    local_offer = v.items
-                end
-            end
-        else
-            
-        end
-    end
-    return old1(a,b)
+for k,v in pairs(b) do
+if k == "sender_offer" or k == "recipient_offer" then
+for kk,vv in pairs(v) do
+if kk == "items" then
+local_offer = v.items
+end
+end
+end
+end
+return old1(a,b)
 end)
-
 old2 = hookfunction(TradeApp._overwrite_local_trade_state,function(a,b)
-    if a~=nil and b~= nil and local_offer ~= nil then
-        if game.Players.LocalPlayer == b.sender then
-            b.sender_offer.items = local_offer
-        else
-            b.recipient_offer.items = local_offer
-        end
-    end
-    return old2(a,b)
+if a and b and local_offer then
+if game.Players.LocalPlayer == b.sender then
+b.sender_offer.items = local_offer
+else
+b.recipient_offer.items = local_offer
+end
+end
+return old2(a,b)
 end)
-
 old3 = hookfunction(TradeApp._remove_item_from_my_offer,function(p174, p175)
-    local function findKey(alltables,needtable)
-        for k,v in pairs(alltables) do
-            if v["unique"] == needtable["unique"] then
-                return k
-            end
-        end
-    end
-
-    if p175.category == "houses" then
-        p174.UIManager.apps.HintApp:hint({
-            ["text"] = "You can\'t remove this item.",
-            ["length"] = 5,
-            ["overridable"] = true
-        })
-    else
-        v_u_3.get("TradeAPI/RemoveItemFromOffer"):FireServer(p175.unique)
-        local v176, v177 = p174:_get_my_offer()
-        local v178 = findKey(v176.items,p175)
-        table.remove(v176.items, v178)
-        local v179 = {
-            [v177] = {
-                ["items"] = v176.items
-            }
-        }
-        p174:_change_local_trade_state(v179)
-        p174:_lock_trade_for_appropriate_time()
-        p174:refresh_all()
-    end
+local function findKey(alltables,needtable)
+for k,v in pairs(alltables) do
+if v["unique"] == needtable["unique"] then
+return k
+end
+end
+end
+if p175.category == "houses" then
+p174.UIManager.apps.HintApp:hint({
+["text"] = "You can't remove this item.",
+["length"] = 5,
+["overridable"] = true
+})
+else
+v_u_3.get("TradeAPI/RemoveItemFromOffer"):FireServer(p175.unique)
+local v176, v177 = p174:_get_my_offer()
+local v178 = findKey(v176.items,p175)
+table.remove(v176.items, v178)
+local v179 = {
+[v177] = {
+["items"] = v176.items
+}
+}
+p174:_change_local_trade_state(v179)
+p174:_lock_trade_for_appropriate_time()
+p174:refresh_all()
+end
 end)
-
 old4 = hookfunction(func,function(...)
-    local args = {...}
-
-    if #args > 2 then
-        for k,v in pairs(args) do
-            if typeof(v) == "table" then
-                if local_offer ~= nil then
-                    if game.Players.LocalPlayer == v.sender then
-                        v["sender_offer"]["items"] = local_offer
-                    else
-                        v["recipient_offer"]["items"] = local_offer
-                    end
-                end
-            end
-        end
-    end
-
-    return old4(unpack(args))
+local args = {...}
+if #args > 2 then
+for k,v in pairs(args) do
+if typeof(v) == "table" then
+if local_offer then
+if game.Players.LocalPlayer == v.sender then
+v["sender_offer"]["items"] = local_offer
+else
+v["recipient_offer"]["items"] = local_offer
+end
+end
+end
+end
+end
+return old4(unpack(args))
 end)
-
 old5 = hookfunction(TradeApp.hide,function(...)
-    local v_u_1 = require(game.ReplicatedStorage:WaitForChild("Fsys")).load
-    local v_u_10 = v_u_1("ClientData")
-
-    if local_offer ~= nil then
-        for k,v in pairs(v_u_10.get("inventory")["pets"]) do
-            for kk,vv in pairs(local_offer) do
-                if vv['unique'] == k then
-                    v_u_10.get("inventory")["pets"][k] = nil
-                end
-            end
-        end
-    end
-
-    local_offer = nil
-
-    return old5(...)
+local v_u_1 = require(game.ReplicatedStorage:WaitForChild("Fsys")).load
+local v_u_10 = v_u_1("ClientData")
+if local_offer then
+for k,v in pairs(v_u_10.get("inventory")["pets"]) do
+for kk,vv in pairs(local_offer) do
+if vv['unique'] == k then
+v_u_10.get("inventory")["pets"][k] = nil
+end
+end
+end
+end
+local_offer = nil
+return old5(...)
 end)
-
 old6 = hookfunction(TradeApp.refresh_all,function(arg1)
-    local ab = arg1:_get_my_offer()
-    local ab2 = arg1:_get_partner_offer()
-    if ab.confirmed and ab2.confirmed then
-        local main_tbl
-        for _,a in pairs(getgc(true)) do
-            if typeof(a) == "table" and rawget(a,"local_trade_state") then
-                main_tbl = a
-            end
-        end
-        if saved_ids[tostring(main_tbl.local_trade_state.trade_id)] == nil then
-            saved_ids[tostring(main_tbl.local_trade_state.trade_id)] = {["items"] = local_offer,["name"] = (getgenv().customnames and custom_name) or ab2["player_name"] }
-        end
-    end
-    return old6(arg1)
+local ab = arg1:_get_my_offer()
+local ab2 = arg1:_get_partner_offer()
+if ab.confirmed and ab2.confirmed then
+local main_tbl
+for _,a in pairs(getgc(true)) do
+if typeof(a) == "table" and rawget(a,"local_trade_state") then
+main_tbl = a
+end
+end
+if main_tbl and saved_ids[tostring(main_tbl.local_trade_state.trade_id)] == nil then
+saved_ids[tostring(main_tbl.local_trade_state.trade_id)] = {["items"] = local_offer,["name"] = (getgenv().customnames and custom_name) or ab2["player_name"] }
+end
+end
+return old6(arg1)
 end)
-
 old7 = hookfunction(create_trade_frame,function(...)
-    local args = {...}
-    local arg2 = args[2]
-    if saved_ids[tostring(arg2.trade_id)] then
-        if arg2.sender_name == game.Players.LocalPlayer.Name then
-            arg2.sender_items = saved_ids[tostring(arg2.trade_id)]["items"]
-            arg2.recipient_name = saved_ids[tostring(arg2.trade_id)]["name"]
-        else
-            arg2.recipient_items = saved_ids[tostring(arg2.trade_id)]["items"]
-            arg2.sender_name = saved_ids[tostring(arg2.trade_id)]["name"]
-        end
-    end
-    
-    -- Обновление для фейк-трейда
-    if fakeTradeActive and fakeTradePartner then
-        if arg2.sender_name == game.Players.LocalPlayer.Name then
-            arg2.recipient_name = fakeTradePartner.Name
-            arg2.recipient_items = fakePartnerOffer
-            arg2.recipient_confirmed = fakePartnerConfirmed
-            arg2.recipient_locked = fakePartnerLocked
-        else
-            arg2.sender_name = fakeTradePartner.Name
-            arg2.sender_items = fakePartnerOffer
-            arg2.sender_confirmed = fakePartnerConfirmed
-            arg2.sender_locked = fakePartnerLocked
-        end
-    end
-    
-    return old7(...)
+local args = {...}
+local arg2 = args[2]
+if arg2 and saved_ids[tostring(arg2.trade_id)] then
+if arg2.sender_name == game.Players.LocalPlayer.Name then
+arg2.sender_items = saved_ids[tostring(arg2.trade_id)]["items"]
+arg2.recipient_name = saved_ids[tostring(arg2.trade_id)]["name"]
+else
+arg2.recipient_items = saved_ids[tostring(arg2.trade_id)]["items"]
+arg2.sender_name = saved_ids[tostring(arg2.trade_id)]["name"]
+end
+end
+if fakeTradeActive and fakeTradePartner then
+if arg2.sender_name == game.Players.LocalPlayer.Name then
+arg2.recipient_name = fakeTradePartner.Name
+arg2.recipient_items = fakePartnerOffer
+arg2.recipient_confirmed = fakePartnerConfirmed
+arg2.recipient_locked = fakePartnerLocked
+else
+arg2.sender_name = fakeTradePartner.Name
+arg2.sender_items = fakePartnerOffer
+arg2.sender_confirmed = fakePartnerConfirmed
+arg2.sender_locked = fakePartnerLocked
+end
+end
+return old7(...)
 end)
-
 old8 = hookfunction(parter_offer,function(...)
-    local tbl,a= old8(...)
-    if getgenv().customnames then
-        tbl['player_name'] = custom_name
-    end
-    
-    -- Обновление для фейк-трейда
-    if fakeTradeActive and fakeTradePartner then
-        tbl['player_name'] = fakeTradePartner.Name
-        tbl['items'] = fakePartnerOffer
-        tbl['confirmed'] = fakePartnerConfirmed
-        tbl['locked'] = fakePartnerLocked
-    end
-    
-    return tbl,a
+local tbl,a= old8(...)
+if getgenv().customnames then
+tbl['player_name'] = custom_name
+end
+if fakeTradeActive and fakeTradePartner then
+tbl['player_name'] = fakeTradePartner.Name
+tbl['items'] = fakePartnerOffer
+tbl['confirmed'] = fakePartnerConfirmed
+tbl['locked'] = fakePartnerLocked
+end
+return tbl,a
 end)
-
-old9 = hookfunction(profile_func,function(_,id)
-    if getgenv().customnames then
-        id = game.Players[custom_name].UserId
-    end
-    return old9(_,id)
+old9 = hookfunction(profile_func,function(,id)
+if getgenv().customnames then
+id = game.Players[custom_name].UserId
+end
+return old9(,id)
 end)
-
 -- Функции для создания питомцев
 getgenv().petname = "Dog"
 getgenv().ride = false
 getgenv().fly = false
 getgenv().neon = false
 getgenv().meganeon = false
-
 local function makePetPattern(id,kind,unique,neon,mega,fly,ride)
-    return {
-        ["unique"] = unique,
-        ["category"] = "pets",
-        ["id"] = id,
-        ["kind"] = kind,
-        ["properties"] = {
-            ["pet_trick_level"] = 0,
-            ["rideable"] = false,
-            ['friendship_level'] = 0,
-            ["age"] = math.random(1, 5),
-            ["flyable"] = fly,
-            ["rideable"] = ride,
-            ["neon"] = neon,
-            ["mega_neon"] = mega,
-            ["ailments_completed"] = 0
-        },
-        ["newness_order"] = 0
-    }
+return {
+["unique"] = unique,
+["category"] = "pets",
+["id"] = id,
+["kind"] = kind,
+["properties"] = {
+["pet_trick_level"] = 0,
+["rideable"] = false,
+['friendship_level'] = 0,
+["age"] = math.random(1, 5),
+["flyable"] = fly,
+["rideable"] = ride,
+["neon"] = neon,
+["mega_neon"] = mega,
+["ailments_completed"] = 0
+},
+["newness_order"] = 0
+}
 end
-
 local function createPet(name,fly,ride,neon,meganeon)
-    local m = require(game:GetService("ReplicatedStorage").ClientDB.Inventory.InventoryDB)
-    for k,v in pairs(m.pets) do
-        if v["name"]:lower() == name:lower() then
-            local uniq = "2_"..tostring(math.random(1,20000000000000))
-            local v_u_1 = require(game.ReplicatedStorage:WaitForChild("Fsys")).load
-            local v_u_10 = v_u_1("ClientData")
-            v_u_10.get("inventory")["pets"][uniq] = makePetPattern(v['id'],v['kind'],uniq,neon,meganeon,fly,ride)
-            return uniq
-        end
-    end
-    return nil
+local m = require(game:GetService("ReplicatedStorage").ClientDB.Inventory.InventoryDB)
+for k,v in pairs(m.pets) do
+if v["name"]:lower() == name:lower() then
+local uniq = "2_"..tostring(math.random(1,20000000000000))
+local v_u_1 = require(game.ReplicatedStorage:WaitForChild("Fsys")).load
+local v_u_10 = v_u_1("ClientData")
+v_u_10.get("inventory")["pets"][uniq] = makePetPattern(v['id'],v['kind'],uniq,neon,meganeon,fly,ride)
+return uniq
 end
-
+end
+return nil
+end
 local event = Instance.new("BindableEvent")
-
 event.Event:Connect(function(name,fly,ride,neon,meganeon)
-    createPet(name,fly,ride,neon,meganeon)
+createPet(name,fly,ride,neon,meganeon)
 end)
-
 local function isPetExist(petname)
-    local m = require(game:GetService("ReplicatedStorage").ClientDB.Inventory.InventoryDB)
-    for k,v in pairs(m.pets) do
-        if v["name"] == petname then
-            return true
-        end
-    end
-    return false
+local m = require(game:GetService("ReplicatedStorage").ClientDB.Inventory.InventoryDB)
+for k,v in pairs(m.pets) do
+if v["name"] == petname then
+return true
 end
-
+end
+return false
+end
 -- Функции для управления фейк-трейдом
+local fakeTradePartner = nil
+local fakeTradeActive = false
+local fakePartnerOffer = {}
+local fakePartnerConfirmed = false
+local fakePartnerLocked = false
 local function startFakeTrade(player)
-    fakeTradePartner = player
-    fakeTradeActive = true
-    fakePartnerOffer = {}
-    fakePartnerConfirmed = false
-    fakePartnerLocked = false
-    
-    -- Создание фейкового состояния трейда
-    local localPlayer = game.Players.LocalPlayer
-    local fake_state = {
-        trade_id = math.random(1, 1000000000),
-        sender = localPlayer,
-        recipient = player,
-        sender_offer = {
-            items = local_offer or {},
-            locked = false,
-            confirmed = false
-        },
-        recipient_offer = {
-            items = fakePartnerOffer,
-            locked = fakePartnerLocked,
-            confirmed = fakePartnerConfirmed
-        },
-        -- Добавьте другие необходимые поля, если нужно (например, status = "active")
-    }
-    
-    -- Установка состояния и открытие окна трейда
-    TradeApp:_overwrite_local_trade_state(nil, fake_state)
-    TradeApp:Show()  -- Предполагаем, что метод Show() существует; если нет, попробуйте :open() или найдите правильный метод через getgc
+if not player then return end
+fakeTradePartner = player
+fakeTradeActive = true
+fakePartnerOffer = {}
+fakePartnerConfirmed = false
+fakePartnerLocked = false
+local localPlayer = game.Players.LocalPlayer
+local fake_state = {
+trade_id = tostring(math.random(1000000000, 9999999999)),
+sender = localPlayer,
+recipient = player,
+sender_offer = {
+items = local_offer or {},
+locked = false,
+confirmed = false
+},
+recipient_offer = {
+items = fakePartnerOffer,
+locked = fakePartnerLocked,
+confirmed = fakePartnerConfirmed
+},
+status = "active"
+}
+TradeApp:_overwrite_local_trade_state(nil, fake_state)
+local uiManager = require(game.ReplicatedStorage.ClientModules.Core.UIManager)
+if uiManager and uiManager.open_app then
+uiManager:open_app("TradeApp")
+else
+TradeApp:_change_local_trade_state(fake_state)
+local playerGui = game.Players.LocalPlayer.PlayerGui
+local tradeGui = playerGui:FindFirstChild("TradeApp") or playerGui:FindFirstChildOfClass("ScreenGui") -- Adjust if needed
+if tradeGui then
+tradeGui.Enabled = true
 end
-
+end
+end
 local function addFakePartnerPet(petName, fly, ride, neon, megaNeon)
-    if not fakeTradeActive then return end
-    
-    local m = require(game:GetService("ReplicatedStorage").ClientDB.Inventory.InventoryDB)
-    for k,v in pairs(m.pets) do
-        if v["name"]:lower() == petName:lower() then
-            local uniq = "fake_"..tostring(math.random(1,20000000000000))
-            table.insert(fakePartnerOffer, makePetPattern(v['id'],v['kind'],uniq,neon,megaNeon,fly,ride))
-            return true
-        end
-    end
-    return false
+if not fakeTradeActive or not petName or petName == "" then return false end
+local m = require(game:GetService("ReplicatedStorage").ClientDB.Inventory.InventoryDB)
+for k,v in pairs(m.pets) do
+if v["name"]:lower() == petName:lower() then
+local uniq = "fake_"..tostring(math.random(1,20000000000000))
+table.insert(fakePartnerOffer, makePetPattern(v['id'],v['kind'],uniq,neon,megaNeon,fly,ride))
+TradeApp:refresh_all()
+return true
 end
-
+end
+return false
+end
 local function removeFakePartnerPet(index)
-    if not fakeTradeActive then return end
-    
-    if index >= 1 and index <= #fakePartnerOffer then
-        table.remove(fakePartnerOffer, index)
-        return true
-    end
-    return false
+if not fakeTradeActive or not index then return false end
+if index >= 1 and index <= #fakePartnerOffer then
+table.remove(fakePartnerOffer, index)
+TradeApp:refresh_all()
+return true
 end
-
+return false
+end
 local function acceptFakeTrade()
-    if not fakeTradeActive then return end
-    
-    fakePartnerConfirmed = true
-    fakePartnerLocked = true
-    
-    -- Обновление интерфейса трейда
-    for _,app in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
-        if app.Name == "TradeApp" then
-            app:refresh_all()
-        end
-    end
+if not fakeTradeActive then return end
+fakePartnerConfirmed = true
+fakePartnerLocked = true
+TradeApp:refresh_all()
 end
-
 local function declineFakeTrade()
-    if not fakeTradeActive then return end
-    
-    fakeTradeActive = false
-    fakeTradePartner = nil
-    
-    -- Закрытие окна трейда
-    for _,app in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
-        if app.Name == "TradeApp" then
-            app:hide()
-        end
-    end
+if not fakeTradeActive then return end
+fakeTradeActive = false
+fakeTradePartner = nil
+TradeApp:hide()
 end
-
 local function resetFakeTrade()
-    fakeTradeActive = false
-    fakeTradePartner = nil
-    fakePartnerOffer = {}
-    fakePartnerConfirmed = false
-    fakePartnerLocked = false
+fakeTradeActive = false
+fakeTradePartner = nil
+fakePartnerOffer = {}
+fakePartnerConfirmed = false
+fakePartnerLocked = false
+TradeApp:hide()
 end
-
 -- Создание интерфейса
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "Adopt me",
-    Icon = 0,
-    LoadingTitle = "Rayfield Interface Suite",
-    LoadingSubtitle = "",
-    ShowText = "Rayfield",
-    Theme = "Default",
- 
-    ToggleUIKeybind = "K",
- 
-    DisableRayfieldPrompts = false,
-    DisableBuildWarnings = false,
- 
-    ConfigurationSaving = {
-       Enabled = false,
-       FolderName = "",
-       FileName = "mines_file"
-    },
- 
-    Discord = {
-       Enabled = false, 
-       Invite = "noinvitelink", 
-       RememberJoins = true 
-    },
- 
-    KeySystem = false, 
- })
-
+Name = "Adopt me",
+Icon = 0,
+LoadingTitle = "Rayfield Interface Suite",
+LoadingSubtitle = "",
+ShowText = "Rayfield",
+Theme = "Default",
+ToggleUIKeybind = "K",
+DisableRayfieldPrompts = false,
+DisableBuildWarnings = false,
+ConfigurationSaving = {
+Enabled = false,
+FolderName = "",
+FileName = "mines_file"
+},
+Discord = {
+Enabled = false,
+Invite = "noinvitelink",
+RememberJoins = true
+},
+KeySystem = false,
+})
 -- Основная вкладка
 local main_tab = Window:CreateTab("Main",0)
 local Input = main_tab:CreateInput({
-    Name = "Pet name",
-    CurrentValue = "",
-    PlaceholderText = "Pet name",
-    RemoveTextAfterFocusLost = false,
-    Flag = "Input1",
-    Callback = function(Text)
-        getgenv().petname = Text
-    end,
- })
-
+Name = "Pet name",
+CurrentValue = "",
+PlaceholderText = "Pet name",
+RemoveTextAfterFocusLost = false,
+Flag = "Input1",
+Callback = function(Text)
+getgenv().petname = Text
+end,
+})
 local ride_toggle = main_tab:CreateToggle({
-    Name = "Ride",
-    CurrentValue = false,
-    Flag = "Toggle1",
-    Callback = function(Value)
-        getgenv().ride = Value
-    end,
+Name = "Ride",
+CurrentValue = false,
+Flag = "Toggle1",
+Callback = function(Value)
+getgenv().ride = Value
+end,
 })
-
 local fly_toggle = main_tab:CreateToggle({
-    Name = "Fly",
-    CurrentValue = false,
-    Flag = "Toggle2",
-    Callback = function(Value)
-        getgenv().fly = Value
-    end,
+Name = "Fly",
+CurrentValue = false,
+Flag = "Toggle2",
+Callback = function(Value)
+getgenv().fly = Value
+end,
 })
-
 local neon_toggle = main_tab:CreateToggle({
-    Name = "Neon",
-    CurrentValue = false,
-    Flag = "Toggle3",
-    Callback = function(Value)
-        getgenv().neon = Value
-    end,
+Name = "Neon",
+CurrentValue = false,
+Flag = "Toggle3",
+Callback = function(Value)
+getgenv().neon = Value
+end,
 })
-
 local meganeon_toggle = main_tab:CreateToggle({
-    Name = "Mega neon",
-    CurrentValue = false,
-    Flag = "Toggle4",
-    Callback = function(Value)
-        getgenv().meganeon = Value
-    end,
+Name = "Mega neon",
+CurrentValue = false,
+Flag = "Toggle4",
+Callback = function(Value)
+getgenv().meganeon = Value
+end,
 })
-
 local Button = main_tab:CreateButton({
-    Name = "Create pet",
-    Callback = function()
-        event:Fire(getgenv().petname,getgenv().fly,getgenv().ride,getgenv().neon,getgenv().meganeon)
-    end,
- })
-
-local Button2 = main_tab:CreateButton({
-    Name = "Spawn pets",
-    Callback = function()
-        for _,namepet in pairs(petstbl) do
-            for i = 1,math.random(5,20) do
-                event:Fire(namepet,getgenv().fly,getgenv().ride,getgenv().neon,getgenv().meganeon)
-            end
-        end
-    end,
- })
-
-local names_toggle = main_tab:CreateToggle({
-    Name = "Custom names",
-    CurrentValue = false,
-    Flag = "Toggle5",
-    Callback = function(Value)
-        getgenv().customnames = Value
-    end,
-})
-
-local name_input = main_tab:CreateInput({
-    Name = "Custom Name",
-    CurrentValue = "",
-    PlaceholderText = "Name",
-    RemoveTextAfterFocusLost = false,
-    Flag = "Input2",
-    Callback = function(Text)
-        custom_name = Text
-    end,
- })
-
-local function getPlayerNames()
-    local tbll = {}
-    for _,v in pairs(game:GetService("Players"):GetChildren()) do
-        local name = wtf..v.Name
-        table.insert(tbll, name)
-    end
-    return tbll
+Name = "Create pet",
+Callback = function()
+if getgenv().petname then
+event:Fire(getgenv().petname, getgenv().fly, getgenv().ride, getgenv().neon, getgenv().meganeon)
 end
-
-local Dropdown = main_tab:CreateDropdown({
-    Name = "Players",
-    Options = getPlayerNames(),
-    CurrentOption = {},
-    MultipleOptions = false,
-    Flag = "Dropdown1",
-    Callback = function(Options)
-        local name = unpack(Options):gsub(wtf,"")
-        getgenv().custom_name = name
-        name_input:Set(name)
-    end,
+end,
 })
-
+local Button2 = main_tab:CreateButton({
+Name = "Spawn pets",
+Callback = function()
+for _,namepet in pairs(petstbl) do
+for i = 1,math.random(5,20) do
+event:Fire(namepet, getgenv().fly, getgenv().ride, getgenv().neon, getgenv().meganeon)
+end
+end
+end,
+})
+local names_toggle = main_tab:CreateToggle({
+Name = "Custom names",
+CurrentValue = false,
+Flag = "Toggle5",
+Callback = function(Value)
+getgenv().customnames = Value
+end,
+})
+local name_input = main_tab:CreateInput({
+Name = "Custom Name",
+CurrentValue = "",
+PlaceholderText = "Name",
+RemoveTextAfterFocusLost = false,
+Flag = "Input2",
+Callback = function(Text)
+custom_name = Text
+end,
+})
+local function getPlayerNames()
+local tbll = {}
+for _,v in pairs(game:GetService("Players"):GetChildren()) do
+table.insert(tbll, v.Name)
+end
+return tbll
+end
+local Dropdown = main_tab:CreateDropdown({
+Name = "Players",
+Options = getPlayerNames(),
+CurrentOption = {},
+MultipleOptions = false,
+Flag = "Dropdown1",
+Callback = function(Options)
+local name = unpack(Options)
+getgenv().custom_name = name
+name_input:Set(name)
+end,
+})
 game:GetService("Players").PlayerAdded:Connect(function(plr)
-    Dropdown:Refresh(getPlayerNames())
+Dropdown:Refresh(getPlayerNames())
 end)
-
 game:GetService("Players").PlayerRemoving:Connect(function(plr)
-    Dropdown:Refresh(getPlayerNames())
+Dropdown:Refresh(getPlayerNames())
 end)
-
 -- Новая вкладка для фейк-трейдов
 local fake_trade_tab = Window:CreateTab("Fake Trade",0)
-
--- Выбор игрока для фейк-трейда
 local function getOnlinePlayers()
-    local players = {}
-    for _,player in pairs(game:GetService("Players"):GetPlayers()) do
-        if player ~= game.Players.LocalPlayer then
-            table.insert(players, player.Name)
-        end
-    end
-    return players
+local players = {}
+for _,player in pairs(game:GetService("Players"):GetPlayers()) do
+if player ~= game.Players.LocalPlayer then
+table.insert(players, player.Name)
 end
-
+end
+return players
+end
 local fakeTradeDropdown = fake_trade_tab:CreateDropdown({
-    Name = "Select Player",
-    Options = getOnlinePlayers(),
-    CurrentOption = {},
-    MultipleOptions = false,
-    Flag = "FakeTradePlayer",
-    Callback = function(Options)
-        local selectedPlayer = unpack(Options)
-        fakeTradePartner = game.Players:FindFirstChild(selectedPlayer)
-    end,
+Name = "Select Player",
+Options = getOnlinePlayers(),
+CurrentOption = {},
+MultipleOptions = false,
+Flag = "FakeTradePlayer",
+Callback = function(Options)
+local selectedPlayer = unpack(Options)
+fakeTradePartner = game.Players:FindFirstChild(selectedPlayer)
+end,
 })
-
 local startFakeTradeButton = fake_trade_tab:CreateButton({
-    Name = "Start Fake Trade",
-    Callback = function()
-        if fakeTradePartner then
-            startFakeTrade(fakeTradePartner)
-            Rayfield:Notify({
-                Title = "Fake Trade Started",
-                Content = "Fake trade with " .. fakeTradePartner.Name .. " has been started.",
-                Duration = 3,
-                Image = 4483362458,
-            })
-        else
-            Rayfield:Notify({
-                Title = "Error",
-                Content = "Please select a player first.",
-                Duration = 3,
-                Image = 4483362458,
-            })
-        end
-    end,
+Name = "Start Fake Trade",
+Callback = function()
+if fakeTradePartner then
+startFakeTrade(fakeTradePartner)
+Rayfield:Notify({
+Title = "Fake Trade Started",
+Content = "Fake trade with " .. fakeTradePartner.Name .. " has been started.",
+Duration = 3,
+Image = 4483362458,
 })
-
--- Управление питомцами фейк-оппонента
+else
+Rayfield:Notify({
+Title = "Error",
+Content = "Please select a player first.",
+Duration = 3,
+Image = 4483362458,
+})
+end
+end,
+})
 local fakePetInput = fake_trade_tab:CreateInput({
-    Name = "Pet Name",
-    CurrentValue = "",
-    PlaceholderText = "Enter pet name",
-    RemoveTextAfterFocusLost = false,
-    Flag = "FakePetName",
-    Callback = function(Text)
-        getgenv().fakePetName = Text
-    end,
+Name = "Pet Name",
+CurrentValue = "",
+PlaceholderText = "Enter pet name",
+RemoveTextAfterFocusLost = false,
+Flag = "FakePetName",
+Callback = function(Text)
+getgenv().fakePetName = Text
+end,
 })
-
 local fakeRideToggle = fake_trade_tab:CreateToggle({
-    Name = "Ride",
-    CurrentValue = false,
-    Flag = "FakeRide",
-    Callback = function(Value)
-        getgenv().fakeRide = Value
-    end,
+Name = "Ride",
+CurrentValue = false,
+Flag = "FakeRide",
+Callback = function(Value)
+getgenv().fakeRide = Value
+end,
 })
-
 local fakeFlyToggle = fake_trade_tab:CreateToggle({
-    Name = "Fly",
-    CurrentValue = false,
-    Flag = "FakeFly",
-    Callback = function(Value)
-        getgenv().fakeFly = Value
-    end,
+Name = "Fly",
+CurrentValue = false,
+Flag = "FakeFly",
+Callback = function(Value)
+getgenv().fakeFly = Value
+end,
 })
-
 local fakeNeonToggle = fake_trade_tab:CreateToggle({
-    Name = "Neon",
-    CurrentValue = false,
-    Flag = "FakeNeon",
-    Callback = function(Value)
-        getgenv().fakeNeon = Value
-    end,
+Name = "Neon",
+CurrentValue = false,
+Flag = "FakeNeon",
+Callback = function(Value)
+getgenv().fakeNeon = Value
+end,
 })
-
 local fakeMegaNeonToggle = fake_trade_tab:CreateToggle({
-    Name = "Mega Neon",
-    CurrentValue = false,
-    Flag = "FakeMegaNeon",
-    Callback = function(Value)
-        getgenv().fakeMegaNeon = Value
-    end,
+Name = "Mega Neon",
+CurrentValue = false,
+Flag = "FakeMegaNeon",
+Callback = function(Value)
+getgenv().fakeMegaNeon = Value
+end,
 })
-
 local addFakePetButton = fake_trade_tab:CreateButton({
-    Name = "Add Pet to Partner's Offer",
-    Callback = function()
-        if fakeTradeActive and getgenv().fakePetName and getgenv().fakePetName ~= "" then
-            if addFakePartnerPet(getgenv().fakePetName, getgenv().fakeFly, getgenv().fakeRide, getgenv().fakeNeon, getgenv().fakeMegaNeon) then
-                Rayfield:Notify({
-                    Title = "Pet Added",
-                    Content = getgenv().fakePetName .. " has been added to partner's offer.",
-                    Duration = 3,
-                    Image = 4483362458,
-                })
-                
-                -- Обновление интерфейса трейда
-                for _,app in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
-                    if app.Name == "TradeApp" then
-                        app:refresh_all()
-                    end
-                end
-            else
-                Rayfield:Notify({
-                    Title = "Error",
-                    Content = "Failed to add pet. Please check the pet name.",
-                    Duration = 3,
-                    Image = 4483362458,
-                })
-            end
-        else
-            Rayfield:Notify({
-                Title = "Error",
-                Content = "Please start a fake trade first and enter a pet name.",
-                Duration = 3,
-                Image = 4483362458,
-            })
-        end
-    end,
+Name = "Add Pet to Partner's Offer",
+Callback = function()
+if fakeTradeActive and getgenv().fakePetName and getgenv().fakePetName ~= "" then
+if addFakePartnerPet(getgenv().fakePetName, getgenv().fakeFly, getgenv().fakeRide, getgenv().fakeNeon, getgenv().fakeMegaNeon) then
+Rayfield:Notify({
+Title = "Pet Added",
+Content = getgenv().fakePetName .. " has been added to partner's offer.",
+Duration = 3,
+Image = 4483362458,
 })
-
+TradeApp:refresh_all()
+else
+Rayfield:Notify({
+Title = "Error",
+Content = "Failed to add pet. Please check the pet name.",
+Duration = 3,
+Image = 4483362458,
+})
+end
+else
+Rayfield:Notify({
+Title = "Error",
+Content = "Please start a fake trade first and enter a pet name.",
+Duration = 3,
+Image = 4483362458,
+})
+end
+end,
+})
 local removeFakePetInput = fake_trade_tab:CreateInput({
-    Name = "Pet Index",
-    CurrentValue = "1",
-    PlaceholderText = "Enter pet index to remove",
-    RemoveTextAfterFocusLost = false,
-    Flag = "FakePetIndex",
-    Callback = function(Text)
-        getgenv().fakePetIndex = tonumber(Text) or 1
-    end,
+Name = "Pet Index",
+CurrentValue = "1",
+PlaceholderText = "Enter pet index to remove",
+RemoveTextAfterFocusLost = false,
+Flag = "FakePetIndex",
+Callback = function(Text)
+getgenv().fakePetIndex = tonumber(Text) or 1
+end,
 })
-
 local removeFakePetButton = fake_trade_tab:CreateButton({
-    Name = "Remove Pet from Partner's Offer",
-    Callback = function()
-        if fakeTradeActive then
-            if removeFakePartnerPet(getgenv().fakePetIndex or 1) then
-                Rayfield:Notify({
-                    Title = "Pet Removed",
-                    Content = "Pet at index " .. (getgenv().fakePetIndex or 1) .. " has been removed.",
-                    Duration = 3,
-                    Image = 4483362458,
-                })
-                
-                -- Обновление интерфейса трейда
-                for _,app in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
-                    if app.Name == "TradeApp" then
-                        app:refresh_all()
-                    end
-                end
-            else
-                Rayfield:Notify({
-                    Title = "Error",
-                    Content = "Failed to remove pet. Please check the index.",
-                    Duration = 3,
-                    Image = 4483362458,
-                })
-            end
-        else
-            Rayfield:Notify({
-                Title = "Error",
-                Content = "Please start a fake trade first.",
-                Duration = 3,
-                Image = 4483362458,
-            })
-        end
-    end,
+Name = "Remove Pet from Partner's Offer",
+Callback = function()
+if fakeTradeActive then
+if removeFakePartnerPet(getgenv().fakePetIndex or 1) then
+Rayfield:Notify({
+Title = "Pet Removed",
+Content = "Pet at index " .. (getgenv().fakePetIndex or 1) .. " has been removed.",
+Duration = 3,
+Image = 4483362458,
 })
-
--- Управление решением трейда
+TradeApp:refresh_all()
+else
+Rayfield:Notify({
+Title = "Error",
+Content = "Failed to remove pet. Please check the index.",
+Duration = 3,
+Image = 4483362458,
+})
+end
+else
+Rayfield:Notify({
+Title = "Error",
+Content = "Please start a fake trade first.",
+Duration = 3,
+Image = 4483362458,
+})
+end
+end,
+})
 local acceptFakeTradeButton = fake_trade_tab:CreateButton({
-    Name = "Accept Trade (Partner)",
-    Callback = function()
-        if fakeTradeActive then
-            acceptFakeTrade()
-            Rayfield:Notify({
-                Title = "Trade Accepted",
-                Content = "Partner has accepted the trade.",
-                Duration = 3,
-                Image = 4483362458,
-            })
-        else
-            Rayfield:Notify({
-                Title = "Error",
-                Content = "Please start a fake trade first.",
-                Duration = 3,
-                Image = 4483362458,
-            })
-        end
-    end,
+Name = "Accept Trade (Partner)",
+Callback = function()
+if fakeTradeActive then
+acceptFakeTrade()
+Rayfield:Notify({
+Title = "Trade Accepted",
+Content = "Partner has accepted the trade.",
+Duration = 3,
+Image = 4483362458,
 })
-
+else
+Rayfield:Notify({
+Title = "Error",
+Content = "Please start a fake trade first.",
+Duration = 3,
+Image = 4483362458,
+})
+end
+end,
+})
 local declineFakeTradeButton = fake_trade_tab:CreateButton({
-    Name = "Decline Trade (Partner)",
-    Callback = function()
-        if fakeTradeActive then
-            declineFakeTrade()
-            Rayfield:Notify({
-                Title = "Trade Declined",
-                Content = "Partner has declined the trade.",
-                Duration = 3,
-                Image = 4483362458,
-            })
-        else
-            Rayfield:Notify({
-                Title = "Error",
-                Content = "Please start a fake trade first.",
-                Duration = 3,
-                Image = 4483362458,
-            })
-        end
-    end,
+Name = "Decline Trade (Partner)",
+Callback = function()
+if fakeTradeActive then
+declineFakeTrade()
+Rayfield:Notify({
+Title = "Trade Declined",
+Content = "Partner has declined the trade.",
+Duration = 3,
+Image = 4483362458,
 })
-
+else
+Rayfield:Notify({
+Title = "Error",
+Content = "Please start a fake trade first.",
+Duration = 3,
+Image = 4483362458,
+})
+end
+end,
+})
 local resetFakeTradeButton = fake_trade_tab:CreateButton({
-    Name = "Reset Fake Trade",
-    Callback = function()
-        resetFakeTrade()
-        Rayfield:Notify({
-            Title = "Trade Reset",
-            Content = "Fake trade has been reset.",
-            Duration = 3,
-            Image = 4483362458,
-        })
-    end,
+Name = "Reset Fake Trade",
+Callback = function()
+resetFakeTrade()
+Rayfield:Notify({
+Title = "Trade Reset",
+Content = "Fake trade has been reset.",
+Duration = 3,
+Image = 4483362458,
 })
-
--- Обновление списка игроков при входе/выходе
+end,
+})
 game:GetService("Players").PlayerAdded:Connect(function(plr)
-    fakeTradeDropdown:Refresh(getOnlinePlayers())
+fakeTradeDropdown:Refresh(getOnlinePlayers())
 end)
-
 game:GetService("Players").PlayerRemoving:Connect(function(plr)
-    fakeTradeDropdown:Refresh(getOnlinePlayers())
+fakeTradeDropdown:Refresh(getOnlinePlayers())
 end)
-
--- Автоматическое обновление состояния фейк-трейда
 game:GetService("RunService").Heartbeat:Connect(function()
-    if fakeTradeActive then
-        -- Проверка, что окно трейда все еще открыто
-        local tradeApp = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("TradeApp")
-        if not tradeApp or not tradeApp.Enabled then
-            -- Если окно закрыто, сбрасываем состояние трейда
-            resetFakeTrade()
-        end
-    end
+if fakeTradeActive then
+local playerGui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+local tradeApp = playerGui:FindFirstChild("TradeApp")
+if not tradeApp or not tradeApp.Enabled then
+resetFakeTrade()
+end
+end
 end)
