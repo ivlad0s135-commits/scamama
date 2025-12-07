@@ -193,6 +193,7 @@ old3 = hookfunction(TradeApp._remove_item_from_my_offer,function(p174, p175)
         end
     end
 
+
     if p175.category == "houses" then
 		p174.UIManager.apps.HintApp:hint({
 			["text"] = "You can\'t remove this item.",
