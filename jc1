@@ -7,7 +7,7 @@ local create_trade_frame = TradeHistoryApp._create_trade_frame
 local v_u_1 = require(game.ReplicatedStorage:WaitForChild("Fsys")).load
 local v_u_3 = v_u_1("RouterClient")
 
-local_offer = nil
+local local_offer = nil
 
 local saved_ids = {}
 local custom_name = "NO_CUSTOM_NAME"
@@ -398,8 +398,28 @@ local function startFakeTrade(player)
     fakePartnerConfirmed = false
     fakePartnerLocked = false
     
-    -- Имитация начала трейда
-    v_u_3.get("TradeAPI/RequestTrade"):FireServer(player)
+    -- Создание фейкового состояния трейда
+    local localPlayer = game.Players.LocalPlayer
+    local fake_state = {
+        trade_id = math.random(1, 1000000000),
+        sender = localPlayer,
+        recipient = player,
+        sender_offer = {
+            items = local_offer or {},
+            locked = false,
+            confirmed = false
+        },
+        recipient_offer = {
+            items = fakePartnerOffer,
+            locked = fakePartnerLocked,
+            confirmed = fakePartnerConfirmed
+        },
+        -- Добавьте другие необходимые поля, если нужно (например, status = "active")
+    }
+    
+    -- Установка состояния и открытие окна трейда
+    TradeApp:_overwrite_local_trade_state(nil, fake_state)
+    TradeApp:Show()  -- Предполагаем, что метод Show() существует; если нет, попробуйте :open() или найдите правильный метод через getgc
 end
 
 local function addFakePartnerPet(petName, fly, ride, neon, megaNeon)
@@ -435,7 +455,7 @@ local function acceptFakeTrade()
     -- Обновление интерфейса трейда
     for _,app in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
         if app.Name == "TradeApp" then
-            app:Refresh()
+            app:refresh_all()
         end
     end
 end
@@ -449,7 +469,7 @@ local function declineFakeTrade()
     -- Закрытие окна трейда
     for _,app in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
         if app.Name == "TradeApp" then
-            app:Hide()
+            app:hide()
         end
     end
 end
@@ -720,7 +740,7 @@ local addFakePetButton = fake_trade_tab:CreateButton({
                 -- Обновление интерфейса трейда
                 for _,app in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
                     if app.Name == "TradeApp" then
-                        app:Refresh()
+                        app:refresh_all()
                     end
                 end
             else
@@ -768,7 +788,7 @@ local removeFakePetButton = fake_trade_tab:CreateButton({
                 -- Обновление интерфейса трейда
                 for _,app in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
                     if app.Name == "TradeApp" then
-                        app:Refresh()
+                        app:refresh_all()
                     end
                 end
             else
