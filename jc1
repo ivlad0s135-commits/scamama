@@ -1,4 +1,3 @@
-
 local TradeApp = require(game:GetService("ReplicatedStorage").ClientModules.Core.UIManager.Apps.TradeApp)
 local TradeHistoryApp = require(game:GetService("ReplicatedStorage").ClientModules.Core.UIManager.Apps.TradeHistoryApp)
 local PlayerProfileApp = require(game.ReplicatedStorage.ClientModules.Core.UIManager.Apps.PlayerProfileApp.PlayerProfileApp)
